@@ -9,6 +9,7 @@ namespace TP3_2019_2020.Objetcs
 {
     public class Mot_clé
     {
+        public event PropertyChangedEventHandler PropertyChanged;
         public String Nom { get; set; }
         public int Volume { get; set; }
 

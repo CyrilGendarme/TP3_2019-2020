@@ -8,6 +8,8 @@ namespace TP3_2019_2020.Objetcs
 {
     public class Contenu
     {
+        public event PropertyChangedEventHandler PropertyChanged;
+
         public String Nom { get; set; }
         public DateTime DateCreation { get; set; }
 

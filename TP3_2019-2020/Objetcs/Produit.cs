@@ -6,7 +6,14 @@ using System.Threading.Tasks;
 
 namespace TP3_2019_2020.Objetcs
 {
-    class Produit
+    public class Produit : Contenu
     {
+        public event PropertyChangedEventHandler PropertyChanged;
+        public Mot_clé mot_clé { get; set; }
+        public list
+
+        private double _difficulté; // valeur comprise entre 0 et 100
+        public double Difficulté;
+
     }
 }

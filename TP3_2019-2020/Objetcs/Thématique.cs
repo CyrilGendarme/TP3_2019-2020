@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace TP3_2019_2020.Objetcs
 {
-    class Thématique
+    public class Thématique : Contenu
     {
+        public event PropertyChangedEventHandler PropertyChanged;
+
+
+
+        // : base (string s)
     }
 }

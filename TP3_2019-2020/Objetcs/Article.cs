@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace TP3_2019_2020.Objetcs
 {
-    class Article
+    public class Article : Contenu
     {
+
+        public event PropertyChangedEventHandler PropertyChanged;
     }
 }
