@@ -11,14 +11,32 @@ namespace TP3_2019_2020.Objetcs
     public class Thématique : Contenu, INotifyPropertyChanged, IUseMot_clé
     {
         public event PropertyChangedEventHandler PropertyChanged;
+        public Collection Collection { get; set; }
+
+        private List<Article> _listeArticles;
+        public List<Article> ListeArticles
+        {
+            get => _listeArticles;
+            set
+            {
+                _listeArticles = value;
+                NotifyPropertyChanged();
+            }
+        }
 
 
 
+        public Thématique() : base()
+        {
+            ListeArticles = new List<Article>();
+        }
+
+        public Thématique(String nom, List<Article> list) : base(nom)
+        {
+            ListeArticles = list;
+        }
 
 
-
-
-        // : base (string s)
 
         private void NotifyPropertyChanged([CallerMemberName] string propertyname = null)
         {
@@ -27,10 +45,20 @@ namespace TP3_2019_2020.Objetcs
                 PropertyChanged(this, new PropertyChangedEventArgs(propertyname));
             }
         }
-    }
 
-    public List<Mot_clé> getAllMotClé()
-    {
-        throw new NotImplementedException();
+
+        public List<Mot_clé> getAllMotClé()
+        {
+
+            List<Mot_clé> ListToBuild = new List<Mot_clé>();
+            ListToBuild.Add(Collection.Mot_clé);
+            foreach (Article art in ListeArticles)
+            {
+                ListToBuild.AddRange(art.getAllMotClé());
+            }
+            ListToBuild.Distinct();
+            return ListToBuild;
+
+        }
     }
 }

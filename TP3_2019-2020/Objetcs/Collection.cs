@@ -59,6 +59,7 @@ namespace TP3_2019_2020.Objetcs
             {
                 ListToBuild.Add(prod.Mot_clé);
             }
+            ListToBuild.Distinct();
             return ListToBuild;
         }
     }
