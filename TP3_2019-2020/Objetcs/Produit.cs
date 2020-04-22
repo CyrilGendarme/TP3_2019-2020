@@ -8,10 +8,10 @@ using System.Runtime.CompilerServices;
 
 namespace TP3_2019_2020.Objetcs
 {
-    public class Produit : Contenu, INotifyPropertyChanged
+    public class Produit : Contenu, INotifyPropertyChanged, IUseMot_clé
     {
         public event PropertyChangedEventHandler PropertyChanged;
-        public Mot_clé mot_clé { get; set; }
+        public Mot_clé Mot_clé { get; set; }
 
         private List<Collection> _listeCollections;
         public List<Collection> ListeCollections
@@ -33,7 +33,7 @@ namespace TP3_2019_2020.Objetcs
         // nous avons ici deux constructeur d'initialisation, un qui utilise un nom, l'autre qui utilise un mot-clé
         public Produit() : base()
         {
-            mot_clé = new Mot_clé();
+            Mot_clé = new Mot_clé();
             ListeCollections = new List<Collection>();
             Fournisseur = "NULL";
             PrixAchat = 0;
@@ -42,7 +42,7 @@ namespace TP3_2019_2020.Objetcs
 
         public Produit(String nom, List<Collection> list, String fourni, double achat, double vente) : base(nom)
         {
-            mot_clé = new Mot_clé();
+            Mot_clé = new Mot_clé();
             ListeCollections = list;
             Fournisseur = fourni;
             PrixAchat = achat;
@@ -51,7 +51,7 @@ namespace TP3_2019_2020.Objetcs
 
         public Produit(Mot_clé _mot_clé, List<Collection> list, String fourni, double achat, double vente) : base(_mot_clé.Nom)
         {
-            mot_clé = _mot_clé;
+            Mot_clé = _mot_clé;
             ListeCollections = list;
             Fournisseur = fourni;
             PrixAchat = achat;
@@ -65,6 +65,13 @@ namespace TP3_2019_2020.Objetcs
             {
                 PropertyChanged(this, new PropertyChangedEventArgs(propertyname));
             }
+        }
+
+        public List<Mot_clé> getAllMotClé()
+        {
+            List<Mot_clé> ListToBuild = new List<Mot_clé>();
+            ListToBuild.Add(Mot_clé);
+            return ListToBuild;
         }
     }
 }

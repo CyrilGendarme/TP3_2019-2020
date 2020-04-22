@@ -8,7 +8,7 @@ using System.Runtime.CompilerServices;
 
 namespace TP3_2019_2020.Objetcs
 {
-    public class Collection : Contenu, INotifyPropertyChanged
+    public class Collection : Contenu, INotifyPropertyChanged, IUseMot_clé
     {
 
         public event PropertyChangedEventHandler PropertyChanged;
@@ -49,6 +49,17 @@ namespace TP3_2019_2020.Objetcs
             {
                 PropertyChanged(this, new PropertyChangedEventArgs(propertyname));
             }
+        }
+
+        public List<Mot_clé> getAllMotClé()
+        {
+            List<Mot_clé> ListToBuild = new List<Mot_clé>();
+            ListToBuild.Add(Mot_clé);
+            foreach (Produit prod in ListeProduits)
+            {
+                ListToBuild.Add(prod.Mot_clé);
+            }
+            return ListToBuild;
         }
     }
 }

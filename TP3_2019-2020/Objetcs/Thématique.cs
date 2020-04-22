@@ -8,9 +8,13 @@ using System.Runtime.CompilerServices;
 
 namespace TP3_2019_2020.Objetcs
 {
-    public class Thématique : Contenu, INotifyPropertyChanged
+    public class Thématique : Contenu, INotifyPropertyChanged, IUseMot_clé
     {
         public event PropertyChangedEventHandler PropertyChanged;
+
+
+
+
 
 
 
@@ -23,5 +27,10 @@ namespace TP3_2019_2020.Objetcs
                 PropertyChanged(this, new PropertyChangedEventArgs(propertyname));
             }
         }
+    }
+
+    public List<Mot_clé> getAllMotClé()
+    {
+        throw new NotImplementedException();
     }
 }

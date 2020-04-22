@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace TP3_2019_2020.Objetcs
 {
-    public class Article : Contenu, INotifyPropertyChanged
+    public class Article : Contenu, INotifyPropertyChanged, IUseMot_clé
     {
 
         public event PropertyChangedEventHandler PropertyChanged;
@@ -81,6 +81,11 @@ namespace TP3_2019_2020.Objetcs
             {
                 PropertyChanged(this, new PropertyChangedEventArgs(propertyname));
             }
+        }
+
+        public List<Mot_clé> getAllMotClé()
+        {
+            return ListeMotClé;
         }
     }
 }
