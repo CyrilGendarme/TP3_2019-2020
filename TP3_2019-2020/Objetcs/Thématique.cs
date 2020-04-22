@@ -8,7 +8,7 @@ using System.Runtime.CompilerServices;
 
 namespace TP3_2019_2020.Objetcs
 {
-    public class Thématique : Contenu, INotifyPropertyChanged, IUseMot_clé
+    public class Thématique : INotifyPropertyChanged, IUseMot_clé
     {
         public event PropertyChangedEventHandler PropertyChanged;
         public Collection Collection { get; set; }
@@ -26,13 +26,15 @@ namespace TP3_2019_2020.Objetcs
 
 
 
-        public Thématique() : base()
+        public Thématique()
         {
+            Collection = new Collection();
             ListeArticles = new List<Article>();
         }
 
-        public Thématique(String nom, List<Article> list) : base(nom)
+        public Thématique(Collection col, List<Article> list) 
         {
+            Collection = col;
             ListeArticles = list;
         }
 
@@ -60,6 +62,11 @@ namespace TP3_2019_2020.Objetcs
             ListToBuild.Distinct(comparer);
             return ListToBuild;
 
+        }
+
+        public override String ToString()
+        {
+            return Collection.Nom + " (thématique)";
         }
     }
 }

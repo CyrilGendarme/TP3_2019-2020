@@ -63,5 +63,10 @@ namespace TP3_2019_2020.Objetcs
             ListToBuild.Distinct(comparer);
             return ListToBuild;
         }
+
+        public override String ToString()
+        {
+            return Nom + " (collection)";
+        }
     }
 }

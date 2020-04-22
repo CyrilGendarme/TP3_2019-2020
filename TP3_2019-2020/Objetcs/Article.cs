@@ -87,5 +87,10 @@ namespace TP3_2019_2020.Objetcs
         {
             return ListeMotClé;
         }
+
+        public override String ToString()
+        {
+            return Nom + " (article)";
+        }
     }
 }

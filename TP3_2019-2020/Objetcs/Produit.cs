@@ -73,5 +73,11 @@ namespace TP3_2019_2020.Objetcs
             ListToBuild.Add(Mot_clé);
             return ListToBuild;
         }
+
+
+        public override String ToString()
+        {
+            return Nom + " (produit)";
+        }
     }
 }
