@@ -56,7 +56,8 @@ namespace TP3_2019_2020.Objetcs
             {
                 ListToBuild.AddRange(art.getAllMotClé());
             }
-            ListToBuild.Distinct();
+            Mot_cléComparer comparer = new Mot_cléComparer();
+            ListToBuild.Distinct(comparer);
             return ListToBuild;
 
         }
