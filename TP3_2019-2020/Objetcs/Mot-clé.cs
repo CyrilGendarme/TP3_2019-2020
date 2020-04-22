@@ -44,7 +44,7 @@ namespace TP3_2019_2020.Objetcs
 
         public override String ToString()
         {
-            return Nom;
+            return Nom; 
         }
     }
 }
