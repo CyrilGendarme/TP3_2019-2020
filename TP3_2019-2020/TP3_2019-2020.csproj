@@ -37,6 +37,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -69,6 +70,15 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Objetcs\Article.cs" />
+    <Compile Include="Objetcs\Collection.cs" />
+    <Compile Include="Objetcs\Contenu.cs" />
+    <Compile Include="Objetcs\IUseMot_clé.cs" />
+    <Compile Include="Objetcs\Mot-clé.cs" />
+    <Compile Include="Objetcs\Mot_cléComparer.cs" />
+    <Compile Include="Objetcs\MyPersonalMapData.cs" />
+    <Compile Include="Objetcs\Produit.cs" />
+    <Compile Include="Objetcs\Thématique.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -93,6 +103,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Windows And Dialogs\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,4 +1,3 @@
-comment # labo-phase-3-CyrilGendarme
 
 Objectif : 
 	Créer une applciation pour gérer des produits sur un site d'e-commerce, et ce dans une optique SEO par la gestion de thématiques.
@@ -12,11 +11,16 @@ Spécifications :
 	
 	
 Besoin (classes) :
-	- produit
-		==> un mot-clé (ce qui comprend le nom du produit et son volume de recherche)
+	- Contenu classe dont hériteront toutes les autres sauf mot-clé et thématique
+		==>	un nom / titre 
+			une date de création
+
+	- IUseMot_clé : une interface pqui possède une méthode retournant une lsite de mots-clé		
+
+	- Produit
+		==> un mot-clé non obligatoire (identique au nom du produit et qui contient son volume de recherche)
 			une liste de collections
-			un texte 
-			un fournisseur (= adresse web)
+			un fournisseur (= adresse web : String)
 			un prix fournisseur
 			un prix de vente (une suggestion sera calculée automatiquement à partir du prix fournisseur)
 
@@ -26,8 +30,8 @@ Besoin (classes) :
 		
 	- Article de blog
 		==>	une liste de mot-clés 
-			une texte 
-			une liste de liens sortants (adresses web, notamment celles du site-même)
+			une évaluation de la qualité (très subjectif comme ça, peut-être faire ça de manière plus précise si temps suffisant)
+			une liste de liens sortants (adresses web, notamment celles du site-même) : String ou créer une lasse spécifique... Cela sera à déterminer plus tard
 			
 	- Mot-clé 
 		==>	mot 
@@ -37,9 +41,9 @@ Besoin (classes) :
 	- Thématique : "supra-classe" permettant de regrouper collections et articles de blog associés
 		==> une collection
 			une liste d'articles de blog
-			une liste de mots-clés correspondant à la somme de tous les mots-clés des éléments constituant la thématique
+			une liste de mots-clés correspondant à la somme de tous les mots-clés des éléments constituant la thématique (pas besoin de créer de vraible membre grâce à l'interface IUseMot_clé !! )
 			
-	- Une interface graphique principal : partir sur une interface où les champs proposés évoluent dynamiquement en fonction du type d'objet sur lequel on veut travailler (type TP2)
+	- Une fenêtre graphique principal : partir sur une interface où les champs proposés évoluent dynamiquement en fonction du type d'objet sur lequel on veut travailler (type TP2)
 	    ==>	tout le nécessaire pour créer / modifier les objets ci-dessus
 			la sélection des champs devrait ici notamment se faire sous forme de liste (mots-clé, collection, etc) : classée par ordre alphabétique ? par thématique ? Cela reste à voir... 
 			
@@ -55,18 +59,3 @@ Classification en librairies / projets
 	- une libraire objets
 	- une libraire "interface graphique A" (ajout et modification d'objets)
 	- une libraire "interface graphique B" (vue globale du site)
-	
-	
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
