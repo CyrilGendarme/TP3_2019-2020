@@ -13,7 +13,7 @@ namespace TP3_2019_2020.Objetcs
 
         public event PropertyChangedEventHandler PropertyChanged;
 
-        public Mot_clé mot_clé { get; set; }
+        public Mot_clé Mot_clé { get; set; }
 
         private List<Produit> _listeProduits;
         public List<Produit> ListeProduits
@@ -27,6 +27,18 @@ namespace TP3_2019_2020.Objetcs
         }
 
 
+
+        public Collection() : base()
+        {
+            Mot_clé = new Mot_clé();
+            ListeProduits = new List<Produit>();
+        }
+
+        public Collection(Mot_clé mot_clé, List<Produit> list) : base (mot_clé.Nom)
+        {
+            Mot_clé = mot_clé;
+            ListeProduits = list;
+        }
 
 
 
