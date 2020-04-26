@@ -23,5 +23,26 @@ namespace TP3_2019_2020.Windows_And_Dialogs.Produit
         {
             InitializeComponent();
         }
+
+        private void Ok_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Suivant_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Annuler_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ConfigMot_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
     }
 }
