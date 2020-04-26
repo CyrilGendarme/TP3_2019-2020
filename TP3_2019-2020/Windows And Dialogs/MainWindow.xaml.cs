@@ -27,17 +27,26 @@ namespace TP3_2019_2020
 
         private void Produit_Click(object sender, RoutedEventArgs e)
         {
-
+            GestionProduit win = new GestionProduit();
+            win.Show();
         }
 
         private void Collection_Click(object sender, RoutedEventArgs e)
         {
-
+            GestionCollection win = new GestionCollection();
+            win.Show();
         }
 
         private void Thématique_Click(object sender, RoutedEventArgs e)
         {
+            GestionThématique win = new GestionThématique);
+            win.Show();
+        }
 
+        private void Article_Click(object sender, RoutedEventArgs e)
+        {
+            GestionArticle win = new GestionArticle();
+            win.Show();
         }
     }
 }
