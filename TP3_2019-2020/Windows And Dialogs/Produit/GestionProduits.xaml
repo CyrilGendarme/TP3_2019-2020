@@ -1,0 +1,79 @@
+﻿<Window x:Class="TP3_2019_2020.Windows_And_Dialogs.Produit.GestionProduits"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TP3_2019_2020.Windows_And_Dialogs.Ajout_Produit"
+        mc:Ignorable="d"
+        Title="GestionProduits" Height="450" Width="800">
+    <Grid DataContext="_owner.MyData">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="80"/>
+        </Grid.RowDefinitions>
+
+
+        <StackPanel Grid.Row="0" Orientation="Horizontal" x:Name="StackPanel" Margin="0,10,0,10" HorizontalAlignment="Center">
+
+                <Label Content="Classer par : "   Width="100" />
+                <CheckBox x:Name="BoxParNom" Content="Nom"  Height="auto" Width="100" Margin="0,6,0,0" Checked="CheckBox_Checked1" />
+                <CheckBox x:Name="BoxParDate" Content="Date"  Height="auto" Width="100" Margin="0,6,0,0" Checked="CheckBox_Checked3"  />
+         </StackPanel>
+
+
+
+
+                <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Left" Name="ToolBox">
+            <Button x:Name="Supprimer" Height="25" Width="80"  Margin="0,0,0,0"
+               Content="Supprimer"  
+               VerticalAlignment="Top"  
+               HorizontalAlignment="Left"
+                    Click="Supprimer_Click">
+            </Button>
+            <Button x:Name="Modifier" Height="25" Width="80"  Margin="0,0,0,0"
+               Content="Modifier"  
+               VerticalAlignment="Top"  
+               HorizontalAlignment="Left"
+                    Click="Modifier_Click">
+            </Button>
+
+        </StackPanel>
+
+        <Grid Grid.Row="2">
+            
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="20"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <ListBox x:Name="ListBoxProduit" Grid.Column="0" Height="auto" Margin="10,0,0,0" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" ItemsSource="{Binding Path=SelectedItem.ListeCollections}">
+            </ListBox>
+
+            <GridSplitter Grid.Column="1"
+                      Grid.RowSpan="3" 
+              HorizontalAlignment="Center"
+              VerticalAlignment="Stretch"
+              Background="Black" 
+              Width="3"
+              />
+
+            <ListBox x:Name="ListBoxDonnéesProduit" Grid.Column="1"  Margin="0,0,10,0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  ItemsSource="{Binding Path=ListCollection}">
+            </ListBox>
+
+        </Grid>
+        
+        
+        
+        <Button x:Name="Ajout" Grid.Row="3"  Width="200" Height="40" Margin="0,20,0,20"
+               Content="Ajouter un produit"  
+               VerticalAlignment="Top"  
+               HorizontalAlignment="Center"
+                Click="Ajout_Click">
+        </Button>
+
+    </Grid>
+</Window>

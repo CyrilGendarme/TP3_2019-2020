@@ -36,7 +36,7 @@
                Content="Gestion du blog"  
                VerticalAlignment="Top"  
                HorizontalAlignment="Center"
-                    Click="ViderMap_Click">
+                    Click="Article_Click">
         </Button>
 
         <Button x:Name="Thématique" Grid.Row="4"  Width="200" Height="40"  
