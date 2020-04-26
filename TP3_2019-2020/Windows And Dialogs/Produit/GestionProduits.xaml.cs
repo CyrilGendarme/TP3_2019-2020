@@ -33,6 +33,7 @@ namespace TP3_2019_2020.Windows_And_Dialogs.Produit
         {
             AjoutProduit win = new AjoutProduit();
             win.Show();
+            this.Hide();
         }
 
 
@@ -42,12 +43,14 @@ namespace TP3_2019_2020.Windows_And_Dialogs.Produit
         {
             BoxParCollection.IsChecked = false;
             BoxParDate.IsChecked = false;
+            _owner.MyData.
         }
 
         private void CheckBox_Checked2(object sender, RoutedEventArgs e)
         {
             BoxParNom.IsChecked = false;
             BoxParDate.IsChecked = false;
+            this
         }
 
         private void CheckBox_Checked3(object sender, RoutedEventArgs e)
@@ -64,6 +67,13 @@ namespace TP3_2019_2020.Windows_And_Dialogs.Produit
         private void Supprimer_Click(object sender, RoutedEventArgs e)
         {
             _owner.MyData.ListProduit.Remove((TP3_2019_2020.Objetcs.Produit)ListBoxProduit.SelectedItem);
+        }
+
+        private void Modifier_Click(object sender, RoutedEventArgs e)
+        {
+            AjoutProduit win = new AjoutProduit((TP3_2019_2020.Objetcs.Produit)ListBoxProduit.SelectedItem);
+            win.Show();
+            this.Hide();
         }
     }
 }

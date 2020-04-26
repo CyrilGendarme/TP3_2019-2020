@@ -19,8 +19,17 @@ namespace TP3_2019_2020.Windows_And_Dialogs.Produit
     /// </summary>
     public partial class AjoutProduit : Window
     {
+        GestionProduits _owner;
+
         public AjoutProduit()
         {
+            _owner = Owner as GestionProduits;
+            InitializeComponent();
+        }
+
+        public AjoutProduit(TP3_2019_2020.Objetcs.Produit p)
+        {
+            _owner = Owner as GestionProduits;
             InitializeComponent();
         }
 

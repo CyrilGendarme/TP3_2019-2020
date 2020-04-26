@@ -37,7 +37,7 @@
                Content="Modifier"  
                VerticalAlignment="Top"  
                HorizontalAlignment="Left"
-                    Click="Modification_Click">
+                    Click="Modifier_Click">
             </Button>
 
         </StackPanel>
