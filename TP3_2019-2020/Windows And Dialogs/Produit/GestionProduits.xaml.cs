@@ -19,9 +19,14 @@ namespace TP3_2019_2020.Windows_And_Dialogs.Produit
     /// </summary>
     public partial class GestionProduits : Window
     {
+        private MainWindow _owner;
+
         public GestionProduits()
         {
+            _owner = Owner as MainWindow;
             InitializeComponent();
+            ListBoxProduit.DataContext = _owner.MyData;
+            ListBoxDonnéesProduit.DataContext = ListBoxProduit;
         }
 
         private void Ajout_Click(object sender, RoutedEventArgs e)
@@ -51,6 +56,14 @@ namespace TP3_2019_2020.Windows_And_Dialogs.Produit
             BoxParCollection.IsChecked = false;
         }
 
+        private void ListBoxProduit_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
 
+        }
+
+        private void Supprimer_Click(object sender, RoutedEventArgs e)
+        {
+            _owner.MyData.ListProduit.Remove((TP3_2019_2020.Objetcs.Produit)ListBoxProduit.SelectedItem);
+        }
     }
 }
