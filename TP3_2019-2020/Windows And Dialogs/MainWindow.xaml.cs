@@ -12,6 +12,10 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using TP3_2019_2020.Windows_And_Dialogs.Produit;
+using TP3_2019_2020.Windows_And_Dialogs.Article;
+using TP3_2019_2020.Windows_And_Dialogs.Collection;
+using TP3_2019_2020.Windows_And_Dialogs.Thématique;
 
 namespace TP3_2019_2020
 {
@@ -27,7 +31,7 @@ namespace TP3_2019_2020
 
         private void Produit_Click(object sender, RoutedEventArgs e)
         {
-            GestionProduit win = new GestionProduit();
+            GestionProduits win = new GestionProduit();
             win.Show();
         }
 
