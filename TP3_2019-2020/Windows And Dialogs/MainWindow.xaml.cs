@@ -24,5 +24,20 @@ namespace TP3_2019_2020
         {
             InitializeComponent();
         }
+
+        private void Produit_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Collection_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Thématique_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
