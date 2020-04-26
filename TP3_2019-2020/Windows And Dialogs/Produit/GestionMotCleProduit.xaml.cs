@@ -27,5 +27,10 @@ namespace TP3_2019_2020.Windows_And_Dialogs.Produit
             InitializeComponent();
             DataContext = _owner.ThisProd.Mot_clé;
         }
+
+        private void Ok_Click(object sender, RoutedEventArgs e)
+        {
+            this.Hide();
+        }
     }
 }

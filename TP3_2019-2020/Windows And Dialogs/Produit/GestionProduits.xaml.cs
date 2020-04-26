@@ -67,5 +67,10 @@ namespace TP3_2019_2020.Windows_And_Dialogs.Produit
             this.Hide();
         }
 
+        public void AddToProduitList(Objetcs.Produit p)
+        {
+            _owner.MyData.ListProduit.Add(p);
+        }
+
     }
 }

@@ -38,22 +38,28 @@ namespace TP3_2019_2020.Windows_And_Dialogs.Produit
 
         private void Ok_Click(object sender, RoutedEventArgs e)
         {
-
+            ThisProd.ListeCollections = ((List<TP3_2019_2020.Objetcs.Collection>)ListBoxCollection1.SelectedItem);
+            _owner.AddToProduitList(ThisProd);
+            this.Hide();
         }
 
         private void Suivant_Click(object sender, RoutedEventArgs e)
         {
-
+            ThisProd.ListeCollections = ((List<TP3_2019_2020.Objetcs.Collection>)ListBoxCollection1.SelectedItem);
+            _owner.AddToProduitList(ThisProd);
+            ThisProd = new Objetcs.Produit();
+            ListBoxCollection1.UnselectAll();
         }
 
         private void Annuler_Click(object sender, RoutedEventArgs e)
         {
-
+            this.Hide();
         }
 
         private void ConfigMot_Click(object sender, RoutedEventArgs e)
         {
-
+            GestionMotCleProduit win = new GestionMotCleProduit();
+            win.Show();
         }
 
     }

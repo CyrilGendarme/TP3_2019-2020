@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TP3_2019_2020.Windows_And_Dialogs.Produit"
         mc:Ignorable="d"
-        Title="GestionMotCleProduit" Height="200" Width="600">
+        Title="GestionMotCleProduit" Height="250" Width="600">
     <Grid>
         <StackPanel Orientation="Vertical" Name="PrixVente" >
             <Label  Content="Nom" Margin="59,0,0,0" HorizontalAlignment="Left" Width="301"/>
@@ -14,6 +14,12 @@
             <TextBox  x:Name ="Longitude" Text="{Binding Path= Volume}"/>
             <Label Content="Difficulté" Margin="59,0,0,0" HorizontalAlignment="Left" Height="auto" Width="auto"/>
             <Slider x:Name ="Opacité" Minimum="0" Maximum="100" Value="{Binding Path=Difficulté}"/>
+            <Button x:Name="Ok" Grid.Row="3"  Width="200" Height="40" Margin="0,20,0,20"
+               Content="Ok"  
+               VerticalAlignment="Top"  
+               HorizontalAlignment="Center"
+                Click="Ok_Click">
+            </Button>
         </StackPanel>
     </Grid>
 </Window>

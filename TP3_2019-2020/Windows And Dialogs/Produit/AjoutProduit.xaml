@@ -60,7 +60,7 @@
 
             <StackPanel Grid.Column="1" Orientation="Vertical" Name="ListCollectionType1" HorizontalAlignment="Stretch">
                 <Label Content="Collections spécifiques :  "   Height="30" Width="auto"/>
-                <ListBox x:Name="ListBoxCollection1"  Height="auto" Margin="10,0,5,0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                <ListBox x:Name="ListBoxCollection1" SelectionMode="Multiple" Height="auto" Margin="10,0,5,0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" DataContext="_owner.DataContext.ListCollection">
                 </ListBox>
 
             </StackPanel>
