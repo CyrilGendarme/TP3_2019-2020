@@ -14,6 +14,8 @@ namespace TP3_2019_2020.Objetcs
         public event PropertyChangedEventHandler PropertyChanged;
         public String Nom { get; set; }
         public int Volume { get; set; }
+        public int Id { get; }
+        protected static int counter = 0;
 
         private double _difficulté; // valeur comprise entre 0 et 100
         public double Difficulté
@@ -30,9 +32,15 @@ namespace TP3_2019_2020.Objetcs
             }
         }
 
+        public void SetMaxCnt(int nb)
+        {
+            counter = nb;
+        }
 
         public Mot_clé()
         {
+            counter++;
+            Id = counter;
             Nom = "NULL";
             Volume = 0;
             Difficulté = 100;
@@ -40,6 +48,8 @@ namespace TP3_2019_2020.Objetcs
 
         public Mot_clé(String s, int v, double d)
         {
+            counter++;
+            Id = counter;
             Nom = s;
             Volume = v;
             Difficulté = d;
