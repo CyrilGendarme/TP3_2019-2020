@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,6 +12,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using TP3_2019_2020.Objetcs;
 
 namespace TP3_2019_2020.Windows_And_Dialogs.Produit
 {
@@ -25,7 +27,7 @@ namespace TP3_2019_2020.Windows_And_Dialogs.Produit
         {
             _owner = Owner as MainWindow;
             InitializeComponent();
-            ListBoxProduit.DataContext = _owner.MyData;
+            //ListBoxProduit.DataContext = _owner.MyData;
             ListBoxDonnéesProduit.DataContext = ListBoxProduit;
         }
 
@@ -41,28 +43,17 @@ namespace TP3_2019_2020.Windows_And_Dialogs.Produit
 
         private void CheckBox_Checked1(object sender, RoutedEventArgs e)
         {
-            BoxParCollection.IsChecked = false;
             BoxParDate.IsChecked = false;
-            _owner.MyData.
+            ListBoxProduit.DataContext = _owner.MyData.ListArticle.OrderBy(d => d.DateCreation);
         }
 
-        private void CheckBox_Checked2(object sender, RoutedEventArgs e)
-        {
-            BoxParNom.IsChecked = false;
-            BoxParDate.IsChecked = false;
-            this
-        }
 
         private void CheckBox_Checked3(object sender, RoutedEventArgs e)
         {
             BoxParNom.IsChecked = false;
-            BoxParCollection.IsChecked = false;
+            ListBoxProduit.DataContext = _owner.MyData.ListArticle.OrderBy(d => d.Nom);
         }
 
-        private void ListBoxProduit_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
 
         private void Supprimer_Click(object sender, RoutedEventArgs e)
         {
@@ -75,5 +66,6 @@ namespace TP3_2019_2020.Windows_And_Dialogs.Produit
             win.Show();
             this.Hide();
         }
+
     }
 }

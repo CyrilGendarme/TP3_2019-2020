@@ -1,0 +1,19 @@
+﻿<Window x:Class="TP3_2019_2020.Windows_And_Dialogs.Produit.GestionMotCleProduit"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TP3_2019_2020.Windows_And_Dialogs.Produit"
+        mc:Ignorable="d"
+        Title="GestionMotCleProduit" Height="200" Width="600">
+    <Grid>
+        <StackPanel Orientation="Vertical" Name="PrixVente" >
+            <Label  Content="Nom" Margin="59,0,0,0" HorizontalAlignment="Left" Width="301"/>
+            <TextBox  x:Name ="Latitude" Text="{Binding Path= Nom}"/>
+            <Label  Content="Volume de recherche mensuel" Margin="59,0,0,0" HorizontalAlignment="Left" Width="301"/>
+            <TextBox  x:Name ="Longitude" Text="{Binding Path= Volume}"/>
+            <Label Content="Difficulté" Margin="59,0,0,0" HorizontalAlignment="Left" Height="auto" Width="auto"/>
+            <Slider x:Name ="Opacité" Minimum="0" Maximum="100" Value="{Binding Path=Difficulté}"/>
+        </StackPanel>
+    </Grid>
+</Window>
