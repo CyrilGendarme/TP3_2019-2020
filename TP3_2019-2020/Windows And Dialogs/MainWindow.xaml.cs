@@ -13,10 +13,11 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using TP3_2019_2020.Windows_And_Dialogs.Produit;
-using TP3_2019_2020.Windows_And_Dialogs.Article;
-using TP3_2019_2020.Windows_And_Dialogs.Collection;
-using TP3_2019_2020.Windows_And_Dialogs.Thématique;
+//using TP3_2019_2020.Windows_And_Dialogs.Article;
+//using TP3_2019_2020.Windows_And_Dialogs.Collection;
+//using TP3_2019_2020.Windows_And_Dialogs.Thématique;
 using TP3_2019_2020.Objetcs;
+using TP3_2019_2020.Windows_And_Dialogs;
 
 namespace TP3_2019_2020
 {
@@ -40,7 +41,8 @@ namespace TP3_2019_2020
         {
             InitializeComponent();
             MyData = new MyData();
-            MyData.LoadData();
+            AskForFileDialog dialog = new AskForFileDialog();
+            dialog.Show();
         }
 
         private void Produit_Click(object sender, RoutedEventArgs e)
@@ -52,23 +54,23 @@ namespace TP3_2019_2020
 
         private void Collection_Click(object sender, RoutedEventArgs e)
         {
-            GestionCollection win = new GestionCollection();
-            win.Show();
-            this.Hide();
+            //GestionCollection win = new GestionCollection();
+            //win.Show();
+            //this.Hide();
         }
 
         private void Thématique_Click(object sender, RoutedEventArgs e)
         {
-            GestionThématique win = new GestionThématique);
-            win.Show();
-            this.Hide();
+            //GestionThématique win = new GestionThématique);
+            //win.Show();
+            //this.Hide();
         }
 
         private void Article_Click(object sender, RoutedEventArgs e)
         {
-            GestionArticle win = new GestionArticle();
-            win.Show();
-            this.Hide();
+            //GestionArticle win = new GestionArticle();
+            //win.Show();
+            //this.Hide();
         }
     }
 }

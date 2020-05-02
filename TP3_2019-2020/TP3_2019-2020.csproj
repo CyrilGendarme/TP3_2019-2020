@@ -56,11 +56,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Windows And Dialogs\AskForFileDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Windows And Dialogs\Produit\AjoutProduit.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Windows And Dialogs\Produit\GestionMotCleProduit.xaml">
+    <Page Include="Windows And Dialogs\AjoutMotCle.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -77,14 +81,16 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Objetcs\MyData.cs" />
-    <Compile Include="Objetcs\MyPersonalMapData.cs" />
     <Compile Include="Objetcs\ProduitComparatorByDate.cs" />
     <Compile Include="Objetcs\ProduitComparatorByName.cs" />
+    <Compile Include="Windows And Dialogs\AskForFileDialog.xaml.cs">
+      <DependentUpon>AskForFileDialog.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows And Dialogs\Produit\AjoutProduit.xaml.cs">
       <DependentUpon>AjoutProduit.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Windows And Dialogs\Produit\GestionMotCleProduit.xaml.cs">
-      <DependentUpon>GestionMotCleProduit.xaml</DependentUpon>
+    <Compile Include="Windows And Dialogs\AjoutMotCle.xaml.cs">
+      <DependentUpon>AjoutMotCle.xaml</DependentUpon>
     </Compile>
     <Compile Include="Windows And Dialogs\Produit\GestionProduits.xaml.cs">
       <DependentUpon>GestionProduits.xaml</DependentUpon>

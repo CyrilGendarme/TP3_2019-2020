@@ -15,7 +15,7 @@
         <StackPanel Grid.Row="0" HorizontalAlignment="Center" Orientation="Horizontal" Name="StachPanel2" >
             <StackPanel   Margin="0,0,20,0" Orientation="Vertical" Name="sp3" HorizontalAlignment="Left">
                 <Label Content="Nouveau site : " Margin="0,20,0,10"  Height="30" Width="auto"/>
-                <TextBox Width="300" x:Name ="FournisseurBox" Height="30" TextChanged="FournisseurBox_TextChanged" />
+                <TextBox Width="300" x:Name ="NouveauSite" Height="30" TextChanged="FournisseurBox_TextChanged" />
             </StackPanel>
             <StackPanel   Margin="0,0,20,0" Orientation="Vertical" Name="sp4" HorizontalAlignment="Left">
                 <Label Content="Site existant : " Margin="0,20,0,10"  Height="30" Width="auto"/>
