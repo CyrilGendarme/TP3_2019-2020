@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using TP3_2019_2020.Objetcs;
 
 namespace TP3_2019_2020.Windows_And_Dialogs.Produit
 {
@@ -36,6 +37,20 @@ namespace TP3_2019_2020.Windows_And_Dialogs.Produit
             ThisProd = p;
         }
 
+
+
+
+
+
+        public void PutMotClé(Mot_clé mot)
+        {
+            ThisProd.Mot_clé = mot;
+        }
+
+
+
+
+
         private void Ok_Click(object sender, RoutedEventArgs e)
         {
             ThisProd.ListeCollections = ((List<TP3_2019_2020.Objetcs.Collection>)ListBoxCollection1.SelectedItem);
@@ -58,7 +73,7 @@ namespace TP3_2019_2020.Windows_And_Dialogs.Produit
 
         private void ConfigMot_Click(object sender, RoutedEventArgs e)
         {
-            GestionMotCleProduit win = new GestionMotCleProduit();
+            AjoutMotCle win = new AjoutMotCle(_owner.DataContext);
             win.Show();
         }
 
