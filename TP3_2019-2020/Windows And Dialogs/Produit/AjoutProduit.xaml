@@ -48,7 +48,7 @@
 
                 <StackPanel Grid.Row="2" Orientation="Horizontal" Name="PrixAchat" HorizontalAlignment="Left">
                     <Label Content="Prix d'achat : " Margin="40,0,26,0"  Height="30" Width="auto"/>
-                    <TextBox Width="250" x:Name ="AchatBox" Height="30" Text="{Binding Path= PrixAchat}"/>
+                    <TextBox Width="250" x:Name ="AchatBox" Height="30" Text="{Binding Path= PrixAchat}" TextChanged="AchatBox_TextChanged"/>
                 </StackPanel>
 
                 <StackPanel Grid.Row="3" Orientation="Horizontal" Name="PrixVente" HorizontalAlignment="Left">
