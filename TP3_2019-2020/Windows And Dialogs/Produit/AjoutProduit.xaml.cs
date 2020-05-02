@@ -77,5 +77,17 @@ namespace TP3_2019_2020.Windows_And_Dialogs.Produit
             win.Show();
         }
 
+        private void AchatBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            try 
+            {
+                double prixachat = Convert.ToDouble(AchatBox.Text);
+                double prixvente = prixachat * 3.2;
+                if (prixvente < 4.70) prixvente = 4.70;
+                if ((prixvente - prixachat) > 20) prixvente = prixachat + 20;
+                ThisProd.PrixVente = prixvente;
+            }
+            catch { }
+        }
     }
 }

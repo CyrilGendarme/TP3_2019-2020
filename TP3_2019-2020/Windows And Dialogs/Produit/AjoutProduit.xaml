@@ -82,21 +82,27 @@
         </Grid>
 
         <StackPanel Grid.Row="1" Orientation="Horizontal" Name="ToolBox" HorizontalAlignment="Center">
-            <Button x:Name="Ok" Grid.Row="3"  Width="200" Height="40" Margin="0,20,0,20"
+            <Button x:Name="CreateContent"  Width="200" Height="40" Margin="0,20,20,20"
+               Content="Créer description"  
+               VerticalAlignment="Top"  
+               HorizontalAlignment="Center"
+                Click="Ok_Click">
+            </Button>
+            <Button x:Name="Ok"  Width="200" Height="40" Margin="0,20,0,20"
                Content="Enregistrer et fermer"  
                VerticalAlignment="Top"  
                HorizontalAlignment="Center"
                 Click="Ok_Click">
             </Button>
 
-            <Button x:Name="Suivant" Grid.Row="3"  Width="200" Height="40" Margin="20,20,20,20"
+            <Button x:Name="Suivant" Width="200" Height="40" Margin="20,20,20,20"
                Content="Enregistrer (produit suivant)"  
                VerticalAlignment="Top"  
                HorizontalAlignment="Center"
                 Click="Suivant_Click">
             </Button>
 
-            <Button x:Name="Annuler" Grid.Row="3"  Width="200" Height="40" Margin="0,20,0,20"
+            <Button x:Name="Annuler"  Width="200" Height="40" Margin="0,20,0,20"
                Content="Annuler"  
                VerticalAlignment="Top"  
                HorizontalAlignment="Center"
