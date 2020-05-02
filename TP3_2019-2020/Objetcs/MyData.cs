@@ -8,6 +8,7 @@ using System.Runtime.CompilerServices;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Serialization;
 
 namespace TP3_2019_2020.Objetcs
 {
@@ -22,6 +23,7 @@ namespace TP3_2019_2020.Objetcs
         public ObservableCollection<Produit> _listProduit;
         public ObservableCollection<Article> _listArticle;
         public ObservableCollection<Mot_clé> _listMotClé;
+        public string FilePath { get; set; }
 
         public ObservableCollection<Thématique> ListThématique
         {
@@ -98,57 +100,41 @@ namespace TP3_2019_2020.Objetcs
 
         public void SaveData()
         {
-            BinaryFormatter binFormat = new BinaryFormatter();
-            using (Stream fstream = new FileStream(@"" + "MyWebsiteMotClé.dat", FileMode.Create, FileAccess.Write, FileShare.None))
-            {
-                binFormat.Serialize(fstream, ListMotClé);
-            }
-            using (Stream fstream = new FileStream(@"" + "MyWebsiteArticle.dat", FileMode.Create, FileAccess.Write, FileShare.None))
-            {
-                binFormat.Serialize(fstream, ListArticle);
-            }
-            using (Stream fstream = new FileStream(@"" + "MyWebsiteProduit.dat", FileMode.Create, FileAccess.Write, FileShare.None))
-            {
-                binFormat.Serialize(fstream, ListProduit);
-            }
-            using (Stream fstream = new FileStream(@"" + "MyWebsiteCollection.dat", FileMode.Create, FileAccess.Write, FileShare.None))
-            {
-                binFormat.Serialize(fstream, ListCollection);
-            }
-            using (Stream fstream = new FileStream(@"" + "MyWebsiteThématique.dat", FileMode.Create, FileAccess.Write, FileShare.None))
-            {
-                binFormat.Serialize(fstream, ListThématique);
-            }
-
-
+                TextWriter writer = null;
+                try
+                {
+                    var serializer = new XmlSerializer(typeof(MyData));
+                    writer = new StreamWriter(FilePath, false);
+                    serializer.Serialize(writer, this);
+                }
+                finally
+                {
+                    if (writer != null)
+                        writer.Close();
+                }
         }
 
-        public void LoadData()
+        public void LoadData(String path)
         {
-            BinaryFormatter binFormat = new BinaryFormatter();
-            using (Stream fstream = new FileStream(@"" + "MyWebsiteMotClé.dat", FileMode.Open, FileAccess.Read, FileShare.None))
+            TextReader reader = null;
+            try
             {
-                ListMotClé = (ObservableCollection<Mot_clé>)binFormat.Deserialize(fstream);
-            }
-            using (Stream fstream = new FileStream(@"" + "MyWebsiteArticle.dat", FileMode.Open, FileAccess.Read, FileShare.None))
-            {
-                ListProduit = (ObservableCollection<Produit>)binFormat.Deserialize(fstream);
-            }
-            using (Stream fstream = new FileStream(@"" + "MyWebsiteProduit.dat", FileMode.Open, FileAccess.Read, FileShare.None))
-            {
-                ListArticle = (ObservableCollection<Article>)binFormat.Deserialize(fstream);
-            }
-            using (Stream fstream = new FileStream(@"" + "MyWebsiteCollection.dat", FileMode.Open, FileAccess.Read, FileShare.None))
-            {
-                ListCollection = (ObservableCollection<Collection>)binFormat.Deserialize(fstream);
-            }
-            using (Stream fstream = new FileStream(@"" + "MyWebsiteThématique.dat", FileMode.Open, FileAccess.Read, FileShare.None))
-            {
-                ListThématique = (ObservableCollection<Thématique>)binFormat.Deserialize(fstream);
-            }
+                var serializer = new XmlSerializer(typeof(MyData));
+                reader = new StreamReader(path);
+                MyData temp = (MyData)serializer.Deserialize(reader);
+                ListMotClé = temp.ListMotClé;
+                ListCollection = temp.ListCollection;
+                ListProduit = temp.ListProduit;
+                ListArticle = temp.ListArticle;
+                ListThématique = temp.ListThématique;
+                FilePath = temp.FilePath;
 
+            }
+            finally
+            {
+                if (reader != null)
+                    reader.Close();
+            }
         }
-
-
     }
 }

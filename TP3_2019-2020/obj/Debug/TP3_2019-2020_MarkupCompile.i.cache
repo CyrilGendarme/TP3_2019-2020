@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 D:\Visual Studio 2k19\TP3_2019-2020\TP3_2019-2020\App.xaml
-41875428133
+5805586824
 
-21-176058038
+21-1729187343
 14-1290796308
-Windows And Dialogs\Produit\AjoutProduit.xaml;Windows And Dialogs\Produit\GestionMotCleProduit.xaml;Windows And Dialogs\Produit\GestionProduits.xaml;Windows And Dialogs\MainWindow.xaml;
+Windows And Dialogs\AskForFileDialog.xaml;Windows And Dialogs\Produit\AjoutProduit.xaml;Windows And Dialogs\Produit\GestionMotCleProduit.xaml;Windows And Dialogs\Produit\GestionProduits.xaml;Windows And Dialogs\MainWindow.xaml;
 
 True
 
