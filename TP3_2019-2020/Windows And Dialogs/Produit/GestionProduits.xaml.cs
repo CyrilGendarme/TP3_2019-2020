@@ -31,6 +31,11 @@ namespace TP3_2019_2020.Windows_And_Dialogs.Produit
             ListBoxDonnéesProduit.DataContext = ListBoxProduit;
         }
 
+
+
+
+
+
         private void Ajout_Click(object sender, RoutedEventArgs e)
         {
             AjoutProduit win = new AjoutProduit();

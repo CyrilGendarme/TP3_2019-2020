@@ -12,25 +12,16 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace TP3_2019_2020.Windows_And_Dialogs.Produit
+namespace TP3_2019_2020.Windows_And_Dialogs
 {
     /// <summary>
-    /// Interaction logic for GestionMotCleProduit.xaml
+    /// Interaction logic for AskForFileDialog.xaml
     /// </summary>
-    public partial class GestionMotCleProduit : Window
+    public partial class AskForFileDialog : Window
     {
-        private AjoutProduit _owner;
-
-        public GestionMotCleProduit()
+        public AskForFileDialog()
         {
-            _owner = Owner as AjoutProduit;
             InitializeComponent();
-            DataContext = _owner.ThisProd.Mot_clé;
-        }
-
-        private void Ok_Click(object sender, RoutedEventArgs e)
-        {
-            this.Hide();
         }
     }
 }
