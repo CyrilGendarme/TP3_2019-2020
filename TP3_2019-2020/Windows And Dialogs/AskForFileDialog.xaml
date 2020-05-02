@@ -5,9 +5,33 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TP3_2019_2020.Windows_And_Dialogs"
         mc:Ignorable="d"
-        Title="AskForFileDialog" Height="450" Width="800">
+        Title="AskForFileDialog" Height="300" Width="800">
     <Grid>
-        
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" HorizontalAlignment="Center" Orientation="Horizontal" Name="StachPanel2" >
+            <StackPanel   Margin="0,0,20,0" Orientation="Vertical" Name="sp3" HorizontalAlignment="Left">
+                <Label Content="Nouveau site : " Margin="0,20,0,10"  Height="30" Width="auto"/>
+                <TextBox Width="300" x:Name ="FournisseurBox" Height="30" TextChanged="FournisseurBox_TextChanged" />
+            </StackPanel>
+            <StackPanel   Margin="0,0,20,0" Orientation="Vertical" Name="sp4" HorizontalAlignment="Left">
+                <Label Content="Site existant : " Margin="0,20,0,10"  Height="30" Width="auto"/>
+                <ListBox x:Name="ListBoxSites" Grid.Column="0" Width="300" Height="auto" Margin="10,0,0,0" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" >
+                </ListBox>
+            </StackPanel>
+
+            
+               
+         </StackPanel>
+        <Button Grid.Row="1" x:Name="Ok" Width="200" Height="40" Margin="0,20,0,20"
+                   Content="Charger"  
+                   VerticalAlignment="Top"  
+                   HorizontalAlignment="Center"
+                    Click="Ok_Click">
+        </Button>
+
     </Grid>
 </Window>
