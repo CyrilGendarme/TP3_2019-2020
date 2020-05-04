@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TP3_2019_2020"
         mc:Ignorable="d"
-        Title="Accueil" Height="450" Width="400">
+        Title="Accueil" Height="450" Width="400"
+        >
     <Grid>
 
         <Grid.RowDefinitions>

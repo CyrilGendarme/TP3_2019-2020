@@ -32,9 +32,22 @@ namespace TP3_2019_2020.Windows_And_Dialogs
             DataContext = _owner.MyData;
             InitializeComponent();
 
-
             String[] files = System.IO.Directory.GetFiles("D:\\Visual Studio 2k19\\TP3_2019-2020\\DATA");   // 
             for (int i = 0; i < files.Length; i++) 
+            {
+                String sitename = System.IO.Path.GetFileName(files[i]);
+                ListBoxSites.Items.Add(files[i]);
+            }
+
+        }
+
+        public AskForFileDialog()
+        {
+            _owner = new MainWindow();
+            DataContext = _owner.MyData;
+            InitializeComponent();
+            String[] files = System.IO.Directory.GetFiles("D:\\Visual Studio 2k19\\TP3_2019-2020\\DATA");   // 
+            for (int i = 0; i < files.Length; i++)
             {
                 String sitename = System.IO.Path.GetFileName(files[i]);
                 ListBoxSites.Items.Add(files[i]);
