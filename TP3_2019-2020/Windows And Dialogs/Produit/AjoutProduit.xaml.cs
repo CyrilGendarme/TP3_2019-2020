@@ -23,16 +23,16 @@ namespace TP3_2019_2020.Windows_And_Dialogs.Produit
         private GestionProduits _owner;
         public Objetcs.Produit ThisProd;
 
-        public AjoutProduit()
+        public AjoutProduit(GestionProduits Owner)
         {
-            _owner = Owner as GestionProduits;
+            _owner = Owner;
             InitializeComponent();
             ThisProd = new Objetcs.Produit();
         }
 
-        public AjoutProduit(TP3_2019_2020.Objetcs.Produit p)
+        public AjoutProduit(GestionProduits Owner, TP3_2019_2020.Objetcs.Produit p)
         {
-            _owner = Owner as GestionProduits;
+            _owner = Owner;
             InitializeComponent();
             ThisProd = p;
         }
@@ -73,7 +73,7 @@ namespace TP3_2019_2020.Windows_And_Dialogs.Produit
 
         private void ConfigMot_Click(object sender, RoutedEventArgs e)
         {
-            AjoutMotCle win = new AjoutMotCle(_owner.DataContext);
+            AjoutMotCle win = new AjoutMotCle(this, _owner.DataContext);
             win.Show();
         }
 

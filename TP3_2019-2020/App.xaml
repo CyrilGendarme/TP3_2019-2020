@@ -2,8 +2,18 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:TP3_2019_2020"
-             StartupUri="MainWindow.xaml">
+             StartupUri="Windows And Dialogs/MainWindow.xaml">
     <Application.Resources>
-         
+        <Menu x:Name="MainMenu" x:Key="MyMenu" Height="30">
+
+            <MenuItem Header="Accueil" Height="30" Width="100" Click="MenuItem_Click">
+            </MenuItem>
+            <MenuItem Header="Options" Height="30" Width="100" Click="MenuItem_Click_1">
+            </MenuItem>
+            <MenuItem Header="Sauvegarder" Height="30" Width="100" Click="MenuItem_Click_2">
+            </MenuItem>
+            <MenuItem Header="Changer de site" Height="30" Width="200" Click="MenuItem_Click_3">
+            </MenuItem>
+        </Menu>
     </Application.Resources>
 </Application>
