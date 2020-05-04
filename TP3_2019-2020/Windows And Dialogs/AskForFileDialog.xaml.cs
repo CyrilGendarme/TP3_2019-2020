@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using TP3_2019_2020.Objetcs;
 using System.IO;
-using System.Text;
+
 
 namespace TP3_2019_2020.Windows_And_Dialogs
 {
@@ -23,12 +23,12 @@ namespace TP3_2019_2020.Windows_And_Dialogs
     public partial class AskForFileDialog : Window
     {
 
-        private MainWindow _owner;
+        public MainWindow _owner { get; set; }
 
 
-        public AskForFileDialog()
+        public AskForFileDialog(MainWindow Owner)
         {
-            _owner = Owner as MainWindow;
+            _owner = Owner;
             DataContext = _owner.MyData;
             InitializeComponent();
 
@@ -56,6 +56,7 @@ namespace TP3_2019_2020.Windows_And_Dialogs
                 _owner.MyData.FilePath = path;
                 _owner.MyData.LoadData(path);
             }
+            this.Hide();
         }
 
         private void FournisseurBox_TextChanged(object sender, TextChangedEventArgs e)

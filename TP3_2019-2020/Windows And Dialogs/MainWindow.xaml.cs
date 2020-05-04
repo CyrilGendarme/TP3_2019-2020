@@ -41,13 +41,13 @@ namespace TP3_2019_2020
         {
             InitializeComponent();
             MyData = new MyData();
-            AskForFileDialog dialog = new AskForFileDialog();
-            dialog.Show();
+            AskForFileDialog dialog = new AskForFileDialog(this);
+            dialog.ShowDialog();
         }
 
         private void Produit_Click(object sender, RoutedEventArgs e)
         {
-            GestionProduits win = new GestionProduits();
+            GestionProduits win = new GestionProduits(this);
             win.Show();
             this.Hide();
         }

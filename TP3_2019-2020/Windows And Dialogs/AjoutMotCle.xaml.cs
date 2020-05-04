@@ -28,7 +28,7 @@ namespace TP3_2019_2020.Windows_And_Dialogs
         //private AjoutArticle _owner3;
         int cas = 0;   // valeur differente pour chaque type de appli appelante
 
-        public AjoutMotCle(Object received)
+        public AjoutMotCle(Window Owner, Object received)
         {
             temp = received as MyData;
             // if is pour voir dans quel cas on est pour gerer plusieurs appli demandant la gestion de motclé

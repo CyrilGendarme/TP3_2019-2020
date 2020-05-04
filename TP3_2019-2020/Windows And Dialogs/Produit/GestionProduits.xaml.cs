@@ -23,9 +23,9 @@ namespace TP3_2019_2020.Windows_And_Dialogs.Produit
     {
         private MainWindow _owner;
 
-        public GestionProduits()
+        public GestionProduits(MainWindow Owner)
         {
-            _owner = Owner as MainWindow;
+            _owner = Owner;
             InitializeComponent();
             //ListBoxProduit.DataContext = _owner.MyData;
             ListBoxDonnéesProduit.DataContext = ListBoxProduit;
@@ -38,7 +38,7 @@ namespace TP3_2019_2020.Windows_And_Dialogs.Produit
 
         private void Ajout_Click(object sender, RoutedEventArgs e)
         {
-            AjoutProduit win = new AjoutProduit();
+            AjoutProduit win = new AjoutProduit(this);
             win.Show();
             this.Hide();
         }
@@ -67,7 +67,7 @@ namespace TP3_2019_2020.Windows_And_Dialogs.Produit
 
         private void Modifier_Click(object sender, RoutedEventArgs e)
         {
-            AjoutProduit win = new AjoutProduit((TP3_2019_2020.Objetcs.Produit)ListBoxProduit.SelectedItem);
+            AjoutProduit win = new AjoutProduit(this, (TP3_2019_2020.Objetcs.Produit)ListBoxProduit.SelectedItem);
             win.Show();
             this.Hide();
         }
