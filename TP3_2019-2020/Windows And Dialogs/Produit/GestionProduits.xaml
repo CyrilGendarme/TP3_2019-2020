@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
         Title="GestionProduits" Height="450" Width="800">
-    <Grid DataContext="_owner.MyData">
+    <Grid x:Name="MainGrid">
 
         <Grid.RowDefinitions>
             <RowDefinition Height="50"/>
@@ -49,7 +49,7 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
-            <ListBox x:Name="ListBoxProduit" Grid.Column="0" Height="auto" Margin="10,0,0,0" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" ItemsSource="{Binding Path=SelectedItem.ListeCollections}">
+            <ListBox x:Name="ListBoxProduit" Grid.Column="0" Height="auto" Margin="10,0,0,0" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" ItemsSource="{Binding Path=ListProduit}" >
             </ListBox>
 
             <GridSplitter Grid.Column="1"
@@ -60,7 +60,7 @@
               Width="3"
               />
 
-            <ListBox x:Name="ListBoxDonnéesProduit" Grid.Column="1"  Margin="0,0,10,0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  ItemsSource="{Binding Path=ListCollection}">
+            <ListBox x:Name="ListBoxDonnéesProduit" Grid.Column="1"  Margin="0,0,10,0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  ItemsSource="{Binding Path=SelectedItem.ListeCollections}">
             </ListBox>
 
         </Grid>

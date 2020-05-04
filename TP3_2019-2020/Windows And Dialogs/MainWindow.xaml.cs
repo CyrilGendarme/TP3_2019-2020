@@ -38,7 +38,7 @@ namespace TP3_2019_2020
 
         private void Produit_Click(object sender, RoutedEventArgs e)
         {
-            GestionProduits win = new GestionProduits(this);
+            GestionProduits win = new GestionProduits();
             win.Show();
             this.Hide();
         }

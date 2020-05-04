@@ -21,13 +21,13 @@ namespace TP3_2019_2020.Windows_And_Dialogs.Produit
     /// </summary>
     public partial class GestionProduits : Window
     {
-        private MainWindow _owner;
 
-        public GestionProduits(MainWindow Owner)
+
+        public GestionProduits()
         {
-            _owner = Owner;
             InitializeComponent();
-            //ListBoxProduit.DataContext = _owner.MyData;
+            var currentApp = System.Windows.Application.Current as App;
+            MainGrid.DataContext = currentApp.MyData; 
             ListBoxDonnéesProduit.DataContext = ListBoxProduit;
         }
 
@@ -38,7 +38,7 @@ namespace TP3_2019_2020.Windows_And_Dialogs.Produit
 
         private void Ajout_Click(object sender, RoutedEventArgs e)
         {
-            AjoutProduit win = new AjoutProduit(this);
+            AjoutProduit win = new AjoutProduit();
             win.Show();
             this.Hide();
         }
@@ -49,33 +49,32 @@ namespace TP3_2019_2020.Windows_And_Dialogs.Produit
         private void CheckBox_Checked1(object sender, RoutedEventArgs e)
         {
             BoxParDate.IsChecked = false;
-            ListBoxProduit.DataContext = _owner.MyData.ListArticle.OrderBy(d => d.DateCreation);
+            var currentApp = System.Windows.Application.Current as App;
+            ListBoxProduit.DataContext = currentApp.MyData.ListArticle.OrderBy(d => d.DateCreation);
         }
 
 
         private void CheckBox_Checked3(object sender, RoutedEventArgs e)
         {
             BoxParNom.IsChecked = false;
-            ListBoxProduit.DataContext = _owner.MyData.ListArticle.OrderBy(d => d.Nom);
+            var currentApp = System.Windows.Application.Current as App;
+            ListBoxProduit.DataContext = currentApp.MyData.ListArticle.OrderBy(d => d.Nom);
         }
 
 
         private void Supprimer_Click(object sender, RoutedEventArgs e)
         {
-            _owner.MyData.ListProduit.Remove((TP3_2019_2020.Objetcs.Produit)ListBoxProduit.SelectedItem);
+            var currentApp = System.Windows.Application.Current as App;
+            currentApp.MyData.ListProduit.Remove((TP3_2019_2020.Objetcs.Produit)ListBoxProduit.SelectedItem);
         }
 
         private void Modifier_Click(object sender, RoutedEventArgs e)
         {
-            AjoutProduit win = new AjoutProduit(this, (TP3_2019_2020.Objetcs.Produit)ListBoxProduit.SelectedItem);
+            AjoutProduit win = new AjoutProduit((TP3_2019_2020.Objetcs.Produit)ListBoxProduit.SelectedItem);
             win.Show();
             this.Hide();
         }
 
-        public void AddToProduitList(Objetcs.Produit p)
-        {
-            _owner.MyData.ListProduit.Add(p);
-        }
 
     }
 }
