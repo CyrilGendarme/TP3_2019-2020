@@ -19,7 +19,7 @@
             </StackPanel>
             <StackPanel   Margin="0,0,20,0" Orientation="Vertical" Name="sp4" HorizontalAlignment="Left">
                 <Label Content="Site existant : " Margin="0,20,0,10"  Height="30" Width="auto"/>
-                <ListBox x:Name="ListBoxSites" Grid.Column="0" Width="300" Height="auto" Margin="10,0,0,0" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" >
+                <ListBox x:Name="ListBoxSites" Grid.Column="0" Width="300" Height="auto" Margin="10,0,0,0" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch"  >
                 </ListBox>
             </StackPanel>
 
