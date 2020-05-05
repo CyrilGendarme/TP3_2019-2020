@@ -10,7 +10,7 @@ using System.Runtime.CompilerServices;
 
 namespace TP3_2019_2020.Objetcs
 {
-    public class CollectionGroup : Collection, INotifyPropertyChanged
+    public class CollectionGroup : Contenu, INotifyPropertyChanged
     {
 
         public event PropertyChangedEventHandler PropertyChanged;

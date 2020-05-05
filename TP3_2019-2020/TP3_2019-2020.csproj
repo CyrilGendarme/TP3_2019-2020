@@ -60,6 +60,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Windows And Dialogs\Collection\GestionCollection.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Windows And Dialogs\Produit\AjoutProduit.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -80,11 +84,16 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Objetcs\CollectionGroup.cs" />
+    <Compile Include="Objetcs\MyCollectionStructure.cs" />
     <Compile Include="Objetcs\MyData.cs" />
     <Compile Include="Objetcs\ProduitComparatorByDate.cs" />
     <Compile Include="Objetcs\ProduitComparatorByName.cs" />
     <Compile Include="Windows And Dialogs\AskForFileDialog.xaml.cs">
       <DependentUpon>AskForFileDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows And Dialogs\Collection\GestionCollection.xaml.cs">
+      <DependentUpon>GestionCollection.xaml</DependentUpon>
     </Compile>
     <Compile Include="Windows And Dialogs\Produit\AjoutProduit.xaml.cs">
       <DependentUpon>AjoutProduit.xaml</DependentUpon>
@@ -136,7 +145,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Windows And Dialogs\Article\" />
-    <Folder Include="Windows And Dialogs\Collection\" />
     <Folder Include="Windows And Dialogs\Thématique\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
