@@ -36,7 +36,7 @@ namespace TP3_2019_2020.Objetcs
             ListeCollection = new List<Collection>();
         }
 
-        public CollectionGroup(Mot_clé mot_clé, List<Collection> list
+        public CollectionGroup(Mot_clé mot_clé, List<Collection> list)
         {
             Nom = mot_clé.Nom;
             Mot_clé = mot_clé;
