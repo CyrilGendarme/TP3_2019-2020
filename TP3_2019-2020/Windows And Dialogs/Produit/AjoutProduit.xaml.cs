@@ -20,19 +20,21 @@ namespace TP3_2019_2020.Windows_And_Dialogs.Produit
     /// </summary>
     public partial class AjoutProduit : Window
     {
-        private GestionProduits _owner;
+
         public Objetcs.Produit ThisProd;
 
-        public AjoutProduit(GestionProduits Owner)
+        public AjoutProduit()
         {
-            _owner = Owner;
+            var currentApp = System.Windows.Application.Current as App;
+            ListBoxCollection1.DataContext = currentApp.MyData.ListCollection;
             InitializeComponent();
             ThisProd = new Objetcs.Produit();
         }
 
-        public AjoutProduit(GestionProduits Owner, TP3_2019_2020.Objetcs.Produit p)
+        public AjoutProduit(TP3_2019_2020.Objetcs.Produit p)
         {
-            _owner = Owner;
+            var currentApp = System.Windows.Application.Current as App;
+            ListBoxCollection1.DataContext = currentApp.MyData.ListCollection;
             InitializeComponent();
             ThisProd = p;
         }
@@ -54,14 +56,16 @@ namespace TP3_2019_2020.Windows_And_Dialogs.Produit
         private void Ok_Click(object sender, RoutedEventArgs e)
         {
             ThisProd.ListeCollections = ((List<TP3_2019_2020.Objetcs.Collection>)ListBoxCollection1.SelectedItem);
-            _owner.AddToProduitList(ThisProd);
+            var currentApp = System.Windows.Application.Current as App;
+            currentApp.MyData.ListProduit.Add(ThisProd);
             this.Hide();
         }
 
         private void Suivant_Click(object sender, RoutedEventArgs e)
         {
             ThisProd.ListeCollections = ((List<TP3_2019_2020.Objetcs.Collection>)ListBoxCollection1.SelectedItem);
-            _owner.AddToProduitList(ThisProd);
+            var currentApp = System.Windows.Application.Current as App;
+            currentApp.MyData.ListProduit.Add(ThisProd);
             ThisProd = new Objetcs.Produit();
             ListBoxCollection1.UnselectAll();
         }
@@ -73,7 +77,8 @@ namespace TP3_2019_2020.Windows_And_Dialogs.Produit
 
         private void ConfigMot_Click(object sender, RoutedEventArgs e)
         {
-            AjoutMotCle win = new AjoutMotCle(this, _owner.DataContext);
+            var currentApp = System.Windows.Application.Current as App;
+            AjoutMotCle win = new AjoutMotCle(this);
             win.Show();
         }
 

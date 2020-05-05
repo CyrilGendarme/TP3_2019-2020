@@ -27,27 +27,18 @@ namespace TP3_2019_2020
     public partial class MainWindow : Window
     {
         private MyData _myData;
-        public MyData MyData
-        {
-            get => _myData;
-            set
-            {
-                _myData = value;
 
-            }
-        }
 
         public MainWindow()
         {
             InitializeComponent();
-            MyData = new MyData();
-            AskForFileDialog dialog = new AskForFileDialog(this);
+            AskForFileDialog dialog = new AskForFileDialog();
             dialog.ShowDialog();
         }
 
         private void Produit_Click(object sender, RoutedEventArgs e)
         {
-            GestionProduits win = new GestionProduits(this);
+            GestionProduits win = new GestionProduits();
             win.Show();
             this.Hide();
         }

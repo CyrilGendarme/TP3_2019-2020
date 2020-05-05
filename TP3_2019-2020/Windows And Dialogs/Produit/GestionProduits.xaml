@@ -5,9 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
         Title="GestionProduits" Height="450" Width="800">
-    <Grid DataContext="_owner.MyData">
+    <Grid x:Name="MainGrid">
 
         <Grid.RowDefinitions>
+            <RowDefinition Height="30" x:Name="menuRow"/>
             <RowDefinition Height="50"/>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="*"/>
@@ -15,7 +16,8 @@
         </Grid.RowDefinitions>
 
 
-        <StackPanel Grid.Row="0" Orientation="Horizontal" x:Name="StackPanel" Margin="0,10,0,10" HorizontalAlignment="Center">
+
+        <StackPanel Grid.Row="1" Orientation="Horizontal" x:Name="StackPanel" Margin="0,10,0,10" HorizontalAlignment="Center">
 
                 <Label Content="Classer par : "   Width="100" />
                 <CheckBox x:Name="BoxParNom" Content="Nom"  Height="auto" Width="100" Margin="0,6,0,0" Checked="CheckBox_Checked1" />
@@ -25,7 +27,7 @@
 
 
 
-                <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Left" Name="ToolBox">
+                <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Left" Name="ToolBox">
             <Button x:Name="Supprimer" Height="25" Width="80"  Margin="0,0,0,0"
                Content="Supprimer"  
                VerticalAlignment="Top"  
@@ -41,7 +43,7 @@
 
         </StackPanel>
 
-        <Grid Grid.Row="2">
+        <Grid Grid.Row="3">
             
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
@@ -49,7 +51,7 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
-            <ListBox x:Name="ListBoxProduit" Grid.Column="0" Height="auto" Margin="10,0,0,0" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" ItemsSource="{Binding Path=SelectedItem.ListeCollections}">
+            <ListBox x:Name="ListBoxProduit" Grid.Column="0" Height="auto" Margin="10,0,0,0" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" ItemsSource="{Binding Path=ListProduit}" >
             </ListBox>
 
             <GridSplitter Grid.Column="1"
@@ -60,14 +62,14 @@
               Width="3"
               />
 
-            <ListBox x:Name="ListBoxDonnéesProduit" Grid.Column="1"  Margin="0,0,10,0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  ItemsSource="{Binding Path=ListCollection}">
+            <ListBox x:Name="ListBoxDonnéesProduit" Grid.Column="1"  Margin="0,0,10,0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  ItemsSource="{Binding Path=SelectedItem.ListeCollections}">
             </ListBox>
 
         </Grid>
         
         
         
-        <Button x:Name="Ajout" Grid.Row="3"  Width="200" Height="40" Margin="0,20,0,20"
+        <Button x:Name="Ajout" Grid.Row="4"  Width="200" Height="40" Margin="0,20,0,20"
                Content="Ajouter un produit"  
                VerticalAlignment="Top"  
                HorizontalAlignment="Center"
