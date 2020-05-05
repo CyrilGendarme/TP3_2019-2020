@@ -27,7 +27,13 @@ namespace TP3_2019_2020.Windows_And_Dialogs.Produit
         {
             InitializeComponent();
             var currentApp = System.Windows.Application.Current as App;
-            MainGrid.DataContext = currentApp.MyData; 
+            Menu ThisMenu = currentApp.MyMenu;
+            MainGrid.Children.Add(ThisMenu);
+            Grid.SetRow(ThisMenu, 0);
+            MainGrid.DataContext = currentApp.MyData;
+            //var currentApp2 = App.Current as App;
+            //ThisMenu = currentApp2.MyMenu;
+            //MainGrid.DataContext = currentApp2.MyData;
             ListBoxDonnéesProduit.DataContext = ListBoxProduit;
         }
 
