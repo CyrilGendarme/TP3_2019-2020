@@ -8,7 +8,7 @@
         Title="Ajout Produit" Height="450" Width="1300">
 
     
-    <Grid DataContext="ThisProd">
+    <Grid x:Name="MainGrid" DataContext="ThisProd">
       
         <Grid.RowDefinitions>
             <RowDefinition Height="30" />
@@ -16,7 +16,6 @@
             <RowDefinition Height="80"/>
         </Grid.RowDefinitions>
 
-        <Menu Grid.Row="0" x:Name="ThisMenu" ItemsSource="{Binding Source={StaticResource MyMenu}}" ></Menu>
         
         <Grid Grid.Row="1" >
         <Grid.ColumnDefinitions>

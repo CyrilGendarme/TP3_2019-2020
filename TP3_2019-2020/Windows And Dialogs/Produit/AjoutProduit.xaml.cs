@@ -26,6 +26,9 @@ namespace TP3_2019_2020.Windows_And_Dialogs.Produit
         public AjoutProduit()
         {
             var currentApp = System.Windows.Application.Current as App;
+            Menu ThisMenu = currentApp.MyMenu;
+            MainGrid.Children.Add(ThisMenu);
+            Grid.SetRow(ThisMenu, 0);
             ListBoxCollection1.DataContext = currentApp.MyData.ListCollection;
             InitializeComponent();
             ThisProd = new Objetcs.Produit();
