@@ -58,6 +58,8 @@ namespace TP3_2019_2020.Windows_And_Dialogs
                 currentApp.MyData.LoadData(path);
             }
             this.Hide();
+            MainWindow win = new MainWindow();
+            win.Show();
         }
 
         private void FournisseurBox_TextChanged(object sender, TextChangedEventArgs e)

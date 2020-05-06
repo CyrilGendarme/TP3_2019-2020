@@ -47,6 +47,7 @@ namespace TP3_2019_2020.Windows_And_Dialogs.Collection
                 Label label = new Label();
                 label.Content = coll.Nom;
                 label.Width = 100;
+                label.Height = 20;
 
                 ListBox lb = new ListBox();
                 //lb.ItemsSource = coll.ListeCollection;

@@ -26,14 +26,11 @@ namespace TP3_2019_2020
     /// </summary>
     public partial class MainWindow : Window
     {
-        private MyData _myData;
 
 
         public MainWindow()
         {
             InitializeComponent();
-            AskForFileDialog dialog = new AskForFileDialog();
-            dialog.ShowDialog();
         }
 
         private void Produit_Click(object sender, RoutedEventArgs e)

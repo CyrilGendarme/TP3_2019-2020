@@ -15,16 +15,9 @@
                 <RowDefinition Height="80"/>
             </Grid.RowDefinitions>
 
-
-
-            <StackPanel  Grid.Row="1" Orientation="Horizontal" x:Name="StackPanelCollections" Margin="0,10,0,10" HorizontalAlignment="Stretch">
-
-                <Label Content="Classer par : "   Width="100" />
-                <CheckBox x:Name="BoxParNom" Content="Nom"  Height="auto" Width="100" Margin="0,6,0,0" Checked="CheckBox_Checked1" />
-                <CheckBox x:Name="BoxParDate" Content="Date"  Height="auto" Width="100" Margin="0,6,0,0" Checked="CheckBox_Checked3"  />
-            </StackPanel>
-
-
+            
+        <StackPanel  Grid.Row="1" Orientation="Horizontal" x:Name="StackPanelCollections" Margin="0,10,0,10" HorizontalAlignment="Stretch">
+        </StackPanel>
 
 
             <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center" Name="ToolBox">
