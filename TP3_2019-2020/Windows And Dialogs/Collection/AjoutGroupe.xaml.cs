@@ -28,6 +28,11 @@ namespace TP3_2019_2020.Windows_And_Dialogs.Collection
             DataContext = ThisGroup;
             var currentApp = System.Windows.Application.Current as App;
             Menu ThisMenu = currentApp.MyMenu;
+            Grid parentGrid = ThisMenu.Parent as Grid;
+            if (parentGrid != null)
+            {
+                parentGrid.Children.Remove(ThisMenu);
+            }
             MainGrid.Children.Add(ThisMenu);
             Grid.SetRow(ThisMenu, 0);
 
@@ -48,7 +53,7 @@ namespace TP3_2019_2020.Windows_And_Dialogs.Collection
         private void ConfigMot_Click(object sender, RoutedEventArgs e)
         {
             AjoutMotCle win = new AjoutMotCle(this);
-            win.Show();
+            win.ShowDialog();
         }
 
         private void CreateContentAndNext_Click(object sender, RoutedEventArgs e)

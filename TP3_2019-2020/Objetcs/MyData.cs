@@ -108,6 +108,7 @@ namespace TP3_2019_2020.Objetcs
             ListArticle = new ObservableCollection<Article>();
             ListCollection = new ObservableCollection<Collection>();
             ListThématique = new ObservableCollection<Thématique>();
+            Colstruct = new MyCollectionStructure();
         }
 
 

@@ -25,51 +25,24 @@ namespace TP3_2019_2020.Windows_And_Dialogs.Collection
             InitializeComponent();
             var currentApp = System.Windows.Application.Current as App;
             Menu ThisMenu = currentApp.MyMenu;
+            Grid parentGrid = ThisMenu.Parent as Grid;
+            if (parentGrid != null)
+            {
+                parentGrid.Children.Remove(ThisMenu);
+            }
             MainGrid.Children.Add(ThisMenu);
             Grid.SetRow(ThisMenu, 0);
             MainGrid.DataContext = currentApp.MyData;
-            UpdateStackPanel();
         }
 
 
-        private void UpdateStackPanel()
-        {
-            var currentApp = System.Windows.Application.Current as App;
-
-            int nbGroupe = currentApp.MyData.Colstruct.ListCollectionGroup.Count();
-
-    
-            foreach (TP3_2019_2020.Objetcs.CollectionGroup coll in currentApp.MyData.Colstruct.ListCollectionGroup)
-            {
-                StackPanel sp = new StackPanel();
-                sp.Orientation = Orientation.Vertical;
-
-                Label label = new Label();
-                label.Content = coll.Nom;
-                label.Width = 100;
-                label.Height = 20;
-
-                ListBox lb = new ListBox();
-                //lb.ItemsSource = coll.ListeCollection;
-                lb.DataContext = coll.ListeCollection;
-                lb.HorizontalAlignment = HorizontalAlignment.Stretch;
-                lb.VerticalAlignment = VerticalAlignment.Stretch;
-
-                sp.Children.Add(label);
-                sp.Children.Add(lb);
-
-                //< ListBox x: Name = "ListBoxProduit" Grid.Column = "0" Height = "auto" Margin = "10,0,0,0" HorizontalAlignment = "Stretch"  VerticalAlignment = "Stretch" ItemsSource = "{Binding Path=ListProduit}" >
-                //     </ ListBox >
-                StackPanelCollections.Children.Add(sp);
-            }
-
-        }
 
 
 
         private void Ajouter_collection_Click(object sender, RoutedEventArgs e)
         {
-
+            AjoutCollection win = new AjoutCollection();
+            win.ShowDialog();
         }
 
         private void Supprimer_colletion_Click(object sender, RoutedEventArgs e)
@@ -79,10 +52,16 @@ namespace TP3_2019_2020.Windows_And_Dialogs.Collection
 
         private void Ajouter_groupe_Click(object sender, RoutedEventArgs e)
         {
-
+            AjoutGroupe win = new AjoutGroupe();
+            win.ShowDialog();
         }
 
         private void Supprimer_groupe_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Modifier_Click(object sender, RoutedEventArgs e)
         {
 
         }

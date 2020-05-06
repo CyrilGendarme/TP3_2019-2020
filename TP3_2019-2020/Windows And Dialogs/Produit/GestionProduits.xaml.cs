@@ -28,6 +28,11 @@ namespace TP3_2019_2020.Windows_And_Dialogs.Produit
             InitializeComponent();
             var currentApp = System.Windows.Application.Current as App;
             Menu ThisMenu = currentApp.MyMenu;
+            Grid parentGrid = ThisMenu.Parent as Grid;
+            if (parentGrid != null)
+            {
+                parentGrid.Children.Remove(ThisMenu);
+            }
             MainGrid.Children.Add(ThisMenu);
             Grid.SetRow(ThisMenu, 0);
             MainGrid.DataContext = currentApp.MyData;
@@ -45,8 +50,7 @@ namespace TP3_2019_2020.Windows_And_Dialogs.Produit
         private void Ajout_Click(object sender, RoutedEventArgs e)
         {
             AjoutProduit win = new AjoutProduit();
-            win.Show();
-            this.Hide();
+            win.ShowDialog();
         }
 
 
@@ -77,8 +81,7 @@ namespace TP3_2019_2020.Windows_And_Dialogs.Produit
         private void Modifier_Click(object sender, RoutedEventArgs e)
         {
             AjoutProduit win = new AjoutProduit((TP3_2019_2020.Objetcs.Produit)ListBoxProduit.SelectedItem);
-            win.Show();
-            this.Hide();
+            win.ShowDialog();
         }
 
 
