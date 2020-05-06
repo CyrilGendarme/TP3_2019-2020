@@ -18,6 +18,7 @@ using TP3_2019_2020.Windows_And_Dialogs.Produit;
 //using TP3_2019_2020.Windows_And_Dialogs.Thématique;
 using TP3_2019_2020.Objetcs;
 using TP3_2019_2020.Windows_And_Dialogs;
+using TP3_2019_2020.Windows_And_Dialogs.Collection;
 
 namespace TP3_2019_2020
 {
@@ -42,9 +43,9 @@ namespace TP3_2019_2020
 
         private void Collection_Click(object sender, RoutedEventArgs e)
         {
-            //GestionCollection win = new GestionCollection();
-            //win.Show();
-            //this.Hide();
+            GestionCollection win = new GestionCollection();
+            win.Show();
+            this.Hide();
         }
 
         private void Thématique_Click(object sender, RoutedEventArgs e)

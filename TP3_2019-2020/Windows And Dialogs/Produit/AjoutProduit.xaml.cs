@@ -80,7 +80,6 @@ namespace TP3_2019_2020.Windows_And_Dialogs.Produit
 
         private void ConfigMot_Click(object sender, RoutedEventArgs e)
         {
-            var currentApp = System.Windows.Application.Current as App;
             AjoutMotCle win = new AjoutMotCle(this);
             win.Show();
         }
