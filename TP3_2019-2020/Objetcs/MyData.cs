@@ -23,7 +23,20 @@ namespace TP3_2019_2020.Objetcs
         public ObservableCollection<Produit> _listProduit;
         public ObservableCollection<Article> _listArticle;
         public ObservableCollection<Mot_clé> _listMotClé;
+        public MyCollectionStructure _colstruct;
         public string FilePath { get; set; }
+
+
+        public MyCollectionStructure Colstruct
+        {
+            get => _colstruct;
+            set
+            {
+                _colstruct = value;
+                NotifyPropertyChanged();
+
+            }
+        }
 
         public ObservableCollection<Thématique> ListThématique
         {
@@ -95,6 +108,7 @@ namespace TP3_2019_2020.Objetcs
             ListArticle = new ObservableCollection<Article>();
             ListCollection = new ObservableCollection<Collection>();
             ListThématique = new ObservableCollection<Thématique>();
+            Colstruct = new MyCollectionStructure();
         }
 
 
@@ -127,6 +141,7 @@ namespace TP3_2019_2020.Objetcs
                 ListProduit = temp.ListProduit;
                 ListArticle = temp.ListArticle;
                 ListThématique = temp.ListThématique;
+                Colstruct = temp.Colstruct;
                 FilePath = temp.FilePath;
 
             }

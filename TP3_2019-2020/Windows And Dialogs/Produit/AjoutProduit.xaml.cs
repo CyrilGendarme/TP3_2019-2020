@@ -20,27 +20,42 @@ namespace TP3_2019_2020.Windows_And_Dialogs.Produit
     /// </summary>
     public partial class AjoutProduit : Window
     {
-
+        List<ListBox> ListLB;
         public Objetcs.Produit ThisProd;
 
         public AjoutProduit()
         {
-            var currentApp = System.Windows.Application.Current as App;
-            ListBoxCollection1.DataContext = currentApp.MyData.ListCollection;
             InitializeComponent();
+            var currentApp = System.Windows.Application.Current as App;
+            Menu ThisMenu = currentApp.MyMenu;
+            Grid parentGrid = ThisMenu.Parent as Grid;
+            if(parentGrid != null) {
+                parentGrid.Children.Remove(ThisMenu);
+            }
+            MainGrid.Children.Add(ThisMenu);
+            Grid.SetRow(ThisMenu, 0);
+            ListLB = new List<ListBox>();
             ThisProd = new Objetcs.Produit();
+            UpdateStackPanel();
         }
+
 
         public AjoutProduit(TP3_2019_2020.Objetcs.Produit p)
         {
-            var currentApp = System.Windows.Application.Current as App;
-            ListBoxCollection1.DataContext = currentApp.MyData.ListCollection;
             InitializeComponent();
+            var currentApp = System.Windows.Application.Current as App;
+            Menu ThisMenu = currentApp.MyMenu;
+            Grid parentGrid = ThisMenu.Parent as Grid;
+            if (parentGrid != null)
+            {
+                parentGrid.Children.Remove(ThisMenu);
+            }
+            MainGrid.Children.Add(ThisMenu);
+            Grid.SetRow(ThisMenu, 0);
+            ListLB = new List<ListBox>();
             ThisProd = p;
+            UpdateStackPanel();
         }
-
-
-
 
 
 
@@ -51,23 +66,72 @@ namespace TP3_2019_2020.Windows_And_Dialogs.Produit
 
 
 
+        private void UpdateStackPanel()
+        {
+            var currentApp = System.Windows.Application.Current as App;
+
+            int nbGroupe = currentApp.MyData.Colstruct.ListCollectionGroup.Count();
 
 
+            foreach (TP3_2019_2020.Objetcs.CollectionGroup coll in currentApp.MyData.Colstruct.ListCollectionGroup)
+            {
+                StackPanel sp = new StackPanel();
+                sp.Orientation = Orientation.Vertical;
+
+                Label label = new Label();
+                label.Content = coll.Nom;
+                label.Width = 100;
+                label.Height = 20;
+
+                ListBox lb = new ListBox();
+                //lb.ItemsSource = coll.ListeCollection;
+                lb.DataContext = coll.ListeCollection;
+                lb.HorizontalAlignment = HorizontalAlignment.Stretch;
+                lb.VerticalAlignment = VerticalAlignment.Stretch;
+
+                ListLB.Add(lb);
+                sp.Children.Add(label);
+                sp.Children.Add(lb);
+
+                //< ListBox x: Name = "ListBoxProduit" Grid.Column = "0" Height = "auto" Margin = "10,0,0,0" HorizontalAlignment = "Stretch"  VerticalAlignment = "Stretch" ItemsSource = "{Binding Path=ListProduit}" >
+                //     </ ListBox >
+                StackPanelCollections.Children.Add(sp);
+            }
+        }
+
+
+
+
+
+           
         private void Ok_Click(object sender, RoutedEventArgs e)
         {
-            ThisProd.ListeCollections = ((List<TP3_2019_2020.Objetcs.Collection>)ListBoxCollection1.SelectedItem);
             var currentApp = System.Windows.Application.Current as App;
+            foreach (ListBox listbox in ListLB)
+            {
+                if (listbox.SelectedIndex != -1 )
+                {
+                    ThisProd.ListeCollections.Add((TP3_2019_2020.Objetcs.Collection)listbox.SelectedItems);
+                    listbox.UnselectAll();
+                }
+            }
+
             currentApp.MyData.ListProduit.Add(ThisProd);
             this.Hide();
         }
 
         private void Suivant_Click(object sender, RoutedEventArgs e)
         {
-            ThisProd.ListeCollections = ((List<TP3_2019_2020.Objetcs.Collection>)ListBoxCollection1.SelectedItem);
             var currentApp = System.Windows.Application.Current as App;
+            foreach (ListBox listbox in ListLB)
+            {
+                if (listbox.SelectedIndex != -1)
+                {
+                    ThisProd.ListeCollections.Add((TP3_2019_2020.Objetcs.Collection)listbox.SelectedItems);
+                    listbox.UnselectAll();
+                }
+            }
             currentApp.MyData.ListProduit.Add(ThisProd);
-            ThisProd = new Objetcs.Produit();
-            ListBoxCollection1.UnselectAll();
         }
 
         private void Annuler_Click(object sender, RoutedEventArgs e)
@@ -77,9 +141,8 @@ namespace TP3_2019_2020.Windows_And_Dialogs.Produit
 
         private void ConfigMot_Click(object sender, RoutedEventArgs e)
         {
-            var currentApp = System.Windows.Application.Current as App;
             AjoutMotCle win = new AjoutMotCle(this);
-            win.Show();
+            win.ShowDialog();
         }
 
         private void AchatBox_TextChanged(object sender, TextChangedEventArgs e)

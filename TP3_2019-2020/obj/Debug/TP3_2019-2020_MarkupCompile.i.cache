@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 D:\Visual Studio 2k19\TP3_2019-2020\TP3_2019-2020\App.xaml
-51093266669
+8-992475924
 
-2196753217
+261385058619
 14-1290796308
-Windows And Dialogs\AskForFileDialog.xaml;Windows And Dialogs\Produit\AjoutProduit.xaml;Windows And Dialogs\AjoutMotCle.xaml;Windows And Dialogs\Produit\GestionProduits.xaml;Windows And Dialogs\MainWindow.xaml;
+Windows And Dialogs\AskForFileDialog.xaml;Windows And Dialogs\Collection\AjoutCollection.xaml;Windows And Dialogs\Collection\AjoutGroupe.xaml;Windows And Dialogs\Collection\GestionCollection.xaml;Windows And Dialogs\Produit\AjoutProduit.xaml;Windows And Dialogs\AjoutMotCle.xaml;Windows And Dialogs\Produit\GestionProduits.xaml;Windows And Dialogs\MainWindow.xaml;
 
-False
+True
 

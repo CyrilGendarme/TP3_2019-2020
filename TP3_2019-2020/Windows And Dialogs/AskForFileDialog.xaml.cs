@@ -35,10 +35,14 @@ namespace TP3_2019_2020.Windows_And_Dialogs
             String[] files = System.IO.Directory.GetFiles("D:\\Visual Studio 2k19\\TP3_2019-2020\\DATA");   // 
             for (int i = 0; i < files.Length; i++) 
             {
-                String sitename = System.IO.Path.GetFileName(files[i]);
-                ListBoxSites.Items.Add(files[i]);
+                String sitename = System.IO.Path.GetFileName(files[i])/*.Remove(0,40)*/;
+                ListBoxSites.Items.Add(sitename);
             }
 
+            //DataTemplate dt = new DataTemplate();
+            //dt.DataType
+
+            //ListBoxSites.ItemTemplate = (DataTemplate)this.
         }
 
 
@@ -58,6 +62,8 @@ namespace TP3_2019_2020.Windows_And_Dialogs
                 currentApp.MyData.LoadData(path);
             }
             this.Hide();
+            MainWindow win = new MainWindow();
+            win.Show();
         }
 
         private void FournisseurBox_TextChanged(object sender, TextChangedEventArgs e)

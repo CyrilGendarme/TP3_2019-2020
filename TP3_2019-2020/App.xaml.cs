@@ -74,20 +74,30 @@ namespace TP3_2019_2020
             MyData = new MyData();
 
             // lancement de la premiere win 
-            MainWindow win = new MainWindow();
+            AskForFileDialog win = new AskForFileDialog();
             win.Show();
         }
 
         private void MenuItem_Click(object sender, RoutedEventArgs e)
         {
-            Application.Current.Shutdown();
+
+            foreach (System.Windows.Window window in App.Current.Windows)
+            {
+                window.Hide();
+            }
+
             MainWindow win = new MainWindow();
+            win.Tag = 1;
             win.Show();
         }
 
         private void MenuItem_Click_1(object sender, RoutedEventArgs e)
         {
-            Application.Current.Shutdown();
+            //int nb = Application.Current.Windows.Count;
+            //for (int i = 0; i < nb; i++)
+            //{
+            //    Application.Current.Windows[i].Close();
+            //}
             //OptionBox win = new OptionBox();
             //win.Show();
         }
@@ -99,7 +109,10 @@ namespace TP3_2019_2020
 
         private void MenuItem_Click_3(object sender, RoutedEventArgs e)
         {
-            Application.Current.Shutdown();
+            foreach (System.Windows.Window window in App.Current.Windows)
+            {
+                window.Hide();
+            }
             AskForFileDialog win = new AskForFileDialog();
             win.Show();
         }
