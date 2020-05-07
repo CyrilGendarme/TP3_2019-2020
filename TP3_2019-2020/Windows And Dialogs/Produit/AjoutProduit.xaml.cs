@@ -26,14 +26,6 @@ namespace TP3_2019_2020.Windows_And_Dialogs.Produit
         public AjoutProduit()
         {
             InitializeComponent();
-            var currentApp = System.Windows.Application.Current as App;
-            Menu ThisMenu = currentApp.MyMenu;
-            Grid parentGrid = ThisMenu.Parent as Grid;
-            if(parentGrid != null) {
-                parentGrid.Children.Remove(ThisMenu);
-            }
-            MainGrid.Children.Add(ThisMenu);
-            Grid.SetRow(ThisMenu, 0);
             ListLB = new List<ListBox>();
             ThisProd = new Objetcs.Produit();
             UpdateStackPanel();
@@ -62,6 +54,7 @@ namespace TP3_2019_2020.Windows_And_Dialogs.Produit
         public void PutMotClé(Mot_clé mot)
         {
             ThisProd.Mot_clé = mot;
+            ThisProd.Nom = mot.Nom;
         }
 
 
@@ -81,13 +74,15 @@ namespace TP3_2019_2020.Windows_And_Dialogs.Produit
                 Label label = new Label();
                 label.Content = coll.Nom;
                 label.Width = 100;
-                label.Height = 20;
+                label.Height = 30;
 
                 ListBox lb = new ListBox();
                 //lb.ItemsSource = coll.ListeCollection;
-                lb.DataContext = coll.ListeCollection;
+                lb.DataContext = coll;
+                lb.ItemsSource = coll.ListeCollection;
                 lb.HorizontalAlignment = HorizontalAlignment.Stretch;
                 lb.VerticalAlignment = VerticalAlignment.Stretch;
+                lb.SelectionMode = SelectionMode.Multiple;
 
                 ListLB.Add(lb);
                 sp.Children.Add(label);
@@ -141,6 +136,7 @@ namespace TP3_2019_2020.Windows_And_Dialogs.Produit
 
         private void ConfigMot_Click(object sender, RoutedEventArgs e)
         {
+            CreateContent.IsEnabled = true;
             AjoutMotCle win = new AjoutMotCle(this);
             win.ShowDialog();
         }
@@ -156,6 +152,19 @@ namespace TP3_2019_2020.Windows_And_Dialogs.Produit
                 ThisProd.PrixVente = prixvente;
             }
             catch { }
+        }
+
+        private void CreateContent_Click(object sender, RoutedEventArgs e)
+        {
+            foreach (ListBox listbox in ListLB)
+            {
+                if (listbox.SelectedIndex != -1)
+                {
+                    ThisProd.ListeCollections.Add((TP3_2019_2020.Objetcs.Collection)listbox.SelectedItems);
+                }
+            }
+            AskDataForDescription win = new AskDataForDescription(ThisProd);
+            win.ShowDialog();
         }
     }
 }

@@ -11,13 +11,13 @@
     <Grid x:Name="MainGrid" DataContext="ThisProd">
       
         <Grid.RowDefinitions>
-            <RowDefinition Height="30" />
+ 
             <RowDefinition Height="*"/>
             <RowDefinition Height="80"/>
         </Grid.RowDefinitions>
 
         
-        <Grid Grid.Row="1" >
+        <Grid Grid.Row="0" >
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="2*"/>
                 <ColumnDefinition Width="3*"/>
@@ -38,7 +38,7 @@
                 
                 <StackPanel Grid.Row="0" Orientation="Horizontal" Name="MotCLé" HorizontalAlignment="Left" >
                     <Label Content="Mot-clé / titre :" Margin="40,0,10,0"  Height="30" Width="95"/>
-                    <Label Content="{Binding Path= Mot_clé.Nom}" Margin="0,0,10,0"  Height="30" Width="247" />
+                    <Label Content="{Binding Path= Mot_clé.Nom}" Margin="0,0,10,0"  Height="30" Width="247" TextInput="" />
                     <Button x:Name="ConfigMot" Height="30" Width="140" Margin="0,0,0,0"  
                         Content="Configurer mot-clé"  
                         Click="ConfigMot_Click"/>
@@ -61,7 +61,7 @@
 
             </Grid>
 
-            <StackPanel Grid.Column="1" Orientation="Vertical" Name="StackPanelCollections" HorizontalAlignment="Stretch">
+            <StackPanel Grid.Column="1" Orientation="Horizontal" Name="StackPanelCollections" HorizontalAlignment="Stretch">
               
 
             </StackPanel>
@@ -70,12 +70,13 @@
 
         </Grid>
 
-        <StackPanel Grid.Row="2" Orientation="Horizontal" Name="ToolBox" HorizontalAlignment="Center">
+        <StackPanel Grid.Row="1" Orientation="Horizontal" Name="ToolBox" HorizontalAlignment="Center">
             <Button x:Name="CreateContent"  Width="200" Height="40" Margin="0,20,20,20"
+                    IsEnabled="False"
                Content="Créer description"  
                VerticalAlignment="Top"  
                HorizontalAlignment="Center"
-                Click="Ok_Click">
+                Click="CreateContent_Click">
             </Button>
             <Button x:Name="Ok"  Width="200" Height="40" Margin="0,20,0,20"
                Content="Enregistrer et fermer"  

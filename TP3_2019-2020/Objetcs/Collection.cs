@@ -13,7 +13,16 @@ namespace TP3_2019_2020.Objetcs
 
         public event PropertyChangedEventHandler PropertyChanged;
 
-        public Mot_clé Mot_clé { get; set; }
+        private Mot_clé _mot_clé;
+        public Mot_clé Mot_clé
+        {
+            get => _mot_clé;
+            set
+            {
+                _mot_clé = value;
+                NotifyPropertyChanged();
+            }
+        }
 
         private List<Produit> _listeProduits;
         public List<Produit> ListeProduits

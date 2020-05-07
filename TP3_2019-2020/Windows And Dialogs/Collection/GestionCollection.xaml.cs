@@ -45,25 +45,40 @@ namespace TP3_2019_2020.Windows_And_Dialogs.Collection
             win.ShowDialog();
         }
 
-        private void Supprimer_colletion_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
         private void Ajouter_groupe_Click(object sender, RoutedEventArgs e)
         {
             AjoutGroupe win = new AjoutGroupe();
             win.ShowDialog();
         }
 
-        private void Supprimer_groupe_Click(object sender, RoutedEventArgs e)
+        private void Supprimer_colletion_Click(object sender, RoutedEventArgs e)
         {
-
+            var currentApp = System.Windows.Application.Current as App;
+            currentApp.MyData.ListCollection.Remove((Objetcs.Collection)ListBoxCollections.SelectedItem);
         }
 
-        private void Modifier_Click(object sender, RoutedEventArgs e)
-        {
 
+        private void Supprimer_groupe_Click(object sender, RoutedEventArgs e)
+        {
+            var currentApp = System.Windows.Application.Current as App;
+            currentApp.MyData.Colstruct.ListCollectionGroup.Remove((Objetcs.CollectionGroup)ListBoxGroupes.SelectedItem);
+        }
+
+        private void Modifier_colletion_Click(object sender, RoutedEventArgs e)
+        {
+            AjoutCollection win = new AjoutCollection((Objetcs.Collection)ListBoxCollections.SelectedItem);
+            var currentApp = System.Windows.Application.Current as App;
+            currentApp.MyData.ListCollection.Remove((Objetcs.Collection)ListBoxCollections.SelectedItem);
+            win.ShowDialog();
+        }
+
+
+        private void Modifier_groupe_Click(object sender, RoutedEventArgs e)
+        {
+            AjoutGroupe win = new AjoutGroupe((Objetcs.CollectionGroup)ListBoxGroupes.SelectedItem);
+            var currentApp = System.Windows.Application.Current as App;
+            currentApp.MyData.Colstruct.ListCollectionGroup.Remove((Objetcs.CollectionGroup)ListBoxGroupes.SelectedItem);
+            win.ShowDialog();
         }
     }
 }

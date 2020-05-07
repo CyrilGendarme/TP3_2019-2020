@@ -52,6 +52,7 @@ namespace TP3_2019_2020.Windows_And_Dialogs
             if (ListBoxSites.SelectedIndex == -1)
             {
                 var currentApp = System.Windows.Application.Current as App;
+                currentApp.MyData = new MyData();
                 DataContext = currentApp.MyData.FilePath = "D:\\Visual Studio 2k19\\TP3_2019-2020\\DATA\\" + NouveauSite.Text;
             }
             else

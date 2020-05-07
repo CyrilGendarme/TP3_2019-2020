@@ -20,7 +20,7 @@ namespace TP3_2019_2020.Windows_And_Dialogs.Collection
     /// </summary>
     public partial class AjoutCollection : Window
     {
-        TP3_2019_2020.Objetcs.Collection ThisCollection;
+        public TP3_2019_2020.Objetcs.Collection ThisCollection { get; set; }
 
 
         public AjoutCollection()
@@ -31,15 +31,18 @@ namespace TP3_2019_2020.Windows_And_Dialogs.Collection
             DataContext = ThisCollection;
             var currentApp = System.Windows.Application.Current as App;
             ListGroupes.DataContext = currentApp.MyData.Colstruct;
-            Menu ThisMenu = currentApp.MyMenu;
-            Grid parentGrid = ThisMenu.Parent as Grid;
-            if (parentGrid != null)
-            {
-                parentGrid.Children.Remove(ThisMenu);
-            }
-            MainGrid.Children.Add(ThisMenu);
-            Grid.SetRow(ThisMenu, 0);
+            labelnom.DataContext = ThisCollection;
+        }
 
+        public AjoutCollection(Objetcs.Collection coll)
+        {
+
+            ThisCollection = coll;
+            InitializeComponent();
+            DataContext = ThisCollection;
+            var currentApp = System.Windows.Application.Current as App;
+            ListGroupes.DataContext = currentApp.MyData.Colstruct;
+            labelnom.DataContext = ThisCollection;
         }
 
         private void Annuler_Click(object sender, RoutedEventArgs e)

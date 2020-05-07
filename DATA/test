@@ -1,0 +1,1046 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MyData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <_listThématique />
+  <_listCollection>
+    <Collection>
+      <Nom>coll 1</Nom>
+      <DateCreation>2020-05-07T00:00:00+02:00</DateCreation>
+      <Mot_clé>
+        <Volume>20</Volume>
+        <Nom>coll 1</Nom>
+        <Difficulté>0</Difficulté>
+      </Mot_clé>
+      <ListeProduits />
+    </Collection>
+    <Collection>
+      <Nom>coll 4</Nom>
+      <DateCreation>2020-05-07T00:00:00+02:00</DateCreation>
+      <Mot_clé>
+        <Volume>50</Volume>
+        <Nom>coll 4</Nom>
+        <Difficulté>0</Difficulté>
+      </Mot_clé>
+      <ListeProduits />
+    </Collection>
+    <Collection>
+      <Nom>coll 3</Nom>
+      <DateCreation>2020-05-07T00:00:00+02:00</DateCreation>
+      <Mot_clé>
+        <Volume>200</Volume>
+        <Nom>coll 3</Nom>
+        <Difficulté>73.090926343573457</Difficulté>
+      </Mot_clé>
+      <ListeProduits />
+    </Collection>
+    <Collection>
+      <Nom>coll 2</Nom>
+      <DateCreation>2020-05-07T00:00:00+02:00</DateCreation>
+      <Mot_clé>
+        <Volume>50</Volume>
+        <Nom>coll 2</Nom>
+        <Difficulté>0</Difficulté>
+      </Mot_clé>
+      <ListeProduits />
+    </Collection>
+    <Collection>
+      <Nom>coll 1</Nom>
+      <DateCreation>2020-05-07T00:00:00+02:00</DateCreation>
+      <Mot_clé>
+        <Volume>20</Volume>
+        <Nom>coll 1</Nom>
+        <Difficulté>0</Difficulté>
+      </Mot_clé>
+      <ListeProduits />
+    </Collection>
+    <Collection>
+      <Nom>coll 4</Nom>
+      <DateCreation>2020-05-07T00:00:00+02:00</DateCreation>
+      <Mot_clé>
+        <Volume>50</Volume>
+        <Nom>coll 4</Nom>
+        <Difficulté>0</Difficulté>
+      </Mot_clé>
+      <ListeProduits />
+    </Collection>
+    <Collection>
+      <Nom>coll 3</Nom>
+      <DateCreation>2020-05-07T00:00:00+02:00</DateCreation>
+      <Mot_clé>
+        <Volume>200</Volume>
+        <Nom>coll 3</Nom>
+        <Difficulté>73.090926343573457</Difficulté>
+      </Mot_clé>
+      <ListeProduits />
+    </Collection>
+    <Collection>
+      <Nom>coll 2</Nom>
+      <DateCreation>2020-05-07T00:00:00+02:00</DateCreation>
+      <Mot_clé>
+        <Volume>50</Volume>
+        <Nom>coll 2</Nom>
+        <Difficulté>0</Difficulté>
+      </Mot_clé>
+      <ListeProduits />
+    </Collection>
+  </_listCollection>
+  <_listProduit />
+  <_listArticle />
+  <_listMotClé>
+    <Mot_clé>
+      <Volume>0</Volume>
+      <Nom>g1</Nom>
+      <Difficulté>0</Difficulté>
+    </Mot_clé>
+    <Mot_clé>
+      <Volume>0</Volume>
+      <Nom>g2</Nom>
+      <Difficulté>0</Difficulté>
+    </Mot_clé>
+    <Mot_clé>
+      <Volume>0</Volume>
+      <Nom>g3</Nom>
+      <Difficulté>0</Difficulté>
+    </Mot_clé>
+    <Mot_clé>
+      <Volume>20</Volume>
+      <Nom>coll 1</Nom>
+      <Difficulté>0</Difficulté>
+    </Mot_clé>
+    <Mot_clé>
+      <Volume>50</Volume>
+      <Nom>coll 2</Nom>
+      <Difficulté>0</Difficulté>
+    </Mot_clé>
+    <Mot_clé>
+      <Volume>200</Volume>
+      <Nom>coll 3</Nom>
+      <Difficulté>73.090926343573457</Difficulté>
+    </Mot_clé>
+    <Mot_clé>
+      <Volume>50</Volume>
+      <Nom>coll 4</Nom>
+      <Difficulté>0</Difficulté>
+    </Mot_clé>
+    <Mot_clé>
+      <Volume>0</Volume>
+      <Nom>g1</Nom>
+      <Difficulté>0</Difficulté>
+    </Mot_clé>
+    <Mot_clé>
+      <Volume>0</Volume>
+      <Nom>g2</Nom>
+      <Difficulté>0</Difficulté>
+    </Mot_clé>
+    <Mot_clé>
+      <Volume>0</Volume>
+      <Nom>g3</Nom>
+      <Difficulté>0</Difficulté>
+    </Mot_clé>
+    <Mot_clé>
+      <Volume>20</Volume>
+      <Nom>coll 1</Nom>
+      <Difficulté>0</Difficulté>
+    </Mot_clé>
+    <Mot_clé>
+      <Volume>50</Volume>
+      <Nom>coll 2</Nom>
+      <Difficulté>0</Difficulté>
+    </Mot_clé>
+    <Mot_clé>
+      <Volume>200</Volume>
+      <Nom>coll 3</Nom>
+      <Difficulté>73.090926343573457</Difficulté>
+    </Mot_clé>
+    <Mot_clé>
+      <Volume>50</Volume>
+      <Nom>coll 4</Nom>
+      <Difficulté>0</Difficulté>
+    </Mot_clé>
+    <Mot_clé>
+      <Volume>0</Volume>
+      <Nom>g1</Nom>
+      <Difficulté>0</Difficulté>
+    </Mot_clé>
+    <Mot_clé>
+      <Volume>0</Volume>
+      <Nom>g2</Nom>
+      <Difficulté>0</Difficulté>
+    </Mot_clé>
+    <Mot_clé>
+      <Volume>0</Volume>
+      <Nom>g3</Nom>
+      <Difficulté>0</Difficulté>
+    </Mot_clé>
+    <Mot_clé>
+      <Volume>20</Volume>
+      <Nom>coll 1</Nom>
+      <Difficulté>0</Difficulté>
+    </Mot_clé>
+    <Mot_clé>
+      <Volume>50</Volume>
+      <Nom>coll 2</Nom>
+      <Difficulté>0</Difficulté>
+    </Mot_clé>
+    <Mot_clé>
+      <Volume>200</Volume>
+      <Nom>coll 3</Nom>
+      <Difficulté>73.090926343573457</Difficulté>
+    </Mot_clé>
+    <Mot_clé>
+      <Volume>50</Volume>
+      <Nom>coll 4</Nom>
+      <Difficulté>0</Difficulté>
+    </Mot_clé>
+    <Mot_clé>
+      <Volume>0</Volume>
+      <Nom>g1</Nom>
+      <Difficulté>0</Difficulté>
+    </Mot_clé>
+    <Mot_clé>
+      <Volume>0</Volume>
+      <Nom>g2</Nom>
+      <Difficulté>0</Difficulté>
+    </Mot_clé>
+    <Mot_clé>
+      <Volume>0</Volume>
+      <Nom>g3</Nom>
+      <Difficulté>0</Difficulté>
+    </Mot_clé>
+    <Mot_clé>
+      <Volume>20</Volume>
+      <Nom>coll 1</Nom>
+      <Difficulté>0</Difficulté>
+    </Mot_clé>
+    <Mot_clé>
+      <Volume>50</Volume>
+      <Nom>coll 2</Nom>
+      <Difficulté>0</Difficulté>
+    </Mot_clé>
+    <Mot_clé>
+      <Volume>200</Volume>
+      <Nom>coll 3</Nom>
+      <Difficulté>73.090926343573457</Difficulté>
+    </Mot_clé>
+    <Mot_clé>
+      <Volume>50</Volume>
+      <Nom>coll 4</Nom>
+      <Difficulté>0</Difficulté>
+    </Mot_clé>
+  </_listMotClé>
+  <_colstruct>
+    <_listCollectionGroup>
+      <CollectionGroup>
+        <Nom>g1</Nom>
+        <DateCreation>2020-05-07T00:00:00+02:00</DateCreation>
+        <Mot_clé>
+          <Volume>0</Volume>
+          <Nom>g1</Nom>
+          <Difficulté>0</Difficulté>
+        </Mot_clé>
+        <ListeCollection />
+      </CollectionGroup>
+      <CollectionGroup>
+        <Nom>g2</Nom>
+        <DateCreation>2020-05-07T00:00:00+02:00</DateCreation>
+        <Mot_clé>
+          <Volume>0</Volume>
+          <Nom>g2</Nom>
+          <Difficulté>0</Difficulté>
+        </Mot_clé>
+        <ListeCollection>
+          <Collection>
+            <Nom>coll 1</Nom>
+            <DateCreation>2020-05-07T00:00:00+02:00</DateCreation>
+            <Mot_clé>
+              <Volume>20</Volume>
+              <Nom>coll 1</Nom>
+              <Difficulté>0</Difficulté>
+            </Mot_clé>
+            <ListeProduits />
+          </Collection>
+          <Collection>
+            <Nom>coll 3</Nom>
+            <DateCreation>2020-05-07T00:00:00+02:00</DateCreation>
+            <Mot_clé>
+              <Volume>200</Volume>
+              <Nom>coll 3</Nom>
+              <Difficulté>73.090926343573457</Difficulté>
+            </Mot_clé>
+            <ListeProduits />
+          </Collection>
+          <Collection>
+            <Nom>coll 2</Nom>
+            <DateCreation>2020-05-07T00:00:00+02:00</DateCreation>
+            <Mot_clé>
+              <Volume>50</Volume>
+              <Nom>coll 2</Nom>
+              <Difficulté>0</Difficulté>
+            </Mot_clé>
+            <ListeProduits />
+          </Collection>
+        </ListeCollection>
+      </CollectionGroup>
+      <CollectionGroup>
+        <Nom>g3</Nom>
+        <DateCreation>2020-05-07T00:00:00+02:00</DateCreation>
+        <Mot_clé>
+          <Volume>0</Volume>
+          <Nom>g3</Nom>
+          <Difficulté>0</Difficulté>
+        </Mot_clé>
+        <ListeCollection>
+          <Collection>
+            <Nom>coll 4</Nom>
+            <DateCreation>2020-05-07T00:00:00+02:00</DateCreation>
+            <Mot_clé>
+              <Volume>50</Volume>
+              <Nom>coll 4</Nom>
+              <Difficulté>0</Difficulté>
+            </Mot_clé>
+            <ListeProduits />
+          </Collection>
+        </ListeCollection>
+      </CollectionGroup>
+      <CollectionGroup>
+        <Nom>g1</Nom>
+        <DateCreation>2020-05-07T00:00:00+02:00</DateCreation>
+        <Mot_clé>
+          <Volume>0</Volume>
+          <Nom>g1</Nom>
+          <Difficulté>0</Difficulté>
+        </Mot_clé>
+        <ListeCollection />
+      </CollectionGroup>
+      <CollectionGroup>
+        <Nom>g2</Nom>
+        <DateCreation>2020-05-07T00:00:00+02:00</DateCreation>
+        <Mot_clé>
+          <Volume>0</Volume>
+          <Nom>g2</Nom>
+          <Difficulté>0</Difficulté>
+        </Mot_clé>
+        <ListeCollection>
+          <Collection>
+            <Nom>coll 1</Nom>
+            <DateCreation>2020-05-07T00:00:00+02:00</DateCreation>
+            <Mot_clé>
+              <Volume>20</Volume>
+              <Nom>coll 1</Nom>
+              <Difficulté>0</Difficulté>
+            </Mot_clé>
+            <ListeProduits />
+          </Collection>
+          <Collection>
+            <Nom>coll 3</Nom>
+            <DateCreation>2020-05-07T00:00:00+02:00</DateCreation>
+            <Mot_clé>
+              <Volume>200</Volume>
+              <Nom>coll 3</Nom>
+              <Difficulté>73.090926343573457</Difficulté>
+            </Mot_clé>
+            <ListeProduits />
+          </Collection>
+          <Collection>
+            <Nom>coll 2</Nom>
+            <DateCreation>2020-05-07T00:00:00+02:00</DateCreation>
+            <Mot_clé>
+              <Volume>50</Volume>
+              <Nom>coll 2</Nom>
+              <Difficulté>0</Difficulté>
+            </Mot_clé>
+            <ListeProduits />
+          </Collection>
+        </ListeCollection>
+      </CollectionGroup>
+      <CollectionGroup>
+        <Nom>g3</Nom>
+        <DateCreation>2020-05-07T00:00:00+02:00</DateCreation>
+        <Mot_clé>
+          <Volume>0</Volume>
+          <Nom>g3</Nom>
+          <Difficulté>0</Difficulté>
+        </Mot_clé>
+        <ListeCollection>
+          <Collection>
+            <Nom>coll 4</Nom>
+            <DateCreation>2020-05-07T00:00:00+02:00</DateCreation>
+            <Mot_clé>
+              <Volume>50</Volume>
+              <Nom>coll 4</Nom>
+              <Difficulté>0</Difficulté>
+            </Mot_clé>
+            <ListeProduits />
+          </Collection>
+        </ListeCollection>
+      </CollectionGroup>
+    </_listCollectionGroup>
+    <ListCollectionGroup>
+      <CollectionGroup>
+        <Nom>g1</Nom>
+        <DateCreation>2020-05-07T00:00:00+02:00</DateCreation>
+        <Mot_clé>
+          <Volume>0</Volume>
+          <Nom>g1</Nom>
+          <Difficulté>0</Difficulté>
+        </Mot_clé>
+        <ListeCollection />
+      </CollectionGroup>
+      <CollectionGroup>
+        <Nom>g2</Nom>
+        <DateCreation>2020-05-07T00:00:00+02:00</DateCreation>
+        <Mot_clé>
+          <Volume>0</Volume>
+          <Nom>g2</Nom>
+          <Difficulté>0</Difficulté>
+        </Mot_clé>
+        <ListeCollection>
+          <Collection>
+            <Nom>coll 1</Nom>
+            <DateCreation>2020-05-07T00:00:00+02:00</DateCreation>
+            <Mot_clé>
+              <Volume>20</Volume>
+              <Nom>coll 1</Nom>
+              <Difficulté>0</Difficulté>
+            </Mot_clé>
+            <ListeProduits />
+          </Collection>
+          <Collection>
+            <Nom>coll 3</Nom>
+            <DateCreation>2020-05-07T00:00:00+02:00</DateCreation>
+            <Mot_clé>
+              <Volume>200</Volume>
+              <Nom>coll 3</Nom>
+              <Difficulté>73.090926343573457</Difficulté>
+            </Mot_clé>
+            <ListeProduits />
+          </Collection>
+          <Collection>
+            <Nom>coll 2</Nom>
+            <DateCreation>2020-05-07T00:00:00+02:00</DateCreation>
+            <Mot_clé>
+              <Volume>50</Volume>
+              <Nom>coll 2</Nom>
+              <Difficulté>0</Difficulté>
+            </Mot_clé>
+            <ListeProduits />
+          </Collection>
+        </ListeCollection>
+      </CollectionGroup>
+      <CollectionGroup>
+        <Nom>g3</Nom>
+        <DateCreation>2020-05-07T00:00:00+02:00</DateCreation>
+        <Mot_clé>
+          <Volume>0</Volume>
+          <Nom>g3</Nom>
+          <Difficulté>0</Difficulté>
+        </Mot_clé>
+        <ListeCollection>
+          <Collection>
+            <Nom>coll 4</Nom>
+            <DateCreation>2020-05-07T00:00:00+02:00</DateCreation>
+            <Mot_clé>
+              <Volume>50</Volume>
+              <Nom>coll 4</Nom>
+              <Difficulté>0</Difficulté>
+            </Mot_clé>
+            <ListeProduits />
+          </Collection>
+        </ListeCollection>
+      </CollectionGroup>
+      <CollectionGroup>
+        <Nom>g1</Nom>
+        <DateCreation>2020-05-07T00:00:00+02:00</DateCreation>
+        <Mot_clé>
+          <Volume>0</Volume>
+          <Nom>g1</Nom>
+          <Difficulté>0</Difficulté>
+        </Mot_clé>
+        <ListeCollection />
+      </CollectionGroup>
+      <CollectionGroup>
+        <Nom>g2</Nom>
+        <DateCreation>2020-05-07T00:00:00+02:00</DateCreation>
+        <Mot_clé>
+          <Volume>0</Volume>
+          <Nom>g2</Nom>
+          <Difficulté>0</Difficulté>
+        </Mot_clé>
+        <ListeCollection>
+          <Collection>
+            <Nom>coll 1</Nom>
+            <DateCreation>2020-05-07T00:00:00+02:00</DateCreation>
+            <Mot_clé>
+              <Volume>20</Volume>
+              <Nom>coll 1</Nom>
+              <Difficulté>0</Difficulté>
+            </Mot_clé>
+            <ListeProduits />
+          </Collection>
+          <Collection>
+            <Nom>coll 3</Nom>
+            <DateCreation>2020-05-07T00:00:00+02:00</DateCreation>
+            <Mot_clé>
+              <Volume>200</Volume>
+              <Nom>coll 3</Nom>
+              <Difficulté>73.090926343573457</Difficulté>
+            </Mot_clé>
+            <ListeProduits />
+          </Collection>
+          <Collection>
+            <Nom>coll 2</Nom>
+            <DateCreation>2020-05-07T00:00:00+02:00</DateCreation>
+            <Mot_clé>
+              <Volume>50</Volume>
+              <Nom>coll 2</Nom>
+              <Difficulté>0</Difficulté>
+            </Mot_clé>
+            <ListeProduits />
+          </Collection>
+        </ListeCollection>
+      </CollectionGroup>
+      <CollectionGroup>
+        <Nom>g3</Nom>
+        <DateCreation>2020-05-07T00:00:00+02:00</DateCreation>
+        <Mot_clé>
+          <Volume>0</Volume>
+          <Nom>g3</Nom>
+          <Difficulté>0</Difficulté>
+        </Mot_clé>
+        <ListeCollection>
+          <Collection>
+            <Nom>coll 4</Nom>
+            <DateCreation>2020-05-07T00:00:00+02:00</DateCreation>
+            <Mot_clé>
+              <Volume>50</Volume>
+              <Nom>coll 4</Nom>
+              <Difficulté>0</Difficulté>
+            </Mot_clé>
+            <ListeProduits />
+          </Collection>
+        </ListeCollection>
+      </CollectionGroup>
+    </ListCollectionGroup>
+  </_colstruct>
+  <FilePath>D:\Visual Studio 2k19\TP3_2019-2020\DATA\test</FilePath>
+  <Colstruct>
+    <_listCollectionGroup>
+      <CollectionGroup>
+        <Nom>g1</Nom>
+        <DateCreation>2020-05-07T00:00:00+02:00</DateCreation>
+        <Mot_clé>
+          <Volume>0</Volume>
+          <Nom>g1</Nom>
+          <Difficulté>0</Difficulté>
+        </Mot_clé>
+        <ListeCollection />
+      </CollectionGroup>
+      <CollectionGroup>
+        <Nom>g2</Nom>
+        <DateCreation>2020-05-07T00:00:00+02:00</DateCreation>
+        <Mot_clé>
+          <Volume>0</Volume>
+          <Nom>g2</Nom>
+          <Difficulté>0</Difficulté>
+        </Mot_clé>
+        <ListeCollection>
+          <Collection>
+            <Nom>coll 1</Nom>
+            <DateCreation>2020-05-07T00:00:00+02:00</DateCreation>
+            <Mot_clé>
+              <Volume>20</Volume>
+              <Nom>coll 1</Nom>
+              <Difficulté>0</Difficulté>
+            </Mot_clé>
+            <ListeProduits />
+          </Collection>
+          <Collection>
+            <Nom>coll 3</Nom>
+            <DateCreation>2020-05-07T00:00:00+02:00</DateCreation>
+            <Mot_clé>
+              <Volume>200</Volume>
+              <Nom>coll 3</Nom>
+              <Difficulté>73.090926343573457</Difficulté>
+            </Mot_clé>
+            <ListeProduits />
+          </Collection>
+          <Collection>
+            <Nom>coll 2</Nom>
+            <DateCreation>2020-05-07T00:00:00+02:00</DateCreation>
+            <Mot_clé>
+              <Volume>50</Volume>
+              <Nom>coll 2</Nom>
+              <Difficulté>0</Difficulté>
+            </Mot_clé>
+            <ListeProduits />
+          </Collection>
+        </ListeCollection>
+      </CollectionGroup>
+      <CollectionGroup>
+        <Nom>g3</Nom>
+        <DateCreation>2020-05-07T00:00:00+02:00</DateCreation>
+        <Mot_clé>
+          <Volume>0</Volume>
+          <Nom>g3</Nom>
+          <Difficulté>0</Difficulté>
+        </Mot_clé>
+        <ListeCollection>
+          <Collection>
+            <Nom>coll 4</Nom>
+            <DateCreation>2020-05-07T00:00:00+02:00</DateCreation>
+            <Mot_clé>
+              <Volume>50</Volume>
+              <Nom>coll 4</Nom>
+              <Difficulté>0</Difficulté>
+            </Mot_clé>
+            <ListeProduits />
+          </Collection>
+        </ListeCollection>
+      </CollectionGroup>
+      <CollectionGroup>
+        <Nom>g1</Nom>
+        <DateCreation>2020-05-07T00:00:00+02:00</DateCreation>
+        <Mot_clé>
+          <Volume>0</Volume>
+          <Nom>g1</Nom>
+          <Difficulté>0</Difficulté>
+        </Mot_clé>
+        <ListeCollection />
+      </CollectionGroup>
+      <CollectionGroup>
+        <Nom>g2</Nom>
+        <DateCreation>2020-05-07T00:00:00+02:00</DateCreation>
+        <Mot_clé>
+          <Volume>0</Volume>
+          <Nom>g2</Nom>
+          <Difficulté>0</Difficulté>
+        </Mot_clé>
+        <ListeCollection>
+          <Collection>
+            <Nom>coll 1</Nom>
+            <DateCreation>2020-05-07T00:00:00+02:00</DateCreation>
+            <Mot_clé>
+              <Volume>20</Volume>
+              <Nom>coll 1</Nom>
+              <Difficulté>0</Difficulté>
+            </Mot_clé>
+            <ListeProduits />
+          </Collection>
+          <Collection>
+            <Nom>coll 3</Nom>
+            <DateCreation>2020-05-07T00:00:00+02:00</DateCreation>
+            <Mot_clé>
+              <Volume>200</Volume>
+              <Nom>coll 3</Nom>
+              <Difficulté>73.090926343573457</Difficulté>
+            </Mot_clé>
+            <ListeProduits />
+          </Collection>
+          <Collection>
+            <Nom>coll 2</Nom>
+            <DateCreation>2020-05-07T00:00:00+02:00</DateCreation>
+            <Mot_clé>
+              <Volume>50</Volume>
+              <Nom>coll 2</Nom>
+              <Difficulté>0</Difficulté>
+            </Mot_clé>
+            <ListeProduits />
+          </Collection>
+        </ListeCollection>
+      </CollectionGroup>
+      <CollectionGroup>
+        <Nom>g3</Nom>
+        <DateCreation>2020-05-07T00:00:00+02:00</DateCreation>
+        <Mot_clé>
+          <Volume>0</Volume>
+          <Nom>g3</Nom>
+          <Difficulté>0</Difficulté>
+        </Mot_clé>
+        <ListeCollection>
+          <Collection>
+            <Nom>coll 4</Nom>
+            <DateCreation>2020-05-07T00:00:00+02:00</DateCreation>
+            <Mot_clé>
+              <Volume>50</Volume>
+              <Nom>coll 4</Nom>
+              <Difficulté>0</Difficulté>
+            </Mot_clé>
+            <ListeProduits />
+          </Collection>
+        </ListeCollection>
+      </CollectionGroup>
+    </_listCollectionGroup>
+    <ListCollectionGroup>
+      <CollectionGroup>
+        <Nom>g1</Nom>
+        <DateCreation>2020-05-07T00:00:00+02:00</DateCreation>
+        <Mot_clé>
+          <Volume>0</Volume>
+          <Nom>g1</Nom>
+          <Difficulté>0</Difficulté>
+        </Mot_clé>
+        <ListeCollection />
+      </CollectionGroup>
+      <CollectionGroup>
+        <Nom>g2</Nom>
+        <DateCreation>2020-05-07T00:00:00+02:00</DateCreation>
+        <Mot_clé>
+          <Volume>0</Volume>
+          <Nom>g2</Nom>
+          <Difficulté>0</Difficulté>
+        </Mot_clé>
+        <ListeCollection>
+          <Collection>
+            <Nom>coll 1</Nom>
+            <DateCreation>2020-05-07T00:00:00+02:00</DateCreation>
+            <Mot_clé>
+              <Volume>20</Volume>
+              <Nom>coll 1</Nom>
+              <Difficulté>0</Difficulté>
+            </Mot_clé>
+            <ListeProduits />
+          </Collection>
+          <Collection>
+            <Nom>coll 3</Nom>
+            <DateCreation>2020-05-07T00:00:00+02:00</DateCreation>
+            <Mot_clé>
+              <Volume>200</Volume>
+              <Nom>coll 3</Nom>
+              <Difficulté>73.090926343573457</Difficulté>
+            </Mot_clé>
+            <ListeProduits />
+          </Collection>
+          <Collection>
+            <Nom>coll 2</Nom>
+            <DateCreation>2020-05-07T00:00:00+02:00</DateCreation>
+            <Mot_clé>
+              <Volume>50</Volume>
+              <Nom>coll 2</Nom>
+              <Difficulté>0</Difficulté>
+            </Mot_clé>
+            <ListeProduits />
+          </Collection>
+        </ListeCollection>
+      </CollectionGroup>
+      <CollectionGroup>
+        <Nom>g3</Nom>
+        <DateCreation>2020-05-07T00:00:00+02:00</DateCreation>
+        <Mot_clé>
+          <Volume>0</Volume>
+          <Nom>g3</Nom>
+          <Difficulté>0</Difficulté>
+        </Mot_clé>
+        <ListeCollection>
+          <Collection>
+            <Nom>coll 4</Nom>
+            <DateCreation>2020-05-07T00:00:00+02:00</DateCreation>
+            <Mot_clé>
+              <Volume>50</Volume>
+              <Nom>coll 4</Nom>
+              <Difficulté>0</Difficulté>
+            </Mot_clé>
+            <ListeProduits />
+          </Collection>
+        </ListeCollection>
+      </CollectionGroup>
+      <CollectionGroup>
+        <Nom>g1</Nom>
+        <DateCreation>2020-05-07T00:00:00+02:00</DateCreation>
+        <Mot_clé>
+          <Volume>0</Volume>
+          <Nom>g1</Nom>
+          <Difficulté>0</Difficulté>
+        </Mot_clé>
+        <ListeCollection />
+      </CollectionGroup>
+      <CollectionGroup>
+        <Nom>g2</Nom>
+        <DateCreation>2020-05-07T00:00:00+02:00</DateCreation>
+        <Mot_clé>
+          <Volume>0</Volume>
+          <Nom>g2</Nom>
+          <Difficulté>0</Difficulté>
+        </Mot_clé>
+        <ListeCollection>
+          <Collection>
+            <Nom>coll 1</Nom>
+            <DateCreation>2020-05-07T00:00:00+02:00</DateCreation>
+            <Mot_clé>
+              <Volume>20</Volume>
+              <Nom>coll 1</Nom>
+              <Difficulté>0</Difficulté>
+            </Mot_clé>
+            <ListeProduits />
+          </Collection>
+          <Collection>
+            <Nom>coll 3</Nom>
+            <DateCreation>2020-05-07T00:00:00+02:00</DateCreation>
+            <Mot_clé>
+              <Volume>200</Volume>
+              <Nom>coll 3</Nom>
+              <Difficulté>73.090926343573457</Difficulté>
+            </Mot_clé>
+            <ListeProduits />
+          </Collection>
+          <Collection>
+            <Nom>coll 2</Nom>
+            <DateCreation>2020-05-07T00:00:00+02:00</DateCreation>
+            <Mot_clé>
+              <Volume>50</Volume>
+              <Nom>coll 2</Nom>
+              <Difficulté>0</Difficulté>
+            </Mot_clé>
+            <ListeProduits />
+          </Collection>
+        </ListeCollection>
+      </CollectionGroup>
+      <CollectionGroup>
+        <Nom>g3</Nom>
+        <DateCreation>2020-05-07T00:00:00+02:00</DateCreation>
+        <Mot_clé>
+          <Volume>0</Volume>
+          <Nom>g3</Nom>
+          <Difficulté>0</Difficulté>
+        </Mot_clé>
+        <ListeCollection>
+          <Collection>
+            <Nom>coll 4</Nom>
+            <DateCreation>2020-05-07T00:00:00+02:00</DateCreation>
+            <Mot_clé>
+              <Volume>50</Volume>
+              <Nom>coll 4</Nom>
+              <Difficulté>0</Difficulté>
+            </Mot_clé>
+            <ListeProduits />
+          </Collection>
+        </ListeCollection>
+      </CollectionGroup>
+    </ListCollectionGroup>
+  </Colstruct>
+  <ListThématique />
+  <ListCollection>
+    <Collection>
+      <Nom>coll 1</Nom>
+      <DateCreation>2020-05-07T00:00:00+02:00</DateCreation>
+      <Mot_clé>
+        <Volume>20</Volume>
+        <Nom>coll 1</Nom>
+        <Difficulté>0</Difficulté>
+      </Mot_clé>
+      <ListeProduits />
+    </Collection>
+    <Collection>
+      <Nom>coll 4</Nom>
+      <DateCreation>2020-05-07T00:00:00+02:00</DateCreation>
+      <Mot_clé>
+        <Volume>50</Volume>
+        <Nom>coll 4</Nom>
+        <Difficulté>0</Difficulté>
+      </Mot_clé>
+      <ListeProduits />
+    </Collection>
+    <Collection>
+      <Nom>coll 3</Nom>
+      <DateCreation>2020-05-07T00:00:00+02:00</DateCreation>
+      <Mot_clé>
+        <Volume>200</Volume>
+        <Nom>coll 3</Nom>
+        <Difficulté>73.090926343573457</Difficulté>
+      </Mot_clé>
+      <ListeProduits />
+    </Collection>
+    <Collection>
+      <Nom>coll 2</Nom>
+      <DateCreation>2020-05-07T00:00:00+02:00</DateCreation>
+      <Mot_clé>
+        <Volume>50</Volume>
+        <Nom>coll 2</Nom>
+        <Difficulté>0</Difficulté>
+      </Mot_clé>
+      <ListeProduits />
+    </Collection>
+    <Collection>
+      <Nom>coll 1</Nom>
+      <DateCreation>2020-05-07T00:00:00+02:00</DateCreation>
+      <Mot_clé>
+        <Volume>20</Volume>
+        <Nom>coll 1</Nom>
+        <Difficulté>0</Difficulté>
+      </Mot_clé>
+      <ListeProduits />
+    </Collection>
+    <Collection>
+      <Nom>coll 4</Nom>
+      <DateCreation>2020-05-07T00:00:00+02:00</DateCreation>
+      <Mot_clé>
+        <Volume>50</Volume>
+        <Nom>coll 4</Nom>
+        <Difficulté>0</Difficulté>
+      </Mot_clé>
+      <ListeProduits />
+    </Collection>
+    <Collection>
+      <Nom>coll 3</Nom>
+      <DateCreation>2020-05-07T00:00:00+02:00</DateCreation>
+      <Mot_clé>
+        <Volume>200</Volume>
+        <Nom>coll 3</Nom>
+        <Difficulté>73.090926343573457</Difficulté>
+      </Mot_clé>
+      <ListeProduits />
+    </Collection>
+    <Collection>
+      <Nom>coll 2</Nom>
+      <DateCreation>2020-05-07T00:00:00+02:00</DateCreation>
+      <Mot_clé>
+        <Volume>50</Volume>
+        <Nom>coll 2</Nom>
+        <Difficulté>0</Difficulté>
+      </Mot_clé>
+      <ListeProduits />
+    </Collection>
+  </ListCollection>
+  <ListProduit />
+  <ListArticle />
+  <ListMotClé>
+    <Mot_clé>
+      <Volume>0</Volume>
+      <Nom>g1</Nom>
+      <Difficulté>0</Difficulté>
+    </Mot_clé>
+    <Mot_clé>
+      <Volume>0</Volume>
+      <Nom>g2</Nom>
+      <Difficulté>0</Difficulté>
+    </Mot_clé>
+    <Mot_clé>
+      <Volume>0</Volume>
+      <Nom>g3</Nom>
+      <Difficulté>0</Difficulté>
+    </Mot_clé>
+    <Mot_clé>
+      <Volume>20</Volume>
+      <Nom>coll 1</Nom>
+      <Difficulté>0</Difficulté>
+    </Mot_clé>
+    <Mot_clé>
+      <Volume>50</Volume>
+      <Nom>coll 2</Nom>
+      <Difficulté>0</Difficulté>
+    </Mot_clé>
+    <Mot_clé>
+      <Volume>200</Volume>
+      <Nom>coll 3</Nom>
+      <Difficulté>73.090926343573457</Difficulté>
+    </Mot_clé>
+    <Mot_clé>
+      <Volume>50</Volume>
+      <Nom>coll 4</Nom>
+      <Difficulté>0</Difficulté>
+    </Mot_clé>
+    <Mot_clé>
+      <Volume>0</Volume>
+      <Nom>g1</Nom>
+      <Difficulté>0</Difficulté>
+    </Mot_clé>
+    <Mot_clé>
+      <Volume>0</Volume>
+      <Nom>g2</Nom>
+      <Difficulté>0</Difficulté>
+    </Mot_clé>
+    <Mot_clé>
+      <Volume>0</Volume>
+      <Nom>g3</Nom>
+      <Difficulté>0</Difficulté>
+    </Mot_clé>
+    <Mot_clé>
+      <Volume>20</Volume>
+      <Nom>coll 1</Nom>
+      <Difficulté>0</Difficulté>
+    </Mot_clé>
+    <Mot_clé>
+      <Volume>50</Volume>
+      <Nom>coll 2</Nom>
+      <Difficulté>0</Difficulté>
+    </Mot_clé>
+    <Mot_clé>
+      <Volume>200</Volume>
+      <Nom>coll 3</Nom>
+      <Difficulté>73.090926343573457</Difficulté>
+    </Mot_clé>
+    <Mot_clé>
+      <Volume>50</Volume>
+      <Nom>coll 4</Nom>
+      <Difficulté>0</Difficulté>
+    </Mot_clé>
+    <Mot_clé>
+      <Volume>0</Volume>
+      <Nom>g1</Nom>
+      <Difficulté>0</Difficulté>
+    </Mot_clé>
+    <Mot_clé>
+      <Volume>0</Volume>
+      <Nom>g2</Nom>
+      <Difficulté>0</Difficulté>
+    </Mot_clé>
+    <Mot_clé>
+      <Volume>0</Volume>
+      <Nom>g3</Nom>
+      <Difficulté>0</Difficulté>
+    </Mot_clé>
+    <Mot_clé>
+      <Volume>20</Volume>
+      <Nom>coll 1</Nom>
+      <Difficulté>0</Difficulté>
+    </Mot_clé>
+    <Mot_clé>
+      <Volume>50</Volume>
+      <Nom>coll 2</Nom>
+      <Difficulté>0</Difficulté>
+    </Mot_clé>
+    <Mot_clé>
+      <Volume>200</Volume>
+      <Nom>coll 3</Nom>
+      <Difficulté>73.090926343573457</Difficulté>
+    </Mot_clé>
+    <Mot_clé>
+      <Volume>50</Volume>
+      <Nom>coll 4</Nom>
+      <Difficulté>0</Difficulté>
+    </Mot_clé>
+    <Mot_clé>
+      <Volume>0</Volume>
+      <Nom>g1</Nom>
+      <Difficulté>0</Difficulté>
+    </Mot_clé>
+    <Mot_clé>
+      <Volume>0</Volume>
+      <Nom>g2</Nom>
+      <Difficulté>0</Difficulté>
+    </Mot_clé>
+    <Mot_clé>
+      <Volume>0</Volume>
+      <Nom>g3</Nom>
+      <Difficulté>0</Difficulté>
+    </Mot_clé>
+    <Mot_clé>
+      <Volume>20</Volume>
+      <Nom>coll 1</Nom>
+      <Difficulté>0</Difficulté>
+    </Mot_clé>
+    <Mot_clé>
+      <Volume>50</Volume>
+      <Nom>coll 2</Nom>
+      <Difficulté>0</Difficulté>
+    </Mot_clé>
+    <Mot_clé>
+      <Volume>200</Volume>
+      <Nom>coll 3</Nom>
+      <Difficulté>73.090926343573457</Difficulté>
+    </Mot_clé>
+    <Mot_clé>
+      <Volume>50</Volume>
+      <Nom>coll 4</Nom>
+      <Difficulté>0</Difficulté>
+    </Mot_clé>
+  </ListMotClé>
+</MyData>

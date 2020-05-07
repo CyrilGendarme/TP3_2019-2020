@@ -23,6 +23,7 @@ namespace TP3_2019_2020.Objetcs
         public ObservableCollection<Produit> _listProduit;
         public ObservableCollection<Article> _listArticle;
         public ObservableCollection<Mot_clé> _listMotClé;
+        public ObservableCollection<String> _listPhrases;
         public MyCollectionStructure _colstruct;
         public string FilePath { get; set; }
 
@@ -48,6 +49,19 @@ namespace TP3_2019_2020.Objetcs
 
             }
         }
+
+        public ObservableCollection<String> ListPhrases
+        {
+            get => _listPhrases;
+            set
+            {
+                _listPhrases = value;
+                NotifyPropertyChanged();
+
+            }
+        }
+
+
         public ObservableCollection<Collection> ListCollection
         {
             get => _listCollection;

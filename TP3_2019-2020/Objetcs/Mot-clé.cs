@@ -12,10 +12,22 @@ namespace TP3_2019_2020.Objetcs
     public class Mot_clé : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
-        public String Nom { get; set; }
+        //public String Nom { get; set; }
         public int Volume { get; set; }
         public int Id { get; }
         protected static int counter = 0;
+
+
+        private String _nom;
+        public String Nom
+        {
+            get => _nom;
+            set
+            {
+                _nom = value;
+                NotifyPropertyChanged();
+            }
+        }
 
         private double _difficulté; // valeur comprise entre 0 et 100
         public double Difficulté

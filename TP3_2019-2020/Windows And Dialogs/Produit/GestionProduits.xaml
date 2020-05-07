@@ -40,6 +40,12 @@
                HorizontalAlignment="Left"
                     Click="Modifier_Click">
             </Button>
+            <Button x:Name="Créer_description" Height="25" Width="140"  Margin="0,0,0,0"
+               Content="Créer description"  
+               VerticalAlignment="Top"  
+               HorizontalAlignment="Left"
+                    Click="Créer_description_Click">
+            </Button>
 
         </StackPanel>
 
@@ -51,7 +57,7 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
-            <ListBox x:Name="ListBoxProduit" Grid.Column="0" Height="auto" Margin="10,0,0,0" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" ItemsSource="{Binding Path=ListProduit}" >
+            <ListBox x:Name="ListBoxProduit" SelectionMode="Single" Grid.Column="0" Height="auto" Margin="10,0,0,0" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" ItemsSource="{Binding Path=ListProduit}" >
             </ListBox>
 
             <GridSplitter Grid.Column="1"
