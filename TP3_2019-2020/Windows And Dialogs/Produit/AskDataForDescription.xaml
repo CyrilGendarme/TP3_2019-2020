@@ -5,19 +5,23 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TP3_2019_2020.Windows_And_Dialogs.Produit"
         mc:Ignorable="d"
-        Title="AskDataForDescription" Height="450" Width="1400">
+        Title="AskDataForDescription" Height="550" Width="1300">
     
     
     <Grid x:Name="MainGrid" DataContext="ThisProd">
 
         <Grid.RowDefinitions>
-
             <RowDefinition Height="*"/>
+            <RowDefinition Height="4*"/>
             <RowDefinition Height="80"/>
         </Grid.RowDefinitions>
 
+        <StackPanel Grid.Row="0" Orientation="Horizontal" Name="UpperSP" HorizontalAlignment="Stretch" >
+            <Label Content="Phrase d'introduction :" Margin="40,0,0,0"  Height="30" Width="140"/>
+            <TextBox x:Name="PhraseIntro" Margin="10,15,10,15" HorizontalAlignment="Stretch" Width="1080" VerticalAlignment="Stretch"/>
+        </StackPanel>
 
-        <Grid Grid.Row="0" >
+        <Grid Grid.Row="1" >
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="3*"/>
                 <ColumnDefinition Width="2*"/>
@@ -27,7 +31,6 @@
 
             <Grid Grid.Column="0" Margin="0,20,0,0">
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
@@ -45,47 +48,45 @@
                     <TextBox Width="520" x:Name ="MatériauBox1" Height="30" />
                 </StackPanel>
 
-                <TextBox Width="520"  Grid.Row="1" x:Name ="MatériauBox2" Height="30" HorizontalAlignment="Left" Margin="190,0,0,0" />
-
-                <StackPanel Grid.Row="2" Orientation="Horizontal" Name="Fournisseur" HorizontalAlignment="Left">
+                <StackPanel Grid.Row="1" Orientation="Horizontal" Name="Fournisseur" HorizontalAlignment="Left">
                     <Label Content="Taille : " Margin="40,0,66,0"  Height="30" Width="auto"/>
                     <TextBox Width="248" x:Name ="TailleValeurBox" Margin="40,0,0,0" Height="30" Text="ex : Diamètre du pendentif" />
                     <Label Content=":" Height="30" Margin="5,0,5,0" Width="auto"/>
                     <TextBox Width="248" x:Name ="TailleCommentaireBox" Height="30" />
                 </StackPanel>
 
-                <StackPanel Grid.Row="3" Orientation="Horizontal" Name="Fournisseur2" HorizontalAlignment="Left">
+                <StackPanel Grid.Row="2" Orientation="Horizontal" Name="Fournisseur2" HorizontalAlignment="Left">
 
                     <TextBox Width="248" x:Name ="TailleValeurBox2" Margin="190,0,0,0" Height="30" Text="ex : Longueur de la chaine" />
                     <Label Content=":" Height="30" Margin="5,0,5,0" Width="auto"/>
-                    <TextBox Width="248" x:Name ="TailleCommentaireBox3" Height="30" />
+                    <TextBox Width="248" x:Name ="TailleCommentaireBox2" Height="30" />
                 </StackPanel>
 
-                <StackPanel Grid.Row="4" Orientation="Horizontal" Name="sp3" HorizontalAlignment="Left" >
+                <StackPanel Grid.Row="3" Orientation="Horizontal" Name="sp3" HorizontalAlignment="Left" >
                     <Label Content="Poids :" Margin="40,0,55,0"  Height="30" Width="95"/>
                     <TextBox Width="520" x:Name ="PoidsBox" Height="30" />
                 </StackPanel>
                 
-                <StackPanel Grid.Row="5" Orientation="Horizontal" Name="PrixAchat" HorizontalAlignment="Left">
+                <StackPanel Grid.Row="4" Orientation="Horizontal" Name="PrixAchat" HorizontalAlignment="Left">
                     <TextBox Width="120" Margin="40,0,30,0" x:Name ="BoxSupp1a" Height="30" />
                     <TextBox Width="520" x:Name ="BoxSupp1b" Height="30" />
                 </StackPanel>
 
-                <StackPanel Grid.Row="6" Orientation="Horizontal" Name="PrixVente" HorizontalAlignment="Left">
+                <StackPanel Grid.Row="5" Orientation="Horizontal" Name="PrixVente" HorizontalAlignment="Left">
                     <TextBox Width="120" Margin="40,0,30,0" x:Name ="BoxSupp2a" Height="30" />
-                    <TextBox Width="520" x:Name ="TBoxSupp2b" Height="30" />
+                    <TextBox Width="520" x:Name ="BoxSupp2b" Height="30" />
                 </StackPanel>
 
-                <StackPanel Grid.Row="7" Orientation="Horizontal" Name="sp5" HorizontalAlignment="Left">
+                <StackPanel Grid.Row="6" Orientation="Horizontal" Name="sp5" HorizontalAlignment="Left">
                     <TextBox Width="120" Margin="40,0,30,0" x:Name ="BoxSupp3a" Height="30" />
-                    <TextBox Width="520" x:Name ="TBoxSupp3b" Height="30" />
+                    <TextBox Width="520" x:Name ="BoxSupp3b" Height="30" />
                 </StackPanel>
 
             </Grid>
 
-            <StackPanel Grid.Column="1" Orientation="Vertical" Name="StackPanelDroite" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
-
-                <TextBlock Margin="10,10,10,0" HorizontalAlignment="Stretch" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Stretch"/>
+            <StackPanel Grid.Column="1" Orientation="Vertical" Name="StackPanelDroite" VerticalAlignment="Stretch" Margin="0,20,0,0" >
+                <Label Content="Votre texte (html) : " Margin="0,0,0,0" HorizontalAlignment="Left" Height="30" Width="120"/>
+                <TextBox Margin="10,10,10,0" x:Name="TextResult" HorizontalAlignment="Stretch" Height="270" VerticalAlignment="Stretch"/>
             </StackPanel>
 
 
@@ -93,7 +94,7 @@
 
         </Grid>
 
-        <StackPanel Grid.Row="1" Orientation="Horizontal" Name="ToolBox" HorizontalAlignment="Center">
+        <StackPanel Grid.Row="2" Orientation="Horizontal" Name="ToolBox" HorizontalAlignment="Center">
 
             <Button x:Name="Voir_liste" Width="200" Height="40" Margin="20,20,20,20"
                Content="Voir liste de phrases"  

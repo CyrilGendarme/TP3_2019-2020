@@ -29,24 +29,17 @@ namespace TP3_2019_2020.Windows_And_Dialogs.Produit
             ListLB = new List<ListBox>();
             ThisProd = new Objetcs.Produit();
             UpdateStackPanel();
+            labelnom.DataContext = ThisProd;
         }
 
 
         public AjoutProduit(TP3_2019_2020.Objetcs.Produit p)
         {
             InitializeComponent();
-            var currentApp = System.Windows.Application.Current as App;
-            Menu ThisMenu = currentApp.MyMenu;
-            Grid parentGrid = ThisMenu.Parent as Grid;
-            if (parentGrid != null)
-            {
-                parentGrid.Children.Remove(ThisMenu);
-            }
-            MainGrid.Children.Add(ThisMenu);
-            Grid.SetRow(ThisMenu, 0);
             ListLB = new List<ListBox>();
             ThisProd = p;
             UpdateStackPanel();
+            labelnom.DataContext = ThisProd;
         }
 
 
@@ -156,13 +149,17 @@ namespace TP3_2019_2020.Windows_And_Dialogs.Produit
 
         private void CreateContent_Click(object sender, RoutedEventArgs e)
         {
-            foreach (ListBox listbox in ListLB)
-            {
-                if (listbox.SelectedIndex != -1)
-                {
-                    ThisProd.ListeCollections.Add((TP3_2019_2020.Objetcs.Collection)listbox.SelectedItems);
-                }
-            }
+            //foreach (ListBox listbox in ListLB)
+            //{
+            //    if (listbox.SelectedIndex != -1)
+            //    {
+            //        List<Objetcs.Collection> listlb = listbox.SelectedItems as List<Objetcs.Collection>;
+            //        foreach (Objetcs.Collection coll in listlb)
+            //        {
+            //            ThisProd.ListeCollections.Add(coll);
+            //        }
+            //    }
+            //}
             AskDataForDescription win = new AskDataForDescription(ThisProd);
             win.ShowDialog();
         }
