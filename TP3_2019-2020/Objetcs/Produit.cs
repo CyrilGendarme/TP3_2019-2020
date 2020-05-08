@@ -8,9 +8,11 @@ using System.Runtime.CompilerServices;
 
 namespace TP3_2019_2020.Objetcs
 {
+    [Serializable]
     public class Produit : Contenu, INotifyPropertyChanged, IUseMot_clé
     {
-        public event PropertyChangedEventHandler PropertyChanged;
+        [field: NonSerialized]
+        public new event PropertyChangedEventHandler PropertyChanged;
 
         private Mot_clé _mot_clé;
         public Mot_clé Mot_clé

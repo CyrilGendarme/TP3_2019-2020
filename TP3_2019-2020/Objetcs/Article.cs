@@ -9,10 +9,11 @@ using System.Windows.Forms;
 
 namespace TP3_2019_2020.Objetcs
 {
+    [Serializable]
     public class Article : Contenu, INotifyPropertyChanged, IUseMot_clé
     {
-
-        public event PropertyChangedEventHandler PropertyChanged;
+        [field: NonSerialized]
+        public new event PropertyChangedEventHandler PropertyChanged;
 
         private List<Mot_clé> _listeMotClé;
         public List<Mot_clé> ListeMotClé

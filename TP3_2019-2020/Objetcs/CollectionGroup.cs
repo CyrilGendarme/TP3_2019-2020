@@ -10,10 +10,11 @@ using System.Runtime.CompilerServices;
 
 namespace TP3_2019_2020.Objetcs
 {
+    [Serializable]
     public class CollectionGroup : Contenu, INotifyPropertyChanged
     {
-
-        public event PropertyChangedEventHandler PropertyChanged;
+        [field: NonSerialized]
+        public new event PropertyChangedEventHandler PropertyChanged;
 
 
         private Mot_clé _mot_clé;

@@ -9,8 +9,10 @@ using System.Windows.Forms;
 
 namespace TP3_2019_2020.Objetcs
 {
+    [Serializable]
     public class Mot_clé : INotifyPropertyChanged
     {
+        [field: NonSerialized]
         public event PropertyChangedEventHandler PropertyChanged;
         //public String Nom { get; set; }
         public int Volume { get; set; }

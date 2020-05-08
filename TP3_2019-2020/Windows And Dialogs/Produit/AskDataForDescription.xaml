@@ -18,7 +18,7 @@
 
         <StackPanel Grid.Row="0" Orientation="Horizontal" Name="UpperSP" HorizontalAlignment="Stretch" >
             <Label Content="Phrase d'introduction :" Margin="40,0,0,0"  Height="30" Width="140"/>
-            <TextBox x:Name="PhraseIntro" Margin="10,15,10,15" HorizontalAlignment="Stretch" Width="1080" VerticalAlignment="Stretch"/>
+            <TextBox x:Name="PhraseIntro" TextWrapping="Wrap" AcceptsReturn="True" Margin="10,15,10,15" HorizontalAlignment="Stretch" Width="1080" VerticalAlignment="Stretch"/>
         </StackPanel>
 
         <Grid Grid.Row="1" >
@@ -86,7 +86,7 @@
 
             <StackPanel Grid.Column="1" Orientation="Vertical" Name="StackPanelDroite" VerticalAlignment="Stretch" Margin="0,20,0,0" >
                 <Label Content="Votre texte (html) : " Margin="0,0,0,0" HorizontalAlignment="Left" Height="30" Width="120"/>
-                <TextBox Margin="10,10,10,0" x:Name="TextResult" HorizontalAlignment="Stretch" Height="270" VerticalAlignment="Stretch"/>
+                <TextBox Margin="10,10,10,0" TextWrapping="Wrap" AcceptsReturn="True" x:Name="TextResult" HorizontalAlignment="Stretch" Height="270" VerticalAlignment="Stretch"/>
             </StackPanel>
 
 
