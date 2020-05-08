@@ -8,8 +8,10 @@ using System.Runtime.CompilerServices;
 
 namespace TP3_2019_2020.Objetcs
 {
+    [Serializable]
     public class Contenu : INotifyPropertyChanged
     {
+        [field: NonSerialized]
         public event PropertyChangedEventHandler PropertyChanged;
 
         public String Nom { get; set; }

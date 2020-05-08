@@ -10,12 +10,23 @@ using System.Runtime.CompilerServices;
 
 namespace TP3_2019_2020.Objetcs
 {
+    [Serializable]
     public class CollectionGroup : Contenu, INotifyPropertyChanged
     {
+        [field: NonSerialized]
+        public new event PropertyChangedEventHandler PropertyChanged;
 
-        public event PropertyChangedEventHandler PropertyChanged;
 
-        public Mot_clé Mot_clé { get; set; }
+        private Mot_clé _mot_clé;
+        public Mot_clé Mot_clé
+        {
+            get => _mot_clé;
+            set
+            {
+                _mot_clé = value;
+                NotifyPropertyChanged();
+            }
+        }
 
         private List<Collection> _listeCollection;
         public List<Collection> ListeCollection
@@ -57,7 +68,7 @@ namespace TP3_2019_2020.Objetcs
 
         public override String ToString()
         {
-            return Nom + " (collection)";
+            return Nom + " (Groupe de collection)";
         }
     }
 }

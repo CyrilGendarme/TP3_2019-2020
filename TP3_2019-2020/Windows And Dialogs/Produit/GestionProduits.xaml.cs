@@ -84,6 +84,9 @@ namespace TP3_2019_2020.Windows_And_Dialogs.Produit
             win.ShowDialog();
         }
 
+        private void Créer_description_Click(object sender, RoutedEventArgs e)
+        {
 
+        }
     }
 }

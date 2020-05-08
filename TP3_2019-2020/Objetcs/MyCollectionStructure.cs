@@ -16,6 +16,7 @@ namespace TP3_2019_2020.Objetcs
     [Serializable]
     public class MyCollectionStructure : INotifyPropertyChanged
     {
+        [field: NonSerialized]
         public event PropertyChangedEventHandler PropertyChanged;
 
         public ObservableCollection<CollectionGroup> _listCollectionGroup;

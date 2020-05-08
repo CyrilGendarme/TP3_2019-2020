@@ -20,21 +20,25 @@ namespace TP3_2019_2020.Windows_And_Dialogs.Collection
     /// </summary>
     public partial class AjoutGroupe : Window
     {
-        CollectionGroup ThisGroup;
+        public CollectionGroup ThisGroup { get; set; }
+
+
+
         public AjoutGroupe()
         {
             InitializeComponent();
             ThisGroup = new CollectionGroup();
             DataContext = ThisGroup;
-            var currentApp = System.Windows.Application.Current as App;
-            Menu ThisMenu = currentApp.MyMenu;
-            Grid parentGrid = ThisMenu.Parent as Grid;
-            if (parentGrid != null)
-            {
-                parentGrid.Children.Remove(ThisMenu);
-            }
-            MainGrid.Children.Add(ThisMenu);
-            Grid.SetRow(ThisMenu, 0);
+            labelnom.DataContext = ThisGroup;
+
+        }
+
+        public AjoutGroupe(CollectionGroup cg)
+        {
+            InitializeComponent();
+            ThisGroup = cg;
+            DataContext = ThisGroup;
+            labelnom.DataContext = ThisGroup;
 
         }
 

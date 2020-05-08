@@ -16,13 +16,25 @@ namespace TP3_2019_2020.Objetcs
     [Serializable]
     public class MyData : INotifyPropertyChanged
     {
+        //[NonSerialized]
+        [field : NonSerialized]
         public event PropertyChangedEventHandler PropertyChanged;
+        private void NotifyPropertyChanged([CallerMemberName] string propertyname = null)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(propertyname));
+            }
+        }
+
+
 
         public ObservableCollection<Thématique> _listThématique;
         public ObservableCollection<Collection> _listCollection;
         public ObservableCollection<Produit> _listProduit;
         public ObservableCollection<Article> _listArticle;
         public ObservableCollection<Mot_clé> _listMotClé;
+        public ObservableCollection<String> _listPhrases;
         public MyCollectionStructure _colstruct;
         public string FilePath { get; set; }
 
@@ -48,6 +60,19 @@ namespace TP3_2019_2020.Objetcs
 
             }
         }
+
+        public ObservableCollection<String> ListPhrases
+        {
+            get => _listPhrases;
+            set
+            {
+                _listPhrases = value;
+                NotifyPropertyChanged();
+
+            }
+        }
+
+
         public ObservableCollection<Collection> ListCollection
         {
             get => _listCollection;
@@ -93,13 +118,6 @@ namespace TP3_2019_2020.Objetcs
 
 
 
-        private void NotifyPropertyChanged([CallerMemberName] string propertyname = null)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(propertyname));
-            }
-        }
 
         public MyData()
         {
@@ -108,34 +126,61 @@ namespace TP3_2019_2020.Objetcs
             ListArticle = new ObservableCollection<Article>();
             ListCollection = new ObservableCollection<Collection>();
             ListThématique = new ObservableCollection<Thématique>();
+            ListPhrases = new ObservableCollection<String>();
             Colstruct = new MyCollectionStructure();
         }
 
 
         public void SaveData()
         {
-                TextWriter writer = null;
-                try
-                {
-                    var serializer = new XmlSerializer(typeof(MyData));
-                    writer = new StreamWriter(FilePath, false);
-                    serializer.Serialize(writer, this);
-                }
-                finally
-                {
-                    if (writer != null)
-                        writer.Close();
-                }
+                //TextWriter writer = null;
+                //try
+                //{
+                //    var serializer = new XmlSerializer(typeof(MyData));
+                //    writer = new StreamWriter(FilePath, false);
+                //    serializer.Serialize(writer, this);
+                //}
+                //finally
+                //{
+                //    if (writer != null)
+                //        writer.Close();
+                //}
+
+            BinaryFormatter binFormat = new BinaryFormatter();
+            using (Stream fstream = new FileStream(FilePath, FileMode.Append, FileAccess.Write, FileShare.None))
+            {
+                binFormat.Serialize(fstream, this);
+            }
         }
 
         public void LoadData(String path)
         {
-            TextReader reader = null;
-            try
+            //TextReader reader = null;
+            //try
+            //{
+            //    var serializer = new XmlSerializer(typeof(MyData));
+            //    reader = new StreamReader(path);
+            //    MyData temp = (MyData)serializer.Deserialize(reader);
+            //    ListMotClé = temp.ListMotClé;
+            //    ListCollection = temp.ListCollection;
+            //    ListProduit = temp.ListProduit;
+            //    ListArticle = temp.ListArticle;
+            //    ListThématique = temp.ListThématique;
+            //    Colstruct = temp.Colstruct;
+            //    FilePath = temp.FilePath;
+
+            //}
+            //finally
+            //{
+            //    if (reader != null)
+            //        reader.Close();
+            //}
+
+
+            BinaryFormatter binFormat = new BinaryFormatter();
+            using (Stream fstream = new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.None))
             {
-                var serializer = new XmlSerializer(typeof(MyData));
-                reader = new StreamReader(path);
-                MyData temp = (MyData)serializer.Deserialize(reader);
+                MyData temp = (MyData)binFormat.Deserialize(fstream);
                 ListMotClé = temp.ListMotClé;
                 ListCollection = temp.ListCollection;
                 ListProduit = temp.ListProduit;
@@ -143,12 +188,6 @@ namespace TP3_2019_2020.Objetcs
                 ListThématique = temp.ListThématique;
                 Colstruct = temp.Colstruct;
                 FilePath = temp.FilePath;
-
-            }
-            finally
-            {
-                if (reader != null)
-                    reader.Close();
             }
         }
     }

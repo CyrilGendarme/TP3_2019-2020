@@ -11,19 +11,18 @@
     <Grid x:Name="MainGrid" DataContext="ThisProd">
 
         <Grid.RowDefinitions>
-            <RowDefinition Height="30" />
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <StackPanel Grid.Row="1" Orientation="Horizontal" Name="MotCLé" HorizontalAlignment="Center" >
+        <StackPanel Grid.Row="0" Orientation="Horizontal" Name="MotCléSP" HorizontalAlignment="Center" >
             <Label Content="Mot-clé / titre :" Margin="40,0,10,0"  Height="30" Width="95"/>
-            <Label Content="{Binding Path= Mot_clé.Nom}" Margin="0,0,10,0"  Height="30" Width="247" />
+            <Label x:Name="labelnom" Content="{Binding Path= Mot_clé.Nom}" Margin="0,0,10,0"  Height="30" Width="247" />
             <Button x:Name="ConfigMot" Height="30" Width="140" Margin="0,0,0,0"  
                         Content="Configurer mot-clé"  
                         Click="ConfigMot_Click"/>
         </StackPanel>
-        <StackPanel Grid.Row="2" Orientation="Horizontal" Name="ToolBox" HorizontalAlignment="Center">
+        <StackPanel Grid.Row="1" Orientation="Horizontal" Name="ToolBox" HorizontalAlignment="Center">
             <Button x:Name="CreateContent"  Width="160" Height="40" Margin="0,20,20,20"
                Content="Créer"  
                VerticalAlignment="Top"  

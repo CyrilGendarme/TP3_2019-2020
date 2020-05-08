@@ -7,73 +7,102 @@
         mc:Ignorable="d"
         Title="GestionCollection" Height="450" Width="800">
 
-        <Grid x:Name="MainGrid">
+    <Grid x:Name="MainGrid">
 
-            <Grid.RowDefinitions>
+        <Grid.RowDefinitions>
             <RowDefinition Height="30" x:Name="menuRow"/>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="*"/>
-                <RowDefinition Height="80"/>
-            </Grid.RowDefinitions>
+            <RowDefinition Height="80"/>
+        </Grid.RowDefinitions>
 
-
-
-        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Left" Name="ToolBox">
-            <Button x:Name="Supprimer" Height="25" Width="80"  Margin="0,0,0,0"
-               Content="Supprimer"  
-               VerticalAlignment="Top"  
-               HorizontalAlignment="Left"
-                    Click="Supprimer_colletion_Click">
-            </Button>
-            <Button x:Name="Modifier" Height="25" Width="80"  Margin="0,0,0,0"
-               Content="Modifier"  
-               VerticalAlignment="Top"  
-               HorizontalAlignment="Left"
-                    Click="Modifier_Click">
-            </Button>
-            </StackPanel>
 
 
         <Grid Grid.Row="2">
 
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="106*"/>
+                <ColumnDefinition Width="281*"/>
+                <ColumnDefinition Width="20"/>
+                <ColumnDefinition Width="386*"/>
             </Grid.ColumnDefinitions>
 
-            <ListBox x:Name="ListBoxCollections" Grid.Column="0" Height="auto" Margin="10,0,0,0" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" ItemsSource="{Binding Path=ListCollection}" >
-            </ListBox>
+            <StackPanel Grid.Column="0" Orientation="Vertical" HorizontalAlignment="Stretch" Name="spcol" Grid.ColumnSpan="2" Margin="0,0,0.2,-0.2">
+                <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Left" Name="ToolBox">
+                    <Button x:Name="Supprimer" Height="25" Width="80"  Margin="0,0,0,0"
+               Content="Supprimer"  
+               VerticalAlignment="Top"  
+               HorizontalAlignment="Left"
+                    Click="Supprimer_colletion_Click">
+                    </Button>
+                    <Button x:Name="Modifier" Height="25" Width="80"  Margin="0,0,0,0"
+               Content="Modifier"  
+               VerticalAlignment="Top"  
+               HorizontalAlignment="Left"
+                    Click="Modifier_colletion_Click">
+                    </Button>
+                </StackPanel>
+                <Label Content="Groupes : "   Width="100" HorizontalAlignment="Left"/>
+                <ListBox x:Name="ListBoxCollections" SelectionMode="Single" Grid.Column="0" Height="auto" Margin="10,0,0,0" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" ItemsSource="{Binding Path=ListCollection}" >
+                </ListBox>
+            </StackPanel>
+
+            <GridSplitter Grid.Column="2" 
+              HorizontalAlignment="Center"
+              VerticalAlignment="Stretch"
+              Background="Black" 
+              Width="3" Margin="8.8,0,8.2,-0.2"
+              />
+
+
+            <StackPanel Grid.Column="2" Orientation="Vertical" HorizontalAlignment="Stretch" Name="spgr" Grid.ColumnSpan="2" Margin="19.8,0,-0.4,-0.2">
+                <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Left" Name="ToolBox2">
+                    <Button x:Name="Supprimer2" Height="25" Width="80"  Margin="0,0,0,0"
+               Content="Supprimer"  
+               VerticalAlignment="Top"  
+               HorizontalAlignment="Left"
+                    Click="Supprimer_groupe_Click">
+                    </Button>
+                    <Button x:Name="Modifier2" Height="25" Width="80"  Margin="0,0,0,0"
+               Content="Modifier"  
+               VerticalAlignment="Top"  
+               HorizontalAlignment="Left"
+                    Click="Modifier_groupe_Click">
+                    </Button>
+                </StackPanel>
+                <Label Content="Collections : "  HorizontalAlignment="Left" Width="100" />
+                <ListBox x:Name="ListBoxGroupes"  SelectionMode="Single" Margin="0,0,10,0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  ItemsSource="{Binding Path=Colstruct.ListCollectionGroup}">
+                </ListBox>
+            </StackPanel>
 
         </Grid>
+
+
+
 
 
         <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Center" Name="Boutons">
 
-                <Button x:Name="Ajouter_collection" Grid.Row="4"  Width="160" Height="40" Margin="20,20,10,20"
+            <Button x:Name="Ajouter_collection" Grid.Row="4"  Width="160" Height="40" Margin="20,20,10,20"
                    Content="Ajouter collection"  
                    VerticalAlignment="Top"  
                    HorizontalAlignment="Center"
                     Click="Ajouter_collection_Click">
-                </Button>
+            </Button>
 
-  
 
-                <Button x:Name="Ajouter_groupe" Grid.Row="4"  Width="160" Height="40" Margin="10,20,10,20"
+
+            <Button x:Name="Ajouter_groupe" Grid.Row="4"  Width="160" Height="40" Margin="10,20,10,20"
                    Content="Ajouter groupe"  
                    VerticalAlignment="Top"  
                    HorizontalAlignment="Center"
                     Click="Ajouter_groupe_Click">
-                </Button>
+            </Button>
 
-                <Button x:Name="Supprimer_groupe" Grid.Row="4"  Width="160" Height="40" Margin="10,20,20,20"
-                   Content="Supprimer groupe"  
-                   VerticalAlignment="Top"  
-                   HorizontalAlignment="Center"
-                    Click="Supprimer_groupe_Click">
-                </Button>
 
         </StackPanel>
 
 
-        </Grid>
-    </Window>
+    </Grid>
+</Window>
 

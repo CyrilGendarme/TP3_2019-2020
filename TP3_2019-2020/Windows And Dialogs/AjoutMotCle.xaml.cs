@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using TP3_2019_2020.Objetcs;
+using TP3_2019_2020.Windows_And_Dialogs.Collection;
 using TP3_2019_2020.Windows_And_Dialogs.Produit;
 
 namespace TP3_2019_2020.Windows_And_Dialogs
@@ -25,14 +26,17 @@ namespace TP3_2019_2020.Windows_And_Dialogs
 
 
         private AjoutProduit _owner;
-        //private AjoutCollection _owner2;
+        private AjoutCollection _owner2;
+        private AjoutGroupe _owner3;
         //private AjoutArticle _owner3;
         int cas = 0;   // valeur differente pour chaque type de appli appelante
 
         public AjoutMotCle(Window Owner)
         {
             // if is pour voir dans quel cas on est pour gerer plusieurs appli demandant la gestion de motclé
-            _owner = Owner as AjoutProduit; cas = 1;
+            if (Owner is AjoutProduit) { _owner = Owner as AjoutProduit; cas = 1; }
+            if (Owner is AjoutCollection) { _owner2 = Owner as AjoutCollection; cas = 2; }
+            if (Owner is AjoutGroupe) { _owner3 = Owner as AjoutGroupe; cas = 3; }
             InitializeComponent();
         }
 
@@ -53,8 +57,13 @@ namespace TP3_2019_2020.Windows_And_Dialogs
             }
 
 
-            if (cas == 1) _owner.PutMotClé(mot); 
-
+            if (cas == 1) _owner.PutMotClé(mot);
+            if (cas == 2) {
+                _owner2.ThisCollection.Mot_clé = mot; 
+                _owner2.ThisCollection.Nom = mot.Nom; }
+            if (cas == 3) {
+                _owner3.ThisGroup.Mot_clé = mot;
+                _owner3.ThisGroup.Nom = mot.Nom; }
 
             this.Hide();
         }

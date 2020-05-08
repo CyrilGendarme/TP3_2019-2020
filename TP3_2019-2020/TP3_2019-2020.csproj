@@ -56,6 +56,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Windows And Dialogs\Produit\VoirListePhrases.xaml.cs">
+      <DependentUpon>VoirListePhrases.xaml</DependentUpon>
+    </Compile>
     <Page Include="Windows And Dialogs\AskForFileDialog.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -77,6 +80,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Windows And Dialogs\AjoutMotCle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows And Dialogs\Produit\AskDataForDescription.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -115,6 +122,9 @@
     <Compile Include="Windows And Dialogs\AjoutMotCle.xaml.cs">
       <DependentUpon>AjoutMotCle.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Windows And Dialogs\Produit\AskDataForDescription.xaml.cs">
+      <DependentUpon>AskDataForDescription.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows And Dialogs\Produit\GestionProduits.xaml.cs">
       <DependentUpon>GestionProduits.xaml</DependentUpon>
     </Compile>
@@ -122,6 +132,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Windows And Dialogs\Produit\VoirListePhrases.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Objetcs\Article.cs" />
