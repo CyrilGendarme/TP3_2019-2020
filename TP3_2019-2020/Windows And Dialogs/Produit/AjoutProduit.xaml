@@ -7,35 +7,40 @@
         mc:Ignorable="d"
         Title="Ajout Produit" Height="450" Width="1370">
 
-    
+
     <Grid x:Name="MainGrid">
-      
+
         <Grid.RowDefinitions>
- 
+
             <RowDefinition Height="*"/>
             <RowDefinition Height="80"/>
         </Grid.RowDefinitions>
 
-        
+
         <Grid Grid.Row="0" >
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="2*"/>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="273*"/>
+                <RowDefinition Height="67*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"/>
                 <ColumnDefinition Width="3*"/>
             </Grid.ColumnDefinitions>
 
-            
-            
-            <Grid Grid.Column="0" Margin="0,20,0,0">
+
+
+            <Grid Grid.Column="0" Margin="0,20,817.2,0" Grid.ColumnSpan="2" Grid.RowSpan="2">
                 <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
 
-                
 
-                
+
+
                 <StackPanel Grid.Row="0" Orientation="Horizontal" Name="MotCLé" HorizontalAlignment="Left" >
                     <Label Content="Mot-clé / titre :" Margin="40,0,10,0"  Height="30" Width="95"/>
                     <Label x:Name="labelnom" Content="{Binding Path=Mot_clé.Nom}" Margin="0,0,10,0"  Height="30" Width="247"  />
@@ -59,10 +64,15 @@
                     <TextBox Width="250" x:Name ="VenteBox" Height="30" Text="{Binding Path=PrixVente}"/>
                 </StackPanel>
 
+                <StackPanel Grid.Row="4" Orientation="Horizontal" Name="ImageSP" HorizontalAlignment="Left">
+                    <Label Content="Image (chemin) : " Margin="40,0,5,0" Height="30" Width="auto"/>
+                    <TextBox Width="250" x:Name ="ImagePathBox" Height="30" Text="{Binding Path=FilePath}"/>
+                </StackPanel>
+
             </Grid>
 
-            <StackPanel Grid.Column="1" Orientation="Horizontal" Name="StackPanelCollections" HorizontalAlignment="Stretch">
-              
+            <StackPanel Grid.Column="1" Orientation="Horizontal" Name="StackPanelCollections" HorizontalAlignment="Stretch" Margin="0.4,0,0.2,0" Grid.RowSpan="2">
+
 
             </StackPanel>
 

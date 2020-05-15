@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
-        Title="GestionProduits" Height="450" Width="800">
+        Title="GestionProduits" Height="450" Width="1000">
     <Grid x:Name="MainGrid">
 
         <Grid.RowDefinitions>
@@ -37,17 +37,28 @@
         </StackPanel>
 
         <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="45*"/>
+                <ColumnDefinition Width="452*"/>
+            </Grid.ColumnDefinitions>
 
-            <DataGrid x:Name="DatagridProduit" SelectionMode="Single" IsReadOnly="True" Height="auto" Margin="10,0,10,0" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" ItemsSource="{Binding Path=ListProduit}" AutoGenerateColumns="False" >
-                
+            <DataGrid x:Name="DatagridProduit" SelectionMode="Single" IsReadOnly="True" Height="auto" Margin="10,0,9.6,-0.2" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" ItemsSource="{Binding Path=ListProduit}" AutoGenerateColumns="False" Grid.ColumnSpan="2" >
+
                 <DataGrid.Columns>
-                    <DataGridTextColumn Header="Nom" Binding="{Binding Mot_clé.Nom}"  Width="2*"/>
+                    <DataGridTemplateColumn Header="Image" >
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Image Source="{Binding FilePath}" Width="20" Height="20" />
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                    <DataGridTextColumn Header="Nom" Binding="{Binding Mot_clé.Nom}"  Width="3*"/>
                     <DataGridTextColumn Header="Date de création" Binding="{Binding DateCreation}"  Width="*" />
                     <DataGridTextColumn Header="Fournisseur" Binding="{Binding Fournisseur}"  Width="*" />
                     <DataGridTextColumn Header="Volume" Binding="{Binding Mot_clé.Volume}"  Width="*"/>
                     <DataGridTextColumn Header="Difficulté" Binding="{Binding Mot_clé.Difficulté}"  Width="*" />
-   
-                    
+
+
                 </DataGrid.Columns>
             </DataGrid>
 

@@ -14,6 +14,17 @@ namespace TP3_2019_2020.Objetcs
         [field: NonSerialized]
         public new event PropertyChangedEventHandler PropertyChanged;
 
+        private String _filePath;
+        public String FilePath
+        {
+            get => _filePath;
+            set
+            {
+                _filePath = value;
+                NotifyPropertyChanged();
+            }
+        }
+
         private Mot_clé _mot_clé;
         public Mot_clé Mot_clé
         {
@@ -78,24 +89,27 @@ namespace TP3_2019_2020.Objetcs
             Fournisseur = "NULL";
             PrixAchat = 0;
             PrixVente = 0;
+            FilePath = "NULL";
         }
 
-        public Produit(String nom, List<Collection> list, String fourni, double achat, double vente) : base(nom)
+        public Produit(String nom, List<Collection> list, String fourni, double achat, double vente, String fp) : base(nom)
         {
             Mot_clé = new Mot_clé();
             ListeCollections = list;
             Fournisseur = fourni;
             PrixAchat = achat;
             PrixVente = vente;
+            FilePath = fp;
         }
 
-        public Produit(Mot_clé _mot_clé, List<Collection> list, String fourni, double achat, double vente) : base(_mot_clé.Nom)
+        public Produit(Mot_clé _mot_clé, List<Collection> list, String fourni, double achat, double vente, String fp) : base(_mot_clé.Nom)
         {
             Mot_clé = _mot_clé;
             ListeCollections = list;
             Fournisseur = fourni;
             PrixAchat = achat;
             PrixVente = vente;
+            FilePath = fp;
         }
 
 
