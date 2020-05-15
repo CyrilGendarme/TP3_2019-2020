@@ -53,19 +53,28 @@ namespace TP3_2019_2020.Windows_And_Dialogs.Collection
         private void CreateContent_Click(object sender, RoutedEventArgs e)
         {
             var currentApp = System.Windows.Application.Current as App;
-            currentApp.MyData.ListCollection.Add(ThisCollection);
-            CollectionGroup group = ListGroupes.SelectedItem as CollectionGroup;
-            group.ListeCollection.Add(ThisCollection);
-            this.Hide();
+
+            try
+            {
+                currentApp.MyData.ListCollection.Add(ThisCollection);
+                CollectionGroup group = ListGroupes.SelectedItem as CollectionGroup;
+                group.ListeCollection.Add(ThisCollection);
+                this.Hide();
+            }
+            catch { var result = System.Windows.Forms.MessageBox.Show("Mauvaises données rentrées", "Fermer", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Exclamation); }
         }
 
         private void CreateContentAndNext_Click(object sender, RoutedEventArgs e)
         {
             var currentApp = System.Windows.Application.Current as App;
-            currentApp.MyData.ListCollection.Add(ThisCollection);
-            CollectionGroup group = ListGroupes.SelectedItem as CollectionGroup;
-            group.ListeCollection.Add(ThisCollection);
-            ThisCollection = new Objetcs.Collection();
+            try
+            {
+                currentApp.MyData.ListCollection.Add(ThisCollection);
+                CollectionGroup group = ListGroupes.SelectedItem as CollectionGroup;
+                group.ListeCollection.Add(ThisCollection);
+                ThisCollection = new Objetcs.Collection();
+            }
+            catch { var result = System.Windows.Forms.MessageBox.Show("Mauvaises données rentrées", "Fermer", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Exclamation); }
         }
 
         private void ConfigMot_Click(object sender, RoutedEventArgs e)

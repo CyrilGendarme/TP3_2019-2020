@@ -102,31 +102,42 @@ namespace TP3_2019_2020.Windows_And_Dialogs.Produit
         private void Ok_Click(object sender, RoutedEventArgs e)
         {
             var currentApp = System.Windows.Application.Current as App;
-            foreach (ListBox listbox in ListLB)
-            {
-                if (listbox.SelectedIndex != -1 )
-                {
-                    ThisProd.ListeCollections.Add((TP3_2019_2020.Objetcs.Collection)listbox.SelectedItems);
-                    listbox.UnselectAll();
-                }
-            }
 
-            currentApp.MyData.ListProduit.Add(ThisProd);
-            this.Hide();
+            try
+            {
+                foreach (ListBox listbox in ListLB)
+                {
+                    if (listbox.SelectedIndex != -1)
+                    {
+                        ThisProd.ListeCollections.Add((TP3_2019_2020.Objetcs.Collection)listbox.SelectedItems);
+                        listbox.UnselectAll();
+                    }
+                }
+
+                currentApp.MyData.ListProduit.Add(ThisProd);
+                this.Hide();
+            }
+            catch { var result = System.Windows.Forms.MessageBox.Show("Mauvaises données rentrées", "Fermer", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Exclamation);}
         }
 
         private void Suivant_Click(object sender, RoutedEventArgs e)
         {
             var currentApp = System.Windows.Application.Current as App;
-            foreach (ListBox listbox in ListLB)
+
+            try
             {
-                if (listbox.SelectedIndex != -1)
+                foreach (ListBox listbox in ListLB)
                 {
-                    ThisProd.ListeCollections.Add((TP3_2019_2020.Objetcs.Collection)listbox.SelectedItems);
-                    listbox.UnselectAll();
+                    if (listbox.SelectedIndex != -1)
+                    {
+                        ThisProd.ListeCollections.Add((TP3_2019_2020.Objetcs.Collection)listbox.SelectedItems);
+                        listbox.UnselectAll();
+                    }
                 }
+                currentApp.MyData.ListProduit.Add(ThisProd);
             }
-            currentApp.MyData.ListProduit.Add(ThisProd);
+            catch { var result = System.Windows.Forms.MessageBox.Show("Mauvaises données rentrées", "Fermer", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Exclamation); }
+        
         }
 
         private void Annuler_Click(object sender, RoutedEventArgs e)

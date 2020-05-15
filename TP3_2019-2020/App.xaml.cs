@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
@@ -73,6 +74,16 @@ namespace TP3_2019_2020
             // création de l'objet MyData
             MyData = new MyData();
 
+            RegistryKey rk;
+
+            try { rk = Registry.CurrentUser.OpenSubKey("TP3Folder"); }
+            catch { rk = Registry.CurrentUser.CreateSubKey("TP3Folder"); }
+            
+            if (rk.GetValue("Path") == null)
+            {
+                rk.SetValue("Path", "D:\\Visual Studio 2k19\\TP3_2019-2020\\DATA");
+            }
+
             // lancement de la premiere win 
             AskForFileDialog win = new AskForFileDialog();
             win.Show();
@@ -98,8 +109,8 @@ namespace TP3_2019_2020
             //{
             //    Application.Current.Windows[i].Close();
             //}
-            //OptionBox win = new OptionBox();
-            //win.Show();
+            OptionsBox win = new OptionsBox();
+            win.Show();
         }
 
         private void MenuItem_Click_2(object sender, RoutedEventArgs e)
@@ -116,5 +127,9 @@ namespace TP3_2019_2020
             AskForFileDialog win = new AskForFileDialog();
             win.Show();
         }
+
+
+    
+
     }
 }

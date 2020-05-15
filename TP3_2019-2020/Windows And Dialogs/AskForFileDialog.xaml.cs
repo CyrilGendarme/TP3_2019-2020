@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using TP3_2019_2020.Objetcs;
 using System.IO;
-
+using Microsoft.Win32;
 
 namespace TP3_2019_2020.Windows_And_Dialogs
 {
@@ -24,7 +24,7 @@ namespace TP3_2019_2020.Windows_And_Dialogs
     {
 
         public MainWindow _owner { get; set; }
-
+        private RegistryKey rk;
 
         public AskForFileDialog()
         {
@@ -32,12 +32,16 @@ namespace TP3_2019_2020.Windows_And_Dialogs
             DataContext = currentApp.MyData;
             InitializeComponent();
 
-            String[] files = System.IO.Directory.GetFiles("D:\\Visual Studio 2k19\\TP3_2019-2020\\DATA");   // 
+            rk = Registry.CurrentUser.OpenSubKey("TP3Folder");
+
+
+            String[] files = System.IO.Directory.GetFiles(rk.GetValue("Path").ToString());   // 
             for (int i = 0; i < files.Length; i++) 
             {
                 String sitename = System.IO.Path.GetFileName(files[i])/*.Remove(0,40)*/;
                 ListBoxSites.Items.Add(sitename);
             }
+
 
             //DataTemplate dt = new DataTemplate();
             //dt.DataType
@@ -53,12 +57,12 @@ namespace TP3_2019_2020.Windows_And_Dialogs
             {
                 var currentApp = System.Windows.Application.Current as App;
                 currentApp.MyData = new MyData();
-                DataContext = currentApp.MyData.FilePath = "D:\\Visual Studio 2k19\\TP3_2019-2020\\DATA\\" + NouveauSite.Text;
+                DataContext = currentApp.MyData.FilePath = rk.GetValue("Path").ToString() + NouveauSite.Text;
             }
             else
             {
                 var currentApp = System.Windows.Application.Current as App;
-                String path = "D:\\Visual Studio 2k19\\TP3_2019-2020\\DATA\\" + ListBoxSites.SelectedItem.ToString();
+                String path = rk.GetValue("Path").ToString() +"\\"+ ListBoxSites.SelectedItem.ToString();
                 currentApp.MyData.FilePath = path;
                 currentApp.MyData.LoadData(path);
             }

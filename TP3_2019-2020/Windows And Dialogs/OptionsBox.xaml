@@ -1,0 +1,23 @@
+﻿<Window x:Class="TP3_2019_2020.Windows_And_Dialogs.OptionsBox"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TP3_2019_2020.Windows_And_Dialogs"
+        mc:Ignorable="d"
+        Title="OptionsBox" Height="200" Width="820">
+    <Grid>
+
+        <StackPanel  Orientation="Horizontal" Name="Fournisseur" HorizontalAlignment="Stretch">
+            <Label Content="Dossier utilisé : " Margin="40,0,30,0"  Height="30" Width="auto"/>
+            <TextBox Width="450"  x:Name ="text" Height="30"/>
+            <Button x:Name="Modifier" Width="150" Height="40" Margin="20,0,0,0"
+                   Content="Modifier"  
+                   VerticalAlignment="Center"  
+                   HorizontalAlignment="Center"
+                    Click="Modifier_Click">
+            </Button>
+        </StackPanel>
+
+    </Grid>
+</Window>

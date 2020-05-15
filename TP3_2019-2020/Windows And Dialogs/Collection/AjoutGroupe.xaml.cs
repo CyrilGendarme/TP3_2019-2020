@@ -45,8 +45,12 @@ namespace TP3_2019_2020.Windows_And_Dialogs.Collection
         private void CreateContent_Click(object sender, RoutedEventArgs e)
         {
             var currentApp = System.Windows.Application.Current as App;
-            currentApp.MyData.Colstruct.ListCollectionGroup.Add(ThisGroup);
-            this.Hide();
+            try
+            {
+                currentApp.MyData.Colstruct.ListCollectionGroup.Add(ThisGroup);
+                this.Hide();
+            }
+            catch { var result = System.Windows.Forms.MessageBox.Show("Mauvaises données rentrées", "Fermer", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Exclamation); }
         }
 
         private void Annuler_Click(object sender, RoutedEventArgs e)
@@ -61,10 +65,14 @@ namespace TP3_2019_2020.Windows_And_Dialogs.Collection
         }
 
         private void CreateContentAndNext_Click(object sender, RoutedEventArgs e)
-        {
+        { 
             var currentApp = System.Windows.Application.Current as App;
-            currentApp.MyData.Colstruct.ListCollectionGroup.Add(ThisGroup);
-            ThisGroup = new CollectionGroup();
+            try
+            {
+                currentApp.MyData.Colstruct.ListCollectionGroup.Add(ThisGroup);
+                ThisGroup = new CollectionGroup();
+            }
+            catch { var result = System.Windows.Forms.MessageBox.Show("Mauvaises données rentrées", "Fermer", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Exclamation); }
         }
     }
 }
