@@ -7,6 +7,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Media;
 using TP3_2019_2020.Objetcs;
 using TP3_2019_2020.Windows_And_Dialogs;
 
@@ -84,6 +85,7 @@ namespace TP3_2019_2020
                 rk.SetValue("Path", "D:\\Visual Studio 2k19\\TP3_2019-2020\\DATA");
             }
 
+
             // lancement de la premiere win 
             AskForFileDialog win = new AskForFileDialog();
             win.Show();
@@ -104,12 +106,8 @@ namespace TP3_2019_2020
 
         private void MenuItem_Click_1(object sender, RoutedEventArgs e)
         {
-            //int nb = Application.Current.Windows.Count;
-            //for (int i = 0; i < nb; i++)
-            //{
-            //    Application.Current.Windows[i].Close();
-            //}
             OptionsBox win = new OptionsBox();
+            win.MenuColorUpdate += MakeMenuColorUpdate;
             win.Show();
         }
 
@@ -129,7 +127,13 @@ namespace TP3_2019_2020
         }
 
 
-    
+
+        public void MakeMenuColorUpdate(System.Windows.Media.Brush col1, System.Windows.Media.Brush col2)    // dans les exemples, static était toujours mis. Cela compliquait toutefois la progaramation. De plus, a partir du moment où cette méthode se trouve dans le code de la fenetre principale, un objet de sa classe sera de toute facon toujours instancié lorsuq'il sera utilsé, cel n'a pas vraiment de sens ici de parler de static
+        {
+            if (col1 != null) MyMenu.Foreground = col1;
+            if (col2 != null) MyMenu.Background = col2;
+        }
+
 
     }
 }

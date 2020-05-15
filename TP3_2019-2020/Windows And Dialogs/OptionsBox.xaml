@@ -5,19 +5,80 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TP3_2019_2020.Windows_And_Dialogs"
         mc:Ignorable="d"
-        Title="OptionsBox" Height="200" Width="820">
+        Title="OptionsBox" Height="300" Width="820">
     <Grid>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="*"/>
 
-        <StackPanel  Orientation="Horizontal" Name="Fournisseur" HorizontalAlignment="Stretch">
+            </Grid.ColumnDefinitions>
+            
+            <Grid Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <StackPanel Grid.Row="0"  Orientation="Horizontal" Name="Fournisseur" HorizontalAlignment="Stretch">
             <Label Content="Dossier utilisé : " Margin="40,0,30,0"  Height="30" Width="auto"/>
-            <TextBox Width="450"  x:Name ="text" Height="30"/>
-            <Button x:Name="Modifier" Width="150" Height="40" Margin="20,0,0,0"
-                   Content="Modifier"  
-                   VerticalAlignment="Center"  
-                   HorizontalAlignment="Center"
-                    Click="Modifier_Click">
-            </Button>
+            <TextBox Width="355"  x:Name ="text" Height="30"/>
+
         </StackPanel>
 
+        <Label Grid.Row="1" Content="Couleur de fond du menu" Margin="50,20,0,0" HorizontalAlignment="Left" Width="301"/>
+
+        <ComboBox Grid.Row="2" x:Name ="CouleurFond"  Width="auto"  Margin="20,5,20,5" >
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <Rectangle Fill="{Binding Name}" Width="16" Height="16" Margin="0,2,5,2" />
+                        <TextBlock Text="{Binding Name}" />
+                    </StackPanel>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+
+        <Label Grid.Row="3" Content="Couleur du texte du menu" Margin="50,20,0,0" HorizontalAlignment="Left" Width="301"/>
+
+        <ComboBox Grid.Row="4" x:Name ="CouleurTexte"  Width="auto"  Margin="20,5,20,5">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <Rectangle Fill="{Binding Name}" Width="16" Height="16" Margin="0,2,5,2" />
+                        <TextBlock Text="{Binding Name}" />
+                    </StackPanel>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+
+        </Grid>
+
+            <Grid Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="80"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                
+                <Button x:Name="ModifierP" Grid.Row="0" Width="150" Height="40" Margin="20,0,0,0"
+                   Content="Modifier path"  
+                   VerticalAlignment="Center"  
+                   HorizontalAlignment="Center"
+                    Click="ModifierP_Click">
+                </Button>
+
+                <Button x:Name="ModifierC" Grid.Row="1" Width="150" Height="40" Margin="20,0,0,0"
+                   Content="Modifier couleur"  
+                   VerticalAlignment="Center"  
+                   HorizontalAlignment="Center"
+                    Click="ModifierC_Click">
+                </Button>
+
+            </Grid>
+
+        </Grid>
     </Grid>
 </Window>
