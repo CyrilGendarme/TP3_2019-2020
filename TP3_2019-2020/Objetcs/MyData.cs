@@ -147,7 +147,7 @@ namespace TP3_2019_2020.Objetcs
                 //}
 
             BinaryFormatter binFormat = new BinaryFormatter();
-            using (Stream fstream = new FileStream(FilePath, FileMode.Append, FileAccess.Write, FileShare.None))
+            using (Stream fstream = new FileStream(FilePath, FileMode.Create, FileAccess.Write, FileShare.None))
             {
                 binFormat.Serialize(fstream, this);
             }
@@ -188,6 +188,7 @@ namespace TP3_2019_2020.Objetcs
                 ListThématique = temp.ListThématique;
                 Colstruct = temp.Colstruct;
                 FilePath = temp.FilePath;
+                ListPhrases = temp.ListPhrases;
             }
         }
     }

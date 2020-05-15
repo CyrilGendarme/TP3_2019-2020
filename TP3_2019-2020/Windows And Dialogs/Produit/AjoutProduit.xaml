@@ -8,7 +8,7 @@
         Title="Ajout Produit" Height="450" Width="1370">
 
     
-    <Grid x:Name="MainGrid" DataContext="ThisProd">
+    <Grid x:Name="MainGrid">
       
         <Grid.RowDefinitions>
  
@@ -38,7 +38,7 @@
                 
                 <StackPanel Grid.Row="0" Orientation="Horizontal" Name="MotCLé" HorizontalAlignment="Left" >
                     <Label Content="Mot-clé / titre :" Margin="40,0,10,0"  Height="30" Width="95"/>
-                    <Label x:Name="labelnom" Content="{Binding Path= Mot_clé.Nom}" Margin="0,0,10,0"  Height="30" Width="247"  />
+                    <Label x:Name="labelnom" Content="{Binding Path=Mot_clé.Nom}" Margin="0,0,10,0"  Height="30" Width="247"  />
                     <Button x:Name="ConfigMot" Height="30" Width="140" Margin="0,0,0,0"  
                         Content="Configurer mot-clé"  
                         Click="ConfigMot_Click"/>
@@ -46,17 +46,17 @@
 
                 <StackPanel Grid.Row="1" Orientation="Horizontal" Name="Fournisseur" HorizontalAlignment="Left">
                     <Label Content="Fourniseur : " Margin="40,0,30,0"  Height="30" Width="auto"/>
-                    <TextBox Width="250" x:Name ="FournisseurBox" Height="30" Text="{Binding Path= Fournisseur}"/>
+                    <TextBox Width="250" x:Name ="FournisseurBox" Height="30" Text="{Binding Path=Fournisseur}"/>
                 </StackPanel>
 
                 <StackPanel Grid.Row="2" Orientation="Horizontal" Name="PrixAchat" HorizontalAlignment="Left">
                     <Label Content="Prix d'achat : " Margin="40,0,26,0"  Height="30" Width="auto"/>
-                    <TextBox Width="250" x:Name ="AchatBox" Height="30" Text="{Binding Path= PrixAchat}" TextChanged="AchatBox_TextChanged"/>
+                    <TextBox Width="250" x:Name ="AchatBox" Height="30" Text="{Binding Path=PrixAchat}" TextChanged="AchatBox_TextChanged"/>
                 </StackPanel>
 
                 <StackPanel Grid.Row="3" Orientation="Horizontal" Name="PrixVente" HorizontalAlignment="Left">
                     <Label Content="Prix de vente : " Margin="40,0,18,0" Height="30" Width="auto"/>
-                    <TextBox Width="250" x:Name ="VenteBox" Height="30" Text="{Binding Path= PrixVente}"/>
+                    <TextBox Width="250" x:Name ="VenteBox" Height="30" Text="{Binding Path=PrixVente}"/>
                 </StackPanel>
 
             </Grid>

@@ -39,7 +39,6 @@ namespace TP3_2019_2020.Windows_And_Dialogs.Produit
             //var currentApp2 = App.Current as App;
             //ThisMenu = currentApp2.MyMenu;
             //MainGrid.DataContext = currentApp2.MyData;
-            ListBoxDonnéesProduit.DataContext = ListBoxProduit;
         }
 
 
@@ -56,37 +55,17 @@ namespace TP3_2019_2020.Windows_And_Dialogs.Produit
 
 
 
-        private void CheckBox_Checked1(object sender, RoutedEventArgs e)
-        {
-            BoxParDate.IsChecked = false;
-            var currentApp = System.Windows.Application.Current as App;
-            ListBoxProduit.DataContext = currentApp.MyData.ListArticle.OrderBy(d => d.DateCreation);
-        }
-
-
-        private void CheckBox_Checked3(object sender, RoutedEventArgs e)
-        {
-            BoxParNom.IsChecked = false;
-            var currentApp = System.Windows.Application.Current as App;
-            ListBoxProduit.DataContext = currentApp.MyData.ListArticle.OrderBy(d => d.Nom);
-        }
-
-
         private void Supprimer_Click(object sender, RoutedEventArgs e)
         {
             var currentApp = System.Windows.Application.Current as App;
-            currentApp.MyData.ListProduit.Remove((TP3_2019_2020.Objetcs.Produit)ListBoxProduit.SelectedItem);
+            currentApp.MyData.ListProduit.Remove((TP3_2019_2020.Objetcs.Produit)DatagridProduit.SelectedItem);
         }
 
         private void Modifier_Click(object sender, RoutedEventArgs e)
         {
-            AjoutProduit win = new AjoutProduit((TP3_2019_2020.Objetcs.Produit)ListBoxProduit.SelectedItem);
+            AjoutProduit win = new AjoutProduit((TP3_2019_2020.Objetcs.Produit)DatagridProduit.SelectedItem);
             win.ShowDialog();
         }
 
-        private void Créer_description_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
     }
 }

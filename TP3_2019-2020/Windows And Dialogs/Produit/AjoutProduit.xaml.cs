@@ -21,25 +21,28 @@ namespace TP3_2019_2020.Windows_And_Dialogs.Produit
     public partial class AjoutProduit : Window
     {
         List<ListBox> ListLB;
+        List<ComboBox> ListCB;
         public Objetcs.Produit ThisProd;
 
         public AjoutProduit()
         {
-            InitializeComponent();
             ListLB = new List<ListBox>();
+            ListCB = new List<ComboBox>();
             ThisProd = new Objetcs.Produit();
+            InitializeComponent();
             UpdateStackPanel();
-            labelnom.DataContext = ThisProd;
+            MainGrid.DataContext = ThisProd;
         }
 
 
         public AjoutProduit(TP3_2019_2020.Objetcs.Produit p)
         {
-            InitializeComponent();
             ListLB = new List<ListBox>();
+            ListCB = new List<ComboBox>();
             ThisProd = p;
+            InitializeComponent();
             UpdateStackPanel();
-            labelnom.DataContext = ThisProd;
+            MainGrid.DataContext = ThisProd;
         }
 
 
@@ -70,16 +73,20 @@ namespace TP3_2019_2020.Windows_And_Dialogs.Produit
                 label.Height = 30;
 
                 ListBox lb = new ListBox();
+                ComboBox cb = new ComboBox();
                 //lb.ItemsSource = coll.ListeCollection;
                 lb.DataContext = coll;
                 lb.ItemsSource = coll.ListeCollection;
+                cb.DataContext = coll;
+                cb.ItemsSource = coll.ListeCollection;
                 lb.HorizontalAlignment = HorizontalAlignment.Stretch;
                 lb.VerticalAlignment = VerticalAlignment.Stretch;
                 lb.SelectionMode = SelectionMode.Multiple;
 
                 ListLB.Add(lb);
+                ListCB.Add(cb);
                 sp.Children.Add(label);
-                sp.Children.Add(lb);
+                sp.Children.Add(cb);
 
                 //< ListBox x: Name = "ListBoxProduit" Grid.Column = "0" Height = "auto" Margin = "10,0,0,0" HorizontalAlignment = "Stretch"  VerticalAlignment = "Stretch" ItemsSource = "{Binding Path=ListProduit}" >
                 //     </ ListBox >

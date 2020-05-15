@@ -9,7 +9,6 @@
 
         <Grid.RowDefinitions>
             <RowDefinition Height="30" x:Name="menuRow"/>
-            <RowDefinition Height="50"/>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="80"/>
@@ -17,17 +16,10 @@
 
 
 
-        <StackPanel Grid.Row="1" Orientation="Horizontal" x:Name="StackPanel" Margin="0,10,0,10" HorizontalAlignment="Center">
-
-                <Label Content="Classer par : "   Width="100" />
-                <CheckBox x:Name="BoxParNom" Content="Nom"  Height="auto" Width="100" Margin="0,6,0,0" Checked="CheckBox_Checked1" />
-                <CheckBox x:Name="BoxParDate" Content="Date"  Height="auto" Width="100" Margin="0,6,0,0" Checked="CheckBox_Checked3"  />
-         </StackPanel>
 
 
 
-
-                <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Left" Name="ToolBox">
+        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Left" Name="ToolBox">
             <Button x:Name="Supprimer" Height="25" Width="80"  Margin="0,0,0,0"
                Content="Supprimer"  
                VerticalAlignment="Top"  
@@ -40,42 +32,31 @@
                HorizontalAlignment="Left"
                     Click="Modifier_Click">
             </Button>
-            <Button x:Name="Créer_description" Height="25" Width="140"  Margin="0,0,0,0"
-               Content="Créer description"  
-               VerticalAlignment="Top"  
-               HorizontalAlignment="Left"
-                    Click="Créer_description_Click">
-            </Button>
+
 
         </StackPanel>
 
-        <Grid Grid.Row="3">
-            
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="20"/>
-                <ColumnDefinition Width="*"/>
-            </Grid.ColumnDefinitions>
+        <Grid Grid.Row="2">
 
-            <ListBox x:Name="ListBoxProduit" SelectionMode="Single" Grid.Column="0" Height="auto" Margin="10,0,0,0" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" ItemsSource="{Binding Path=ListProduit}" >
-            </ListBox>
+            <DataGrid x:Name="DatagridProduit" SelectionMode="Single" IsReadOnly="True" Height="auto" Margin="10,0,10,0" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" ItemsSource="{Binding Path=ListProduit}" AutoGenerateColumns="False" >
+                
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Nom" Binding="{Binding Mot_clé.Nom}"  Width="2*"/>
+                    <DataGridTextColumn Header="Date de création" Binding="{Binding DateCreation}"  Width="*" />
+                    <DataGridTextColumn Header="Fournisseur" Binding="{Binding Fournisseur}"  Width="*" />
+                    <DataGridTextColumn Header="Volume" Binding="{Binding Mot_clé.Volume}"  Width="*"/>
+                    <DataGridTextColumn Header="Difficulté" Binding="{Binding Mot_clé.Difficulté}"  Width="*" />
+   
+                    
+                </DataGrid.Columns>
+            </DataGrid>
 
-            <GridSplitter Grid.Column="1"
-                      Grid.RowSpan="3" 
-              HorizontalAlignment="Center"
-              VerticalAlignment="Stretch"
-              Background="Black" 
-              Width="3"
-              />
-
-            <ListBox x:Name="ListBoxDonnéesProduit" Grid.Column="1"  Margin="0,0,10,0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  ItemsSource="{Binding Path=SelectedItem.ListeCollections}">
-            </ListBox>
 
         </Grid>
-        
-        
-        
-        <Button x:Name="Ajout" Grid.Row="4"  Width="200" Height="40" Margin="0,20,0,20"
+
+
+
+        <Button x:Name="Ajout" Grid.Row="3"  Width="200" Height="40" Margin="0,20,0,20"
                Content="Ajouter un produit"  
                VerticalAlignment="Top"  
                HorizontalAlignment="Center"

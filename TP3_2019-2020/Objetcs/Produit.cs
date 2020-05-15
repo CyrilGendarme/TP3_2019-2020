@@ -36,9 +36,37 @@ namespace TP3_2019_2020.Objetcs
             }
         }
 
-        public String Fournisseur { get; set; }
-        public double PrixAchat { get; set; }
-        public double PrixVente { get; set; }
+        private String _fournisseur;
+        private double _prixAchat;
+        private double _prixVente;
+
+        public String Fournisseur
+        {
+            get => _fournisseur;
+            set
+            {
+                _fournisseur = value;
+                NotifyPropertyChanged();
+            }
+        }
+        public double PrixAchat
+        {
+            get => _prixAchat;
+            set
+            {
+                _prixAchat = value;
+                NotifyPropertyChanged();
+            }
+        }
+        public double PrixVente
+        {
+            get => _prixVente;
+            set
+            {
+                _prixVente = value;
+                NotifyPropertyChanged();
+            }
+        }
 
 
 
