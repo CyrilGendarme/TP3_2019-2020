@@ -42,30 +42,39 @@ namespace TP3_2019_2020.Windows_And_Dialogs
 
         private void Ok_Click(object sender, RoutedEventArgs e)
         {
-            Mot_clé mot = new Mot_clé();
-            Boolean test = true;
-            var currentApp = System.Windows.Application.Current as App;
 
-            foreach (Mot_clé word in currentApp.MyData.ListMotClé)
+            try
             {
-                if (word.Nom.Equals(Nom.Text)) { test = false; mot = word; var result = System.Windows.Forms.MessageBox.Show("Ce mot-clé existe déjà et a été chargé", "Fermer",  MessageBoxButtons.OK,  MessageBoxIcon.Exclamation); break; }
+                Mot_clé mot = new Mot_clé();
+                Boolean test = true;
+                var currentApp = System.Windows.Application.Current as App;
+
+                foreach (Mot_clé word in currentApp.MyData.ListMotClé)
+                {
+                    if (word.Nom.Equals(Nom.Text)) { test = false; mot = word; var result = System.Windows.Forms.MessageBox.Show("Ce mot-clé existe déjà et a été chargé", "Fermer", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); break; }
+                }
+                if (test == true)
+                {
+                    mot = new Mot_clé(Nom.Text, Convert.ToInt32(Volume.Text), Difficulté.Value);
+                    currentApp.MyData.ListMotClé.Add(mot);
+                }
+
+
+                if (cas == 1) _owner.PutMotClé(mot);
+                if (cas == 2)
+                {
+                    _owner2.ThisCollection.Mot_clé = mot;
+                    _owner2.ThisCollection.Nom = mot.Nom;
+                }
+                if (cas == 3)
+                {
+                    _owner3.ThisGroup.Mot_clé = mot;
+                    _owner3.ThisGroup.Nom = mot.Nom;
+                }
+
+                this.Hide();
             }
-            if (test == true)
-            {
-                mot = new Mot_clé(Nom.Text, Convert.ToInt32(Volume.Text), Difficulté.Value);
-                currentApp.MyData.ListMotClé.Add(mot);
-            }
-
-
-            if (cas == 1) _owner.PutMotClé(mot);
-            if (cas == 2) {
-                _owner2.ThisCollection.Mot_clé = mot; 
-                _owner2.ThisCollection.Nom = mot.Nom; }
-            if (cas == 3) {
-                _owner3.ThisGroup.Mot_clé = mot;
-                _owner3.ThisGroup.Nom = mot.Nom; }
-
-            this.Hide();
+            catch (Exception ex) { var result = System.Windows.Forms.MessageBox.Show("Erreur d'encodage des données", "Fermer", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);  }
         }
     }
 }

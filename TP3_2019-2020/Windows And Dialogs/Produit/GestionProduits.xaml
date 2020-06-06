@@ -56,7 +56,7 @@
                     <DataGridTextColumn Header="Date de création" Binding="{Binding DateCreation}"  Width="*" />
                     <DataGridTextColumn Header="Fournisseur" Binding="{Binding Fournisseur}"  Width="*" />
                     <DataGridTextColumn Header="Volume" Binding="{Binding Mot_clé.Volume}"  Width="*"/>
-                    <DataGridTextColumn Header="Difficulté" Binding="{Binding Mot_clé.Difficulté}"  Width="*" />
+                    <DataGridTextColumn Header="Difficulté" Binding="{Binding Mot_clé.Difficulté}"  Width="*"/>
 
 
                 </DataGrid.Columns>

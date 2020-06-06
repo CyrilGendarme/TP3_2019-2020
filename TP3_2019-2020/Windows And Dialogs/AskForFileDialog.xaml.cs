@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Forms;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
@@ -53,11 +54,16 @@ namespace TP3_2019_2020.Windows_And_Dialogs
 
         private void Ok_Click(object sender, RoutedEventArgs e)
         {
-            if (ListBoxSites.SelectedIndex == -1)
-            {
+            if (ListBoxSites.SelectedIndex == -1 && (NouveauSite.Text).Equals("")) 
+                { var result = System.Windows.Forms.MessageBox.Show("Veuillez sélectioner un site", "Fermer", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); }
+            else if (ListBoxSites.SelectedIndex == -1 && !((NouveauSite.Text).Equals("")))
+                    {
                 var currentApp = System.Windows.Application.Current as App;
                 currentApp.MyData = new MyData();
-                DataContext = currentApp.MyData.FilePath = rk.GetValue("Path").ToString() + NouveauSite.Text;
+                DataContext = currentApp.MyData.FilePath = rk.GetValue("Path").ToString() + "/" + NouveauSite.Text;
+                this.Hide();
+                MainWindow win = new MainWindow();
+                win.Show();
             }
             else
             {
@@ -65,10 +71,10 @@ namespace TP3_2019_2020.Windows_And_Dialogs
                 String path = rk.GetValue("Path").ToString() +"\\"+ ListBoxSites.SelectedItem.ToString();
                 currentApp.MyData.FilePath = path;
                 currentApp.MyData.LoadData(path);
+                this.Hide();
+                MainWindow win = new MainWindow();
+                win.Show();
             }
-            this.Hide();
-            MainWindow win = new MainWindow();
-            win.Show();
         }
 
         private void FournisseurBox_TextChanged(object sender, TextChangedEventArgs e)

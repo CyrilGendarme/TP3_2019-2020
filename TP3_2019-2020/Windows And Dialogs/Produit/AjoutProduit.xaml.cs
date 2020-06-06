@@ -23,6 +23,7 @@ namespace TP3_2019_2020.Windows_And_Dialogs.Produit
         List<ListBox> ListLB;
         List<ComboBox> ListCB;
         public Objetcs.Produit ThisProd;
+        bool modif;
 
         public AjoutProduit()
         {
@@ -32,6 +33,7 @@ namespace TP3_2019_2020.Windows_And_Dialogs.Produit
             InitializeComponent();
             UpdateStackPanel();
             MainGrid.DataContext = ThisProd;
+            modif = false;
         }
 
 
@@ -43,6 +45,7 @@ namespace TP3_2019_2020.Windows_And_Dialogs.Produit
             InitializeComponent();
             UpdateStackPanel();
             MainGrid.DataContext = ThisProd;
+            modif = true;
         }
 
 
@@ -87,6 +90,7 @@ namespace TP3_2019_2020.Windows_And_Dialogs.Produit
                 ListCB.Add(cb);
                 sp.Children.Add(label);
                 sp.Children.Add(cb);
+                sp.Margin = new System.Windows.Thickness(5, 0, 5, 0);
 
                 //< ListBox x: Name = "ListBoxProduit" Grid.Column = "0" Height = "auto" Margin = "10,0,0,0" HorizontalAlignment = "Stretch"  VerticalAlignment = "Stretch" ItemsSource = "{Binding Path=ListProduit}" >
                 //     </ ListBox >

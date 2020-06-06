@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
+using System.Windows.Forms;
 using System.Windows.Shapes;
 using TP3_2019_2020.Windows_And_Dialogs.Produit;
 //using TP3_2019_2020.Windows_And_Dialogs.Article;
@@ -50,16 +51,13 @@ namespace TP3_2019_2020
 
         private void Thématique_Click(object sender, RoutedEventArgs e)
         {
-            //GestionThématique win = new GestionThématique);
-            //win.Show();
-            //this.Hide();
+            var result = System.Windows.Forms.MessageBox.Show("À venir...", "Fermer", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void Article_Click(object sender, RoutedEventArgs e)
         {
-            //GestionArticle win = new GestionArticle();
-            //win.Show();
-            //this.Hide();
+            var result = System.Windows.Forms.MessageBox.Show("À venir...", "Fermer", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+    
     }
 }

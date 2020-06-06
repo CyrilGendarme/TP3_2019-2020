@@ -64,6 +64,8 @@ namespace TP3_2019_2020.Windows_And_Dialogs.Produit
         private void Modifier_Click(object sender, RoutedEventArgs e)
         {
             AjoutProduit win = new AjoutProduit((TP3_2019_2020.Objetcs.Produit)DatagridProduit.SelectedItem);
+            var currentApp = System.Windows.Application.Current as App;
+            currentApp.MyData.ListProduit.Remove((TP3_2019_2020.Objetcs.Produit)DatagridProduit.SelectedItem);
             win.ShowDialog();
         }
 
