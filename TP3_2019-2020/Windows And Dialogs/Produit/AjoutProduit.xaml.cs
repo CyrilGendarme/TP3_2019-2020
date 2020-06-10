@@ -139,6 +139,8 @@ namespace TP3_2019_2020.Windows_And_Dialogs.Produit
                     }
                 }
                 currentApp.MyData.ListProduit.Add(ThisProd);
+                ThisProd = new Objetcs.Produit();
+                MainGrid.DataContext = ThisProd;
             }
             catch { var result = System.Windows.Forms.MessageBox.Show("Mauvaises données rentrées", "Fermer", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Exclamation); }
         

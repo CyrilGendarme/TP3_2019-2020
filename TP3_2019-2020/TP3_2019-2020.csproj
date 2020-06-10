@@ -59,6 +59,7 @@
     <Compile Include="Windows And Dialogs\OptionsBox.xaml.cs">
       <DependentUpon>OptionsBox.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Windows And Dialogs\Produit\DifficulteConverter.cs" />
     <Compile Include="Windows And Dialogs\Produit\VoirListePhrases.xaml.cs">
       <DependentUpon>VoirListePhrases.xaml</DependentUpon>
     </Compile>

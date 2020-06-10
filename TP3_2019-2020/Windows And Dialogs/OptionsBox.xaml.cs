@@ -67,7 +67,8 @@ namespace TP3_2019_2020.Windows_And_Dialogs
                 }
                 else
                 {
-                    brush1 = System.Windows.Media.Colors.Black;
+                    var converter1 = new System.Windows.Media.BrushConverter();
+                    brush1 = (Brush)converter1.ConvertFromString(System.Windows.Media.Colors.Black.ToString());
                 }
 
                 if (CouleurTexte.SelectedItem != null)
@@ -79,7 +80,8 @@ namespace TP3_2019_2020.Windows_And_Dialogs
                 }
                 else
                 {
-                    brush2 = System.Windows.Media.Colors.White;
+                    var converter2 = new System.Windows.Media.BrushConverter();
+                    brush2 = (Brush)converter2.ConvertFromString(System.Windows.Media.Colors.White.ToString());
                 }
 
 
